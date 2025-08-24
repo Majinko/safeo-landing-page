@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SafeoID – Evidencia VTZ</title>
+  <meta name="description"
+    content="SafeoID – jednoduchá a bezpečná evidencia vyhradených technických zariadení (VTZ), kalendár revízií a prehľad prác." />
+  <meta name="theme-color" content="#55c48b" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/dist/styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <!-- MOBILE: hamburger vľavo -->
+      <button class="hamburger" id="hamburger" aria-label="Otvoriť menu" aria-controls="mobileMenu"
+        aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- logo (vpravo na mobile) -->
+      <a href="#home" class="brand" aria-label="Domov">
+        <img src="/assets/img/header-logo.svg" alt="SafeoID">
+      </a>
+
+      <!-- Desktop navigácia -->
+      <nav class="nav-links" aria-label="Hlavná navigácia">
+        <a href="#features">Funkcie</a>
+        <a href="#pricing">Cenník</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+
+      <!-- Desktop CTA (na mobile úplne skryté) -->
+      <a class="btn nav-cta" href="#contact">Vyskúšať</a>
+    </div>
+
+    <!-- Mobilné menu (off‑canvas) -->
+    <div class="mobile-wrap" id="mobileWrap" hidden>
+      <div class="backdrop" id="backdrop" tabindex="-1" aria-hidden="true"></div>
+      <nav class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+        <a href="#features" class="mobile-link">Funkcie</a>
+        <a href="#pricing" class="mobile-link">Cenník</a>
+        <a href="#contact" class="mobile-link">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero" id="home">
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Evidencia vyhradených technických zariadení</span>
+        <h1>Majte VTZ pod kontrolou – termíny revízií, zariadenia, zodpovedné osoby</h1>
+        <p class="lead">SafeoID zrýchľuje evidenciu VTZ, pripomína revízie, udržiava auditnú stopu a rieši prístupy cez
+          role. Jednoducho, prehľadne a bezpečne.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Začať používať</a>
+          <a class="btn outline" href="#pricing">Pozrieť ceny</a>
+        </div>
+      </div>
+
+      <div>
+        <img src="assets/img/bozp.png" alt="Ilustrácia bezpečnosť/evidencia">
+      </div>
+    </div>
+  </main>
+
+  <section id="features">
+    <div class="container">
+      <h2 class="section-title">Čo získate</h2>
+      <p class="section-desc">Funkcie navrhnuté priamo pre prevádzku a bezpečnosť.</p>
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="feature-head"><span class="feature-ico">📅</span>
+            <h3>Kalendár revízií</h3>
+          </div>
+          <p class="muted">Prehľad termínov, automatické notifikácie a export do kalendárov.</p>
+        </article>
+        <article class="card">
+          <div class="feature-head"><span class="feature-ico">🧭</span>
+            <h3>Kategórie VTZ</h3>
+          </div>
+          <p class="muted">Elektrické, tlakové, plynové, zdvíhacie – s vlastnými podskupinami.</p>
+        </article>
+        <article class="card">
+          <div class="feature-head"><span class="feature-ico">🔒</span>
+            <h3>Role & prístupy</h3>
+          </div>
+          <p class="muted">RBAC pre interných aj externých technikov, auditná stopa a logy.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="soft">
+    <div class="container">
+      <h2 class="section-title">Jednoduchý cenník</h2>
+      <p class="section-desc">Začnite zdarma a škálujte podľa potreby.</p>
+      <div class="grid grid-3 pricing">
+        <div class="card price">
+          <h3>Starter</h3>
+          <div class="muted">Pre malé prevádzky</div>
+          <div class="cost">0 € / mes.</div>
+          <ul class="list">
+            <li>Do 100 zariadení</li>
+            <li>Kalendár & pripomienky</li>
+            <li>Export PDF</li>
+          </ul>
+        </div>
+        <div class="card price highlight">
+          <h3>Pro</h3>
+          <div class="muted">Pre rastúce firmy</div>
+          <div class="cost">79 € / mes.</div>
+          <ul class="list">
+            <li>Do 5 000 zariadení</li>
+            <li>Role, audit, prílohy</li>
+            <li>Webhooky & API limity</li>
+          </ul>
+        </div>
+        <div class="card price">
+          <h3>Enterprise</h3>
+          <div class="muted">Pre veľké podniky</div>
+          <div class="cost">Dohodou</div>
+          <ul class="list">
+            <li>SLA 99.99% a SSO</li>
+            <li>Privátne nasadenie v EÚ</li>
+            <li>Podpora 24/7</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="center">
+    <div class="container">
+      <h2 class="section-title">Pripravení začať?</h2>
+      <p class="section-desc">Napíšte nám a dohodneme demo alebo konzultáciu.</p>
+      <a class="btn" href="mailto:support@safeo.sk">Kontaktovať</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-row">
+      <div class="muted">© <span id="year"></span> SafeoID. Všetky práva vyhradené.</div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+
+</html>
