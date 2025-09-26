@@ -5,36 +5,100 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO -->
-  <title>SafeoID – Evidencia VTZ a revízií</title>
+  <!-- Primary SEO -->
+  <title>SafeoID – Evidencia VTZ, revízií a BOZP úloh</title>
   <meta name="description"
-    content="SafeoID – jednoduchá a bezpečná evidencia vyhradených technických zariadení (VTZ). Kalendár úloh, pripomienky, audit a prehľad prác." />
-  <link rel="canonical" href="https://safeo.sk/safeoId" />
+    content="SafeoID je jednoduchý systém na evidenciu vyhradených technických zariadení (VTZ), BOZP úloh a termínov. Kalendár, pripomienky, auditná stopa a rýchly prístup k dokumentom." />
+  <link rel="canonical" href="https://safeoid.sk/" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="language" content="sk" />
 
-  <!-- Progressive Web / Theme -->
-  <meta name="theme-color" content="#55c48b" />
+  <!-- Internationalization -->
+  <link rel="alternate" hreflang="sk" href="https://safeoid.sk/" />
+  <link rel="alternate" hreflang="x-default" href="https://safeoid.sk/" />
 
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="SafeoID – Evidencia VTZ a revízií" />
+  <meta property="og:site_name" content="SafeoID" />
+  <meta property="og:title" content="SafeoID – Evidencia VTZ, revízií a BOZP úloh" />
   <meta property="og:description"
-    content="Majte svoje úlohy pod kontrolou – revízie, školenia, kurzy, lekárske prehliadky a iné. SafeoID uľahčuje evidenciu, pripomína termíny a udržiava auditnú stopu." />
-  <meta property="og:url" content="https://safeo.sk/safeoId" />
-  <meta property="og:image" content="https://safeo.sk/assets/safeoid/img/og-image.jpg" />
+    content="Majte revízie, školenia, lekárske prehliadky a ďalšie povinnosti pod kontrolou. SafeoID pripomína termíny a udržiava auditnú stopu." />
+  <meta property="og:url" content="https://safeoid.sk/" />
+  <meta property="og:image" content="https://safeoid.sk/assets/safeoid/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="sk_SK" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SafeoID – Evidencia VTZ a revízií" />
+  <meta name="twitter:title" content="SafeoID – Evidencia VTZ, revízií a BOZP úloh" />
   <meta name="twitter:description"
-    content="Jednoduchá a bezpečná evidencia VTZ. Kalendár, pripomienky, auditná stopa a viac." />
-  <meta name="twitter:image" content="https://safeo.sk/assets/safeoid/img/og-image.jpg" />
+    content="Jednoduchá a bezpečná evidencia VTZ, kalendár, pripomienky a auditná stopa." />
+  <meta name="twitter:image" content="https://safeoid.sk/assets/safeoid/img/og-image.jpg" />
 
-  <link rel="stylesheet" href="assets/dist/styles.css">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <!-- PWA / Theme -->
+  <meta name="theme-color" content="#55c48b" />
+  <!-- (voliteľné) <link rel="manifest" href="/manifest.webmanifest"> -->
 
+  <!-- Performance hints -->
+  <!-- (voliteľné) <link rel="preload" as="image" href="/assets/img/bozp.png" imagesrcset="/assets/img/bozp.png 1x"> -->
+  <link rel="preconnect" href="https://app.safeoid.sk" crossorigin>
+  <link rel="dns-prefetch" href="https://app.safeoid.sk">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <!-- (voliteľné) doplň aj PNG ikony: 32×32, 192×192, 512×512 -->
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/dist/styles.css">
+
+  <!-- Cookie / Consent -->
   <script src="https://www.datacookie.sk/api/jBrSyU4PYngsFAmgV0TSl31GEq9Lv71XBhP6cS9ifYzU7bwZ89/cookie/script"></script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SafeoID",
+    "url": "https://safeoid.sk/",
+    "logo": "https://safeoid.sk/assets/safeoid/img/og-image.jpg"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SafeoID",
+    "url": "https://safeoid.sk/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://safeoid.sk/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- (voliteľné) SaaS cenník ako SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SafeoID",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": [
+      {"@type":"Offer","priceCurrency":"EUR","price":"20.00","name":"Standard (zmluvný)","category":"subscription"},
+      {"@type":"Offer","priceCurrency":"EUR","price":"30.00","name":"Standard (nezmluvný)","category":"subscription"},
+      {"@type":"Offer","priceCurrency":"EUR","price":"50.00","name":"Profi (zmluvný)","category":"subscription"},
+      {"@type":"Offer","priceCurrency":"EUR","price":"65.00","name":"Profi (nezmluvný)","category":"subscription"}
+    ],
+    "url": "https://safeoid.sk/"
+  }
+  </script>
 </head>
+
 
 <body>
   <header>
@@ -80,7 +144,7 @@
       </div>
 
       <div>
-        <img src="assets/img/bozp.png" alt="Ilustrácia bezpečnosť/evidencia">
+        <img src="assets/img/bozp.png" alt="SafeoID – prehľad úloh, revízií a termínov">
       </div>
     </div>
   </main>
@@ -217,7 +281,7 @@
       <div class="contact-grid">
         <!-- Ľavý stĺpec: ilustrácia -->
         <div class="contact-icon">
-          <img src="https://safeo.sk/assets/safeoid/img/undraw_new-message_nl8w.svg" alt="">
+          <img src="https://safeo.sk/assets/safeoid/img/undraw_new-message_nl8w.svg" alt="Kontaktujte SafeoID">
         </div>
 
         <!-- Pravý stĺpec: formulár -->
