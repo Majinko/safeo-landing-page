@@ -16,29 +16,24 @@
 <body>
   <header>
     <div class="container nav">
-      <!-- MOBILE: hamburger vľavo -->
       <button class="hamburger" id="hamburger" aria-label="Otvoriť menu" aria-controls="mobileMenu"
         aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <!-- logo (vpravo na mobile) -->
       <a href="#home" class="brand" aria-label="Domov">
         <img src="/assets/img/header-logo.svg" alt="SafeoID">
       </a>
 
-      <!-- Desktop navigácia -->
       <nav class="nav-links" aria-label="Hlavná navigácia">
         <a href="#features">Funkcie</a>
         <a href="#pricing">Cenník</a>
         <a href="#contact">Kontakt</a>
       </nav>
 
-      <!-- Desktop CTA (na mobile úplne skryté) -->
       <a class="btn nav-cta" href="#contact">Vyskúšať</a>
     </div>
 
-    <!-- Mobilné menu (off‑canvas) -->
     <div class="mobile-wrap" id="mobileWrap" hidden>
       <div class="backdrop" id="backdrop" tabindex="-1" aria-hidden="true"></div>
       <nav class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
@@ -52,10 +47,10 @@
   <main class="hero" id="home">
     <div class="container hero-inner">
       <div>
-        <span class="eyebrow"><span class="dot"></span> Evidencia vyhradených technických zariadení</span>
-        <h1>Majte VTZ pod kontrolou – termíny revízií, zariadenia, zodpovedné osoby</h1>
-        <p class="lead">SafeoID zrýchľuje evidenciu VTZ, pripomína revízie, udržiava auditnú stopu a rieši prístupy cez
-          role. Jednoducho, prehľadne a bezpečne.</p>
+        <span class="eyebrow"><span class="dot"></span> Evidencia a operatíva</span>
+        <h1>Majte svoje úlohy pod kontrolou – revízie, školenia, kurzy, lekárske prehliadky a iné...</h1>
+        <p class="lead">SafeoID uľahčuje evidenciu, prístup k&nbsp;dokumentom, pripomína termíny a&nbsp;pomáha zvládnuť
+          operatívu vašej prevádzky.</p>
         <div class="hero-cta">
           <a class="btn" href="#contact">Začať používať</a>
           <a class="btn outline" href="#pricing">Pozrieť ceny</a>
@@ -71,25 +66,29 @@
   <section id="features">
     <div class="container">
       <h2 class="section-title">Čo získate</h2>
-      <p class="section-desc">Funkcie navrhnuté priamo pre prevádzku a bezpečnosť.</p>
+      <p class="section-desc">Dokonalý prehľad o úlohách. Funkcie navrhnuté priamo pre prevádzku a bezpečnosť.</p>
       <div class="grid grid-3">
         <article class="card">
           <div class="feature-head"><span class="feature-ico">📅</span>
-            <h3>Kalendár revízií</h3>
+            <h3>Kalendár úloh</h3>
           </div>
-          <p class="muted">Prehľad termínov, automatické notifikácie a export do kalendárov.</p>
+          <p class="muted">Prehľad termínov, nedostatkov z&nbsp;kontrol a finančných nákladov. Rýchlejšie a presnejšie
+            plánovanie, automatické notifikácie.</p>
         </article>
         <article class="card">
           <div class="feature-head"><span class="feature-ico">🧭</span>
-            <h3>Kategórie VTZ</h3>
+            <h3>Položky</h3>
           </div>
-          <p class="muted">Elektrické, tlakové, plynové, zdvíhacie – s vlastnými podskupinami.</p>
+          <p class="muted">Zamestnanci, technické zariadenia, požiarne zariadenia, vozový park a vlastné položky –
+            všetko
+            na jednom mieste.</p>
         </article>
         <article class="card">
           <div class="feature-head"><span class="feature-ico">🔒</span>
-            <h3>Role & prístupy</h3>
+            <h3>Spravovanie systému</h3>
           </div>
-          <p class="muted">RBAC pre interných aj externých technikov, auditná stopa a logy.</p>
+          <p class="muted">Vlastní editori, zamestnanci a externí pracovníci. Auditná stopa a jasné pravidlá prístupov.
+          </p>
         </article>
       </div>
     </div>
@@ -97,48 +96,96 @@
 
   <section id="pricing" class="soft">
     <div class="container">
-      <h2 class="section-title">Jednoduchý cenník</h2>
-      <p class="section-desc">Začnite zdarma a škálujte podľa potreby.</p>
+      <h2 class="section-title">Cenník</h2>
+      <div class="section-desc">Uvedené ceny sú v € bez DPH za 1 kalendárny mesiac predplatenej služby.</div>
       <div class="grid grid-3 pricing">
         <div class="card price">
-          <h3>Starter</h3>
-          <div class="muted">Pre malé prevádzky</div>
-          <div class="cost">0 € / mes.</div>
+          <h3>Standard</h3>
+          <div class="muted">od 20 € / mesiac</div>
           <ul class="list">
-            <li>Do 100 zariadení</li>
-            <li>Kalendár & pripomienky</li>
-            <li>Export PDF</li>
+            <li>3 editori</li>
+            <li>5&nbsp;GB úložisko</li>
+            <li>Do 50 zamestnancov</li>
+            <li>Do 15 ks VTZ</li>
+            <li>3 druhy požiarnych zariadení</li>
+            <li>10 ks vozidiel</li>
+            <li>10× vlastných položiek</li>
           </ul>
         </div>
         <div class="card price highlight">
-          <h3>Pro</h3>
-          <div class="muted">Pre rastúce firmy</div>
-          <div class="cost">79 € / mes.</div>
+          <h3>Profi</h3>
+          <div class="muted">od 50 € / mesiac</div>
           <ul class="list">
-            <li>Do 5 000 zariadení</li>
-            <li>Role, audit, prílohy</li>
-            <li>Webhooky & API limity</li>
+            <li>5 editorov</li>
+            <li>10&nbsp;GB úložisko</li>
+            <li>Do 150 zamestnancov</li>
+            <li>Do 30 ks VTZ</li>
+            <li>6 druhov požiarnych zariadení</li>
+            <li>10 ks vozidiel</li>
+            <li>10× vlastných položiek</li>
           </ul>
         </div>
         <div class="card price">
-          <h3>Enterprise</h3>
-          <div class="muted">Pre veľké podniky</div>
-          <div class="cost">Dohodou</div>
+          <h3>Individual</h3>
+          <div class="muted">cena individuálne</div>
           <ul class="list">
-            <li>SLA 99.99% a SSO</li>
-            <li>Privátne nasadenie v EÚ</li>
-            <li>Podpora 24/7</li>
+            <li>Počet editorov podľa potreby</li>
+            <li>20&nbsp;GB úložisko a viac</li>
+            <li>Počet položiek podľa potreby prevádzky</li>
           </ul>
         </div>
       </div>
+
+      <p class="muted" style="margin-top:1rem">
+        V prípade, že potrebujete zväčšiť úložisko, doplniť editora, pridať ďalších zamestnancov alebo iné položky nad
+        rámec zakúpeného balíka, je možné navýšiť obsah balíka jednotlivo, podľa počtu vašich položiek.
+      </p>
     </div>
   </section>
 
-  <section id="contact" class="center">
+  <section id="contact" class="contact-section">
     <div class="container">
-      <h2 class="section-title">Pripravení začať?</h2>
-      <p class="section-desc">Napíšte nám a dohodneme demo alebo konzultáciu.</p>
-      <a class="btn" href="mailto:support@safeo.sk">Kontaktovať</a>
+      <h2 class="section-title">Záujem o prezentáciu a konzultáciu</h2>
+      <p class="section-desc">Zadajte svoje údaje a my vás budeme kontaktovať s termínom.</p>
+
+      <div class="contact-grid">
+        <!-- Ľavý stĺpec: ilustrácia -->
+        <div class="contact-icon">
+          <img src="https://safeo.sk/assets/safeoid/img/undraw_new-message_nl8w.svg" alt="">
+        </div>
+
+        <!-- Pravý stĺpec: formulár -->
+        <form action="https://safeo.sk/contact-sendMail" method="post" class="php-email-form demo-form" id="demo-form"
+          data-recaptcha-site-key="6LdNaasrAAAAAOvIYS3VPbhV9r-cQ95OJFn0rTCA">
+          <input type="hidden" name="_token" value="tR1CMQicrJxFMQIyrnfOlY3TMHfsLseXJldzDs9E" autocomplete="off">
+          <!-- skrytá info (predmet/flag) -->
+          <input type="hidden" name="subject" value="Záujem o SafeoID">
+          <input type="hidden" name="message" value="Záujem o SafeoID">
+          <input type="hidden" name="safeoId" value="true">
+
+          <!-- antispam + čas -->
+          <input type="text" name="website_url" class="hp-input" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <input type="hidden" name="form_time" value="1758881803">
+
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Meno a priezvisko *" required="">
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Email *" required="">
+          </div>
+
+          <!-- správy: NEmaj 'hidden' na WRAPPERI -->
+          <div class="status" aria-live="polite">
+            <div class="loading" hidden="">Odosielam…</div>
+            <div class="error-message" hidden=""></div>
+            <div class="sent-message" hidden="">Ďakujeme! Ozveme sa s termínom prezentácie.</div>
+          </div>
+
+          <div class="text-left">
+            <button type="submit" class="btn submit-btn">Odoslať</button>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
