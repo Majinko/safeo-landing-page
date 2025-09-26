@@ -278,6 +278,18 @@ section {
   }
 }
 
+.grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .card {
   background: $card;
   border: 1px solid $border;
@@ -560,6 +572,7 @@ footer {
         padding: 12px 14px;
         font: inherit;
         color: $text;
+
         transition: border-color .15s ease, box-shadow .15s ease;
 
         &:focus {
