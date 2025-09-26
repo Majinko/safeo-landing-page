@@ -47,7 +47,6 @@
   <main class="hero" id="home">
     <div class="container hero-inner">
       <div>
-        <span class="eyebrow"><span class="dot"></span> Evidencia a operatíva</span>
         <h1>Majte svoje úlohy pod kontrolou – revízie, školenia, kurzy, lekárske prehliadky a iné...</h1>
         <p class="lead">SafeoID uľahčuje evidenciu, prístup k&nbsp;dokumentom, pripomína termíny a&nbsp;pomáha zvládnuť
           operatívu vašej prevádzky.</p>
@@ -157,7 +156,6 @@
         <!-- Pravý stĺpec: formulár -->
         <form action="https://safeo.sk/contact-sendMail" method="post" class="php-email-form demo-form" id="demo-form"
           data-recaptcha-site-key="6LdNaasrAAAAAOvIYS3VPbhV9r-cQ95OJFn0rTCA">
-          <input type="hidden" name="_token" value="tR1CMQicrJxFMQIyrnfOlY3TMHfsLseXJldzDs9E" autocomplete="off">
           <!-- skrytá info (predmet/flag) -->
           <input type="hidden" name="subject" value="Záujem o SafeoID">
           <input type="hidden" name="message" value="Záujem o SafeoID">
@@ -165,7 +163,7 @@
 
           <!-- antispam + čas -->
           <input type="text" name="website_url" class="hp-input" autocomplete="off" tabindex="-1" aria-hidden="true">
-          <input type="hidden" name="form_time" value="1758881803">
+          <input type="hidden" name="form_time" id="form_time">
 
           <div class="form-group">
             <input type="text" name="name" class="form-control" placeholder="Meno a priezvisko *" required="">
@@ -196,6 +194,13 @@
   </footer>
 
   <script src="assets/app.js"></script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("form_time").value = Math.floor(Date.now() / 1000);
+    });
+  </script>
 </body>
 
 </html>
