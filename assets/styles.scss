@@ -346,7 +346,7 @@ section {
   display: flex;
   gap: 8px;
 
-  &::before {
+  &:not(.no-icone)::before {
     content: "✓";
     color: $primary;
     font-weight: 900;

@@ -307,7 +307,7 @@ section {
   display: flex;
   gap: 8px;
 }
-.list li::before {
+.list li:not(.no-icone)::before {
   content: "✓";
   color: #55c48b;
   font-weight: 900;
