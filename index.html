@@ -28,6 +28,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="sk_SK" />
+  <meta property="og:locale:alternate" content="en_US" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -47,7 +48,19 @@
 
   <!-- Icons -->
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-  <!-- (voliteľné) doplň aj PNG ikony: 32×32, 192×192, 512×512 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- Author -->
+  <meta name="author" content="SafeoID">
+
+  <!-- Apple status bar -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Cache control -->
+  <meta http-equiv="Cache-control" content="public">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/dist/styles.css">
@@ -142,7 +155,7 @@
       </div>
 
       <div>
-        <img src="assets/img/bozp.png" alt="SafeoID – prehľad úloh, revízií a termínov">
+        <img src="assets/img/bozp.png" alt="SafeoID – prehľad úloh, revízií a termínov" loading="lazy">
       </div>
     </div>
   </main>
@@ -250,7 +263,7 @@
       <div class="contact-grid">
         <!-- Ľavý stĺpec: ilustrácia -->
         <div class="contact-icon">
-          <img src="https://safeo.sk/assets/safeoid/img/undraw_new-message_nl8w.svg" alt="Kontaktujte SafeoID">
+          <img src="https://safeo.sk/assets/safeoid/img/undraw_new-message_nl8w.svg" alt="Kontaktujte SafeoID" loading="lazy">
         </div>
 
         <!-- Pravý stĺpec: formulár -->
@@ -301,6 +314,14 @@
       document.getElementById("form_time").value = Math.floor(Date.now() / 1000);
     });
   </script>
+
+  <noscript>
+    <div style="background:#fff3cd;color:#856404;padding:1em;text-align:center;">
+      Táto stránka funguje najlepšie s povoleným JavaScriptom.
+    </div>
+  </noscript>
+
+  <!-- SEO TIP: Otestujte stránku cez Google Mobile-Friendly Test: https://search.google.com/test/mobile-friendly -->
 </body>
 
 </html>
