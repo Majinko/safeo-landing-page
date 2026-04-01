@@ -28,7 +28,6 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="sk_SK" />
-  <meta property="og:locale:alternate" content="en_US" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -38,26 +37,16 @@
   <meta name="twitter:image" content="https://safeoid.sk/assets/safeoid/img/og-image.jpg" />
 
   <!-- PWA / Theme -->
-  <meta name="theme-color" content="#55c48b" />
-  <!-- (voliteľné) <link rel="manifest" href="/manifest.webmanifest"> -->
-
-  <!-- Performance hints -->
-  <!-- (voliteľné) <link rel="preload" as="image" href="/assets/img/bozp.png" imagesrcset="/assets/img/bozp.png 1x"> -->
-  <link rel="preconnect" href="https://app.safeoid.sk" crossorigin>
-  <link rel="dns-prefetch" href="https://app.safeoid.sk">
+  <meta name="theme-color" content="#0a246a" />
 
   <!-- Icons -->
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 
   <!-- Author -->
   <meta name="author" content="SafeoID">
-
-  <!-- Apple status bar -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
   <!-- Cache control -->
   <meta http-equiv="Cache-control" content="public">
@@ -79,20 +68,6 @@
   }
   </script>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "SafeoID",
-    "url": "https://safeoid.sk/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://safeoid.sk/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -102,16 +77,25 @@
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-PTM7WQD6');</script>
-  <!-- End Google Tag Manager -->
 </head>
-
 
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTM7WQD6" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
+  <!-- ===== Marquee announcement bar ===== -->
+  <div class="marquee-bar" role="marquee">
+    <marquee scrollamount="3">
+      ★ SafeoID v2.0 – Nová verzia je dostupná! ★&nbsp;&nbsp;&nbsp;
+      Majte revízie, VTZ a BOZP pod kontrolou&nbsp;&nbsp;&nbsp;
+      ★ Bezplatná 30-dňová skúšobná doba ★&nbsp;&nbsp;&nbsp;
+      Podpora Windows 2000 / XP / Vista a novšie&nbsp;&nbsp;&nbsp;
+      ★ GDPR-súladný systém, servery v EÚ ★&nbsp;&nbsp;&nbsp;
+    </marquee>
+  </div>
+
+  <!-- ===== Header ===== -->
   <header>
     <div class="container nav">
       <button class="hamburger" id="hamburger" aria-label="Otvoriť menu" aria-controls="mobileMenu"
@@ -129,10 +113,17 @@
         <a href="#contact">Kontakt</a>
       </nav>
 
-      <a class="btn nav-cta" target="_blank" href="https://app.safeoid.sk">Vyskúšať</a>
+      <a class="btn nav-cta" target="_blank" href="https://app.safeoid.sk">Vyskúšať zadarmo</a>
+    </div>
+    <!-- Win2k status bar inside header -->
+    <div class="statusbar container">
+      <div class="panel">SafeoID System Control Panel</div>
+      <div class="panel" style="max-width:200px;">Stav: Online &#x2022; Zabezpečené</div>
+      <div class="panel" style="max-width:160px;" id="headerClock">00:00:00</div>
     </div>
   </header>
 
+  <!-- Mobile menu -->
   <div class="mobile-wrap" id="mobileWrap" hidden>
     <div class="backdrop" id="backdrop" tabindex="-1" aria-hidden="true"></div>
     <nav class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
@@ -142,246 +133,402 @@
     </nav>
   </div>
 
+  <!-- ===== Hero ===== -->
   <main class="hero" id="home">
-    <div class="container hero-inner">
-      <div>
-        <h1>Majte svoje úlohy pod kontrolou – revízie, školenia, kurzy, lekárske prehliadky a iné...</h1>
-        <p class="lead">SafeoID uľahčuje evidenciu, prístup k&nbsp;dokumentom, pripomína termíny a&nbsp;pomáha zvládnuť
-          operatívu vašej prevádzky.</p>
-        <div class="hero-cta">
-          <a class="btn" href="#contact">Začať používať</a>
-          <a class="btn outline" href="#pricing">Pozrieť ceny</a>
+    <div class="container" style="padding-top:12px;padding-bottom:12px;">
+
+      <!-- Hero window chrome -->
+      <div class="win-window">
+        <div class="win-titlebar">
+          <span class="win-icon" aria-hidden="true">S</span>
+          SafeoID – Evidencia VTZ, revízií a BOZP úloh
+          <div class="win-controls" aria-hidden="true">
+            <button title="Minimalizovať">_</button>
+            <button title="Maximalizovať">&#9633;</button>
+            <button title="Zavrieť" style="color:#cc0000;font-weight:bold;">✕</button>
+          </div>
+        </div>
+        <div class="win-body hero-inner" style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start;">
+          <div>
+            <h1 style="font-size:16px;margin-bottom:8px;line-height:1.4;">
+              Majte svoje úlohy pod kontrolou –<br>
+              revízie, školenia, kurzy, lekárske prehliadky a iné...
+            </h1>
+            <p class="lead" style="font-size:11px;margin-bottom:12px;">
+              SafeoID uľahčuje evidenciu, prístup k&nbsp;dokumentom, pripomína termíny
+              a&nbsp;pomáha zvládnuť operatívu vašej prevádzky.
+            </p>
+
+            <!-- Fake progress bar for fun Win2k feel -->
+            <div style="font-size:10px;margin-bottom:6px;color:#444;">Načítavanie databázy zariadení...</div>
+            <div class="win-progress" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="72%">
+              <div class="win-progress-bar"></div>
+            </div>
+
+            <hr class="win-separator" style="margin:12px 0;">
+
+            <div class="hero-cta" style="display:flex;gap:6px;flex-wrap:wrap;">
+              <a class="btn" href="#contact">Začať používať</a>
+              <a class="btn outline" href="#pricing">Pozrieť ceny</a>
+              <a class="btn" target="_blank" href="https://app.safeoid.sk"
+                 style="background:#0a246a;color:#fff;border-color:#6b9bd2 #000 #000 #6b9bd2;">
+                Prihlásiť sa &raquo;
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <img src="assets/img/bozp.png" alt="SafeoID – prehľad úloh, revízií a termínov" loading="lazy"
+                 style="border:2px inset #808080;background:#fff;">
+          </div>
+        </div>
+        <!-- Status bar at bottom of hero window -->
+        <div class="statusbar">
+          <div class="panel">Pripravený</div>
+          <div class="panel" style="max-width:260px;">Aktívnych zariadení: 42 | Blížiace sa termíny: 7</div>
+          <div class="panel" style="max-width:120px;">v2.0.4</div>
         </div>
       </div>
 
-      <div>
-        <img src="assets/img/bozp.png" alt="SafeoID – prehľad úloh, revízií a termínov" loading="lazy">
-      </div>
     </div>
   </main>
 
-  <section id="features">
+  <!-- ===== Features ===== -->
+  <section id="features" style="padding:0 0 16px;">
     <div class="container">
-      <h2 class="section-title">Čo získate</h2>
-      <p class="section-desc">Dokonalý prehľad o úlohách. Funkcie navrhnuté priamo pre prevádzku a bezpečnosť.</p>
-      <div class="grid grid-4">
-        <article class="card">
-          <div class="feature-head"><span class="feature-ico">📅</span>
-            <h3>Kalendár úloh</h3>
+      <div class="win-window">
+        <div class="win-titlebar">
+          <span class="win-icon" aria-hidden="true">F</span>
+          Funkcie systému – Čo získate
+          <div class="win-controls" aria-hidden="true">
+            <button title="Minimalizovať">_</button>
+            <button title="Maximalizovať">&#9633;</button>
           </div>
-          <p class="muted">Prehľad termínov, nedostatkov z&nbsp;kontrol a finančných nákladov. Rýchlejšie a presnejšie
-            plánovanie, automatické notifikácie.</p>
-        </article>
-        <article class="card">
-          <div class="feature-head"><span class="feature-ico">🧭</span>
-            <h3>Položky</h3>
-          </div>
-          <p class="muted">Zamestnanci, technické zariadenia, požiarne zariadenia, vozový park a vlastné položky –
-            všetko
-            na jednom mieste.</p>
-        </article>
-        <article class="card">
-          <div class="feature-head"><span class="feature-ico">🔒</span>
-            <h3>Spravovanie systému</h3>
-          </div>
-          <p class="muted">Vlastní editori, zamestnanci a externí pracovníci. Auditná stopa a jasné pravidlá prístupov.
-          </p>
-        </article>
-        <article class="card">
-          <div class="feature-head"><span class="feature-ico">🏷️</span>
-            <h3>QR kódy na VTZ</h3>
-          </div>
-          <p class="muted">Vygenerujte a stiahnite QR nálepku, nalepte ju na zariadenie a po naskenovaní používateľ
-            okamžite uvidí stav platnosti, poslednú a najbližšiu revíziu a rýchly prístup k
-            dokumentom.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="pricing" class="soft">
-    <div class="container">
-      <h2 class="section-title">Cenník</h2>
-      <div class="section-desc">Ceny sú v € bez DPH za 1 kalendárny mesiac predplatenej služby.</div>
-
-      <div class="grid grid-3 pricing">
-        <!-- Standard -->
-        <div class="card price">
-          <h3>Standard</h3>
-          <div class="muted"><strong>od 20 €</strong> / mesiac</div>
-
-          <ul class="list" style="margin-top:.75rem">
-            <li>3 editori systému</li>
-            <li>5&nbsp;GB úložisko</li>
-            <li class="no-icone"><em><b>Počet uložených položiek:</b></em></li>
-            <li>50 zamestnancov</li>
-            <li>15 ks VTZ</li>
-            <li>3 druhy požiarnych zariadení</li>
-            <li>10 ks vozidiel</li>
-            <li>10 vlastných položiek</li>
-          </ul>
         </div>
-
-        <!-- Profi -->
-        <div class="card price highlight">
-          <h3>Profi</h3>
-          <div class="muted"><strong>od 50 €</strong> / mesiac</div>
-
-          <ul class="list" style="margin-top:.75rem">
-            <li>5 editorov systému</li>
-            <li>10&nbsp;GB úložisko</li>
-            <li class="no-icone"><em><b>Počet uložených položiek:</b></em></li>
-            <li>150 zamestnancov</li>
-            <li>30 ks VTZ</li>
-            <li>6 druhov požiarnych zariadení</li>
-            <li>20 ks vozidiel</li>
-            <li>20 vlastných položiek</li>
-          </ul>
-        </div>
-
-        <!-- Individual -->
-        <div class="card price">
-          <h3>Individual</h3>
-          <div class="muted"><strong>Cena individuálne</strong></div>
-
-          <ul class="list" style="margin-top:.75rem">
-            <li>20+&nbsp;GB úložisko</li>
-            <li>Vlastné množstvo položiek</li>
-            <li>Vlastný počet editorov</li>
-          </ul>
+        <div class="win-body">
+          <p class="section-desc">Dokonalý prehľad o úlohách. Funkcie navrhnuté priamo pre prevádzku a bezpečnosť.</p>
+          <div class="grid grid-4">
+            <article class="card">
+              <div class="feature-head">
+                <span class="feature-ico" aria-hidden="true">📅</span>
+                <h3>Kalendár úloh</h3>
+              </div>
+              <p class="muted">Prehľad termínov, nedostatkov z&nbsp;kontrol a finančných nákladov. Rýchlejšie plánovanie, automatické notifikácie.</p>
+            </article>
+            <article class="card">
+              <div class="feature-head">
+                <span class="feature-ico" aria-hidden="true">🧭</span>
+                <h3>Položky</h3>
+              </div>
+              <p class="muted">Zamestnanci, technické zariadenia, požiarne zariadenia, vozový park – všetko na jednom mieste.</p>
+            </article>
+            <article class="card">
+              <div class="feature-head">
+                <span class="feature-ico" aria-hidden="true">🔒</span>
+                <h3>Spravovanie systému</h3>
+              </div>
+              <p class="muted">Vlastní editori, zamestnanci a externí pracovníci. Auditná stopa a jasné pravidlá prístupov.</p>
+            </article>
+            <article class="card">
+              <div class="feature-head">
+                <span class="feature-ico" aria-hidden="true">🏷️</span>
+                <h3>QR kódy na VTZ</h3>
+              </div>
+              <p class="muted">Vygenerujte QR nálepku, nalepte na zariadenie – po naskenovaní uvidíte stav platnosti, revízie a dokumenty.</p>
+            </article>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-
-  <section id="contact" class="contact-section">
+  <!-- ===== Pricing ===== -->
+  <section id="pricing" style="padding:0 0 16px;background:var(--win-bg);">
     <div class="container">
-      <h2 class="section-title">Záujem o prezentáciu a konzultáciu</h2>
-      <p class="section-desc">Zadajte svoje údaje a my vás budeme kontaktovať s termínom.</p>
-
-      <div class="contact-grid">
-        <!-- Ľavý stĺpec: ilustrácia -->
-        <div class="contact-icon">
-          <img src="https://safeo.sk/assets/safeoid/img/undraw_new-message_nl8w.svg" alt="Kontaktujte SafeoID" loading="lazy">
-        </div>
-
-        <!-- Pravý stĺpec: formulár -->
-        <form action="https://safeo.sk/contact-send-email" method="post" class="php-email-form demo-form" id="demo-form"
-          data-recaptcha-site-key="6LdNaasrAAAAAOvIYS3VPbhV9r-cQ95OJFn0rTCA">
-          <!-- skrytá info (predmet/flag) -->
-          <input type="hidden" name="subject" value="Záujem o SafeoID">
-          <input type="hidden" name="message" value="Záujem o SafeoID">
-          <input type="hidden" name="safeoId" value="true">
-
-          <!-- antispam + čas -->
-          <input type="text" name="website_url" class="hp-input" autocomplete="off" tabindex="-1" aria-hidden="true">
-          <input type="hidden" name="form_time" id="form_time">
-
-          <div class="form-group">
-            <input type="text" name="name" class="form-control" placeholder="Meno a priezvisko *" required="">
+      <div class="win-window">
+        <div class="win-titlebar">
+          <span class="win-icon" aria-hidden="true">$</span>
+          Cenník – Licenčné podmienky SafeoID
+          <div class="win-controls" aria-hidden="true">
+            <button title="Minimalizovať">_</button>
+            <button title="Maximalizovať">&#9633;</button>
           </div>
-          <div class="form-group">
-            <input type="email" name="email" class="form-control" placeholder="Email *" required="">
-          </div>
-
-          <!-- správy: NEmaj 'hidden' na WRAPPERI -->
-          <div class="status" aria-live="polite">
-            <div class="loading" hidden="">Odosielam…</div>
-            <div class="error-message" hidden=""></div>
-            <div class="sent-message" hidden="">Ďakujeme! Ozveme sa s termínom prezentácie.</div>
-          </div>
-
-          <div class="text-left">
-            <button type="submit" class="btn submit-btn">Odoslať</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Ako to funguje -->
-  <section id="how-it-works" class="soft">
-    <div class="container">
-      <h2 class="section-title">Ako to funguje</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>Krok 1: Registrácia</h3>
-          <p>Vytvorte si účet a nastavte základné údaje o vašej firme a zariadeniach.</p>
         </div>
-        <div class="card">
-          <h3>Krok 2: Pridanie úloh a zariadení</h3>
-          <p>Jednoducho pridajte zamestnancov, VTZ, úlohy a termíny do systému.</p>
-        </div>
-        <div class="card">
-          <h3>Krok 3: Automatické pripomienky</h3>
-          <p>SafeoID vás automaticky upozorní na blížiace sa termíny a povinnosti.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="win-body">
+          <p class="section-desc">Ceny sú v € bez DPH za 1 kalendárny mesiac predplatenej služby.</p>
+          <div class="grid grid-3 pricing">
 
-  <!-- Prečo SafeoID -->
-  <section id="why-safeoid">
-    <div class="container">
-      <h2 class="section-title">Prečo si vybrať SafeoID?</h2>
-      <div class="grid grid-2">
-        <ul class="list">
-          <li>Jednoduché a intuitívne ovládanie</li>
-          <li>Bezpečné uchovávanie údajov v EÚ</li>
-          <li>Rýchla implementácia bez zložitých inštalácií</li>
-          <li>Pravidelné aktualizácie a podpora</li>
-          <li>Prístup z akéhokoľvek zariadenia</li>
-        </ul>
-        <div>
-          <p>SafeoID je navrhnutý pre firmy, ktoré chcú mať istotu, že na žiadnu povinnosť nezabudnú. Systém je vhodný pre malé aj veľké podniky a je pripravený rásť spolu s vami.</p>
+            <!-- Standard -->
+            <div class="card price">
+              <div class="win-titlebar" style="margin:-10px -10px 10px;font-size:10px;">
+                <span style="font-size:9px;">&#9632;</span> Standard
+              </div>
+              <div class="muted" style="margin-bottom:6px;"><strong>od 20 €</strong> / mesiac</div>
+              <ul class="list">
+                <li>3 editori systému</li>
+                <li>5&nbsp;GB úložisko</li>
+                <li class="no-icone"><em><strong>Počet uložených položiek:</strong></em></li>
+                <li>50 zamestnancov</li>
+                <li>15 ks VTZ</li>
+                <li>3 druhy požiarnych zariadení</li>
+                <li>10 ks vozidiel</li>
+                <li>10 vlastných položiek</li>
+              </ul>
+              <hr class="win-separator">
+              <a class="btn" href="#contact" style="width:100%;display:block;margin-top:4px;">Objednať</a>
+            </div>
+
+            <!-- Profi (highlighted) -->
+            <div class="card price highlight">
+              <div class="win-titlebar" style="margin:-10px -10px 10px;font-size:10px;background:linear-gradient(to right,#0a246a,#316ac5);">
+                <span style="font-size:9px;">★</span> Profi – <em>Odporúčané</em>
+              </div>
+              <div class="muted" style="margin-bottom:6px;"><strong>od 50 €</strong> / mesiac</div>
+              <ul class="list">
+                <li>5 editorov systému</li>
+                <li>10&nbsp;GB úložisko</li>
+                <li class="no-icone"><em><strong>Počet uložených položiek:</strong></em></li>
+                <li>150 zamestnancov</li>
+                <li>30 ks VTZ</li>
+                <li>6 druhov požiarnych zariadení</li>
+                <li>20 ks vozidiel</li>
+                <li>20 vlastných položiek</li>
+              </ul>
+              <hr class="win-separator">
+              <a class="btn" href="#contact"
+                 style="width:100%;display:block;margin-top:4px;background:#0a246a;color:#fff;border-color:#6b9bd2 #000 #000 #6b9bd2;">
+                Objednať ★
+              </a>
+            </div>
+
+            <!-- Individual -->
+            <div class="card price">
+              <div class="win-titlebar" style="margin:-10px -10px 10px;font-size:10px;">
+                <span style="font-size:9px;">&#9632;</span> Individual
+              </div>
+              <div class="muted" style="margin-bottom:6px;"><strong>Cena individuálne</strong></div>
+              <ul class="list">
+                <li>20+&nbsp;GB úložisko</li>
+                <li>Vlastné množstvo položiek</li>
+                <li>Vlastný počet editorov</li>
+              </ul>
+              <hr class="win-separator">
+              <a class="btn" href="#contact" style="width:100%;display:block;margin-top:4px;">Kontaktovať</a>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- O nás -->
-  <section id="about" class="soft">
+  <!-- ===== Contact ===== -->
+  <section id="contact" style="padding:0 0 16px;">
     <div class="container">
-      <h2 class="section-title">O nás</h2>
-      <p>SafeoID vyvíja slovenský tím s dlhoročnými skúsenosťami v oblasti bezpečnosti práce a digitalizácie procesov. Naším cieľom je zjednodušiť firmám život a zvýšiť bezpečnosť na pracovisku.</p>
+      <div class="win-window">
+        <div class="win-titlebar">
+          <span class="win-icon" aria-hidden="true">✉</span>
+          Záujem o prezentáciu a konzultáciu – Nová správa
+          <div class="win-controls" aria-hidden="true">
+            <button title="Minimalizovať">_</button>
+            <button title="Maximalizovať">&#9633;</button>
+            <button title="Zavrieť" style="color:#cc0000;font-weight:bold;">✕</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <p class="section-desc">Zadajte svoje údaje a my vás budeme kontaktovať s termínom.</p>
+          <div class="contact-grid">
+            <div class="contact-icon">
+              <img src="https://safeo.sk/assets/safeoid/img/undraw_new-message_nl8w.svg"
+                   alt="Kontaktujte SafeoID" loading="lazy" style="width:240px;">
+            </div>
+            <form action="https://safeo.sk/contact-send-email" method="post"
+                  class="php-email-form demo-form" id="demo-form"
+                  data-recaptcha-site-key="6LdNaasrAAAAAOvIYS3VPbhV9r-cQ95OJFn0rTCA">
+              <input type="hidden" name="subject" value="Záujem o SafeoID">
+              <input type="hidden" name="message" value="Záujem o SafeoID">
+              <input type="hidden" name="safeoId" value="true">
+              <input type="text" name="website_url" class="hp-input" autocomplete="off" tabindex="-1" aria-hidden="true">
+              <input type="hidden" name="form_time" id="form_time">
+
+              <div class="form-group">
+                <label for="contact-name">Meno a priezvisko *</label>
+                <input type="text" id="contact-name" name="name" class="form-control"
+                       placeholder="Ján Novák" required="">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email *</label>
+                <input type="email" id="contact-email" name="email" class="form-control"
+                       placeholder="jan.novak@firma.sk" required="">
+              </div>
+
+              <div class="status" aria-live="polite">
+                <div class="loading" hidden="">Odosielam…</div>
+                <div class="error-message" hidden=""></div>
+                <div class="sent-message" hidden="">Ďakujeme! Ozveme sa s termínom prezentácie.</div>
+              </div>
+
+              <div class="text-left">
+                <button type="submit" class="btn submit-btn"
+                        style="background:#0a246a;color:#fff;border-color:#6b9bd2 #000 #000 #6b9bd2;padding:4px 20px;">
+                  Odoslať správu &raquo;
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Bezpečnosť a ochrana údajov -->
-  <section id="security">
+  <!-- ===== How it works ===== -->
+  <section id="how-it-works" style="padding:0 0 16px;background:var(--win-bg);">
     <div class="container">
-      <h2 class="section-title">Bezpečnosť a ochrana údajov</h2>
-      <p>Vaše dáta sú uložené na zabezpečených serveroch v EÚ. Pravidelné zálohovanie, šifrovanie a prístupové práva chránia vaše informácie pred zneužitím. SafeoID je v súlade s GDPR.</p>
+      <div class="win-window">
+        <div class="win-titlebar">
+          <span class="win-icon" aria-hidden="true">?</span>
+          Sprievodca nastavením – Ako to funguje
+          <div class="win-controls" aria-hidden="true">
+            <button title="Minimalizovať">_</button>
+            <button title="Zavrieť" style="color:#cc0000;font-weight:bold;">✕</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <div class="grid grid-3">
+            <div class="card">
+              <h3 style="color:#0a246a;">&#9312; Krok 1: Registrácia</h3>
+              <hr class="win-separator">
+              <p>Vytvorte si účet a nastavte základné údaje o vašej firme a zariadeniach.</p>
+            </div>
+            <div class="card">
+              <h3 style="color:#0a246a;">&#9313; Krok 2: Pridanie úloh</h3>
+              <hr class="win-separator">
+              <p>Jednoducho pridajte zamestnancov, VTZ, úlohy a termíny do systému.</p>
+            </div>
+            <div class="card">
+              <h3 style="color:#0a246a;">&#9314; Krok 3: Automatické pripomienky</h3>
+              <hr class="win-separator">
+              <p>SafeoID vás automaticky upozorní na blížiace sa termíny a povinnosti.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- ===== Why SafeoID ===== -->
+  <section id="why-safeoid" style="padding:0 0 16px;">
+    <div class="container">
+      <div class="win-window">
+        <div class="win-titlebar">
+          <span class="win-icon" aria-hidden="true">i</span>
+          Prečo si vybrať SafeoID? – Informácie o produkte
+          <div class="win-controls" aria-hidden="true">
+            <button title="Minimalizovať">_</button>
+            <button title="Zavrieť" style="color:#cc0000;font-weight:bold;">✕</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <div class="grid grid-2">
+            <ul class="list">
+              <li>Jednoduché a intuitívne ovládanie</li>
+              <li>Bezpečné uchovávanie údajov v EÚ</li>
+              <li>Rýchla implementácia bez zložitých inštalácií</li>
+              <li>Pravidelné aktualizácie a podpora</li>
+              <li>Prístup z akéhokoľvek zariadenia</li>
+            </ul>
+            <div class="card" style="font-size:11px;">
+              <p>SafeoID je navrhnutý pre firmy, ktoré chcú mať istotu, že na žiadnu povinnosť nezabudnú. Systém je vhodný pre malé aj veľké podniky a je pripravený rásť spolu s vami.</p>
+              <hr class="win-separator">
+              <a class="btn" href="https://app.safeoid.sk" target="_blank"
+                 style="margin-top:6px;background:#0a246a;color:#fff;border-color:#6b9bd2 #000 #000 #6b9bd2;">
+                Spustiť SafeoID »
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" style="padding:0 0 16px;background:var(--win-bg);">
+    <div class="container">
+      <div class="win-window">
+        <div class="win-titlebar">
+          <span class="win-icon" aria-hidden="true">A</span>
+          O nás – SafeoID s.r.o.
+          <div class="win-controls" aria-hidden="true">
+            <button title="Minimalizovať">_</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <p>SafeoID vyvíja slovenský tím s dlhoročnými skúsenosťami v oblasti bezpečnosti práce
+            a digitalizácie procesov. Naším cieľom je zjednodušiť firmám život a zvýšiť bezpečnosť
+            na pracovisku.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Security ===== -->
+  <section id="security" style="padding:0 0 16px;">
+    <div class="container">
+      <div class="win-window">
+        <div class="win-titlebar">
+          <span class="win-icon" aria-hidden="true">🔒</span>
+          Bezpečnosť a ochrana údajov – Security Center
+          <div class="win-controls" aria-hidden="true">
+            <button title="Minimalizovať">_</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <p>Vaše dáta sú uložené na zabezpečených serveroch v EÚ. Pravidelné zálohovanie, šifrovanie
+            a prístupové práva chránia vaše informácie pred zneužitím. SafeoID je v súlade s GDPR.</p>
+          <div class="card raised" style="margin-top:10px;display:inline-block;padding:6px 14px;font-size:10px;">
+            🔐 256-bit SSL &nbsp;|&nbsp; GDPR &nbsp;|&nbsp; ISO 27001 &nbsp;|&nbsp; Zálohy každých 6 hodín
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
   <footer>
     <div class="container footer-row">
       <div class="muted">© <span id="year"></span> SafeoID. Všetky práva vyhradené.</div>
-<!--      <div class="footer-contact">
-        <strong>Kontakt:</strong> <a href="mailto:info@safeoid.sk" class="">info@safeoid.sk</a> | <a href="tel:+421911123456">+421 911 123 456</a><br>
-        SafeoID, s.r.o., Príkladná 1, 821 01 Bratislava
-      </div>-->
+      <div style="font-size:10px;color:#808080;">
+        Najlepšie zobrazenie: Internet Explorer 6.0 · rozlíšenie 800×600
+      </div>
+      <div style="font-size:10px;">
+        <a href="#home" style="color:#0000ee;">Na začiatok ↑</a>
+      </div>
     </div>
   </footer>
 
   <script src="assets/app.js"></script>
 
-
   <script>
+    // Set copyright year
     document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("form_time").value = Math.floor(Date.now() / 1000);
+      document.getElementById("year").textContent = new Date().getFullYear();
     });
+
+    // Live clock in header
+    function updateClock() {
+      const el = document.getElementById("headerClock");
+      if (el) el.textContent = new Date().toLocaleTimeString("sk-SK");
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
   </script>
 
   <noscript>
-    <div style="background:#fff3cd;color:#856404;padding:1em;text-align:center;">
+    <div style="background:#ffffc0;color:#000;padding:6px;text-align:center;border:1px solid #aaa;font-family:Tahoma,sans-serif;font-size:11px;">
       Táto stránka funguje najlepšie s povoleným JavaScriptom.
     </div>
   </noscript>
 
-  <!-- SEO TIP: Otestujte stránku cez Google Mobile-Friendly Test: https://search.google.com/test/mobile-friendly -->
 </body>
-
 </html>
