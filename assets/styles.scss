@@ -292,6 +292,9 @@ header {
 
   .demo-video-card {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     border-radius: 22px;
     background: #0f1c17;
@@ -310,8 +313,8 @@ header {
   video {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     background: #0f1c17;
   }
 }
