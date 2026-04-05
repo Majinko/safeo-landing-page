@@ -245,6 +245,78 @@ header {
 }
 
 // ------------------------------
+// Product demo
+// ------------------------------
+.product-demo {
+  padding: 56px 0 28px;
+
+  .demo-shell {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    gap: 28px;
+    align-items: center;
+    padding: 26px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .96), rgba(241, 248, 244, .96));
+    border: 1px solid rgba(85, 196, 139, .18);
+    border-radius: 24px;
+    box-shadow: 0 24px 60px rgba(24, 54, 42, .08);
+
+    @media (max-width: 960px) {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+  }
+
+  .demo-kicker {
+    display: inline-flex;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(85, 196, 139, .14);
+    color: #176341;
+    font-size: .9rem;
+    font-weight: 700;
+  }
+
+  .demo-copy {
+    .section-title,
+    .section-desc {
+      margin-left: 0;
+    }
+
+    .section-desc {
+      margin-bottom: 0;
+      max-width: 48ch;
+    }
+  }
+
+  .demo-video-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #0f1c17;
+    border: 1px solid rgba(255, 255, 255, .4);
+    box-shadow: 0 22px 50px rgba(15, 28, 23, .18);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .16), transparent 28%);
+    }
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #0f1c17;
+  }
+}
+
+// ------------------------------
 // Sections / Cards
 // ------------------------------
 section {
