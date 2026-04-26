@@ -279,6 +279,7 @@ header {
   }
 
   .demo-copy {
+
     .section-title,
     .section-desc {
       margin-left: 0;
@@ -583,6 +584,44 @@ footer {
 
 .contact-section {
   padding: 56px 0;
+
+  .contact-direct {
+    margin: -6px 0 24px;
+    color: #486059;
+    font-weight: 600;
+  }
+
+  .contact-phone-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 8px;
+    padding: 8px 12px;
+    border: 1px solid rgba(85, 196, 139, .35);
+    border-radius: 999px;
+    background: rgba(85, 196, 139, .12);
+    color: #176341;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .18s ease, transform .18s ease, border-color .18s ease;
+
+    &:hover {
+      background: rgba(85, 196, 139, .2);
+      border-color: rgba(85, 196, 139, .55);
+      transform: translateY(-1px);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(85, 196, 139, .22);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .contact-phone-link {
+      margin: 8px 0 0;
+    }
+  }
 
   .contact-grid {
     display: grid;

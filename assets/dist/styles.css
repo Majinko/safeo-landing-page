@@ -513,6 +513,39 @@ footer .footer-row {
 .contact-section {
   padding: 56px 0;
 }
+.contact-section .contact-direct {
+  margin: -6px 0 24px;
+  color: #486059;
+  font-weight: 600;
+}
+.contact-section .contact-phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(85, 196, 139, 0.35);
+  border-radius: 999px;
+  background: rgba(85, 196, 139, 0.12);
+  color: #176341;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+}
+.contact-section .contact-phone-link:hover {
+  background: rgba(85, 196, 139, 0.2);
+  border-color: rgba(85, 196, 139, 0.55);
+  transform: translateY(-1px);
+}
+.contact-section .contact-phone-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(85, 196, 139, 0.22);
+}
+@media (max-width: 900px) {
+  .contact-section .contact-phone-link {
+    margin: 8px 0 0;
+  }
+}
 .contact-section .contact-grid {
   display: grid;
   grid-template-columns: 500px 1fr;
@@ -577,7 +610,7 @@ footer .footer-row {
 }
 .contact-section .php-email-form .form-group .form-control:focus {
   outline: none;
-  border-color: rgb(115.288209607, 206.511790393, 159.6672489083);
+  border-color: #73cfa0;
   box-shadow: 0 0 0 4px rgba(85, 196, 139, 0.18);
 }
 .contact-section .php-email-form .form-group textarea.form-control {
@@ -598,7 +631,7 @@ footer .footer-row {
 .contact-section .php-email-form .status .loading {
   background: #f3fbf7;
   color: #176341;
-  border: 1px solid rgb(168.2925764192, 224.9074235808, 195.8349344978);
+  border: 1px solid #a8e1c4;
 }
 .contact-section .php-email-form .status .error-message {
   background: #fff5f5;
@@ -641,5 +674,3 @@ footer .footer-row {
 .contact-section img {
   width: 300px;
 }
-
-/*# sourceMappingURL=styles.css.map */
