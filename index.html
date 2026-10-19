@@ -6,12 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Primary SEO -->
-  <title>Safeo ID – Evidencia VTZ, revízií a BOZP úloh</title>
+  <title>Evidencia VTZ a revízií technických zariadení | Safeo ID</title>
   <meta name="description"
-    content="Safeo ID je jednoduchý systém na evidenciu vyhradených technických zariadení (VTZ), BOZP úloh a termínov. Kalendár, pripomienky, auditná stopa a rýchly prístup k dokumentom." />
+    content="Softvér na evidenciu VTZ a revízií. Safeo ID predvyplní periodicitu revízií, sleduje ich platnosť a e-mailom upozorní na blížiace sa termíny." />
   <link rel="canonical" href="https://safeoid.sk/" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-  <meta name="language" content="sk" />
 
   <!-- Internationalization -->
   <link rel="alternate" hreflang="sk" href="https://safeoid.sk/" />
@@ -20,50 +19,39 @@
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Safeo ID" />
-  <meta property="og:title" content="Safeo ID – Evidencia VTZ, revízií a BOZP úloh" />
+  <meta property="og:title" content="Revízie technických zariadení bez chaosu v termínoch | Safeo ID" />
   <meta property="og:description"
-    content="Majte revízie, školenia, lekárske prehliadky a ďalšie povinnosti pod kontrolou. Safeo ID pripomína termíny a udržiava auditnú stopu." />
+    content="Evidencia VTZ, revízií a dokumentácie na jednom mieste. Safeo ID pomôže nastaviť periodicitu revízií a upozorní na blížiace sa termíny." />
   <meta property="og:url" content="https://safeoid.sk/" />
-  <meta property="og:image" content="https://safeoid.sk/assets/safeoid/img/og-image.jpg" />
+  <meta property="og:image" content="https://safeoid.sk/assets/img/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Safeo ID – evidencia VTZ a revízií technických zariadení" />
   <meta property="og:locale" content="sk_SK" />
-  <meta property="og:locale:alternate" content="en_US" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Safeo ID – Evidencia VTZ, revízií a BOZP úloh" />
+  <meta name="twitter:title" content="Revízie technických zariadení bez chaosu v termínoch | Safeo ID" />
   <meta name="twitter:description"
-    content="Jednoduchá a bezpečná evidencia VTZ, kalendár, pripomienky a auditná stopa." />
-  <meta name="twitter:image" content="https://safeoid.sk/assets/safeoid/img/og-image.jpg" />
+    content="Evidencia VTZ, revízií a dokumentácie na jednom mieste. Upozornenia na termíny e-mailom." />
+  <meta name="twitter:image" content="https://safeoid.sk/assets/img/og-image.jpg" />
 
   <!-- PWA / Theme -->
-  <meta name="theme-color" content="#55c48b" />
-  <!-- (voliteľné) <link rel="manifest" href="/manifest.webmanifest"> -->
+  <meta name="theme-color" content="#ffffff" />
 
   <!-- Performance hints -->
-  <!-- (voliteľné) <link rel="preload" as="image" href="/assets/img/bozp.png" imagesrcset="/assets/img/bozp.png 1x"> -->
-  <link rel="preconnect" href="https://app.safeoid.sk" crossorigin>
   <link rel="dns-prefetch" href="https://app.safeoid.sk">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
 
   <!-- Icons -->
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
 
-  <!-- Author -->
   <meta name="author" content="Safeo ID">
-
-  <!-- Apple status bar -->
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-  <!-- Cache control -->
-  <meta http-equiv="Cache-control" content="public">
-
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/dist/styles.css">
+  <link rel="stylesheet" href="/assets/dist/styles.min.css?v=20261019d">
 
   <!-- Cookie / Consent -->
   <script src="https://www.datacookie.sk/api/jBrSyU4PYngsFAmgV0TSl31GEq9Lv71XBhP6cS9ifYzU7bwZ89/cookie/script"></script>
@@ -72,24 +60,66 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Safeo ID",
-    "url": "https://safeoid.sk/",
-    "logo": "https://safeoid.sk/assets/safeoid/img/og-image.jpg"
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Safeo ID",
-    "url": "https://safeoid.sk/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://safeoid.sk/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://safeoid.sk/#organization",
+        "name": "Safeo ID",
+        "url": "https://safeoid.sk/",
+        "logo": "https://safeoid.sk/assets/img/apple-touch-icon.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+421911635510",
+          "contactType": "sales",
+          "areaServed": "SK",
+          "availableLanguage": "sk"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://safeoid.sk/#website",
+        "name": "Safeo ID",
+        "url": "https://safeoid.sk/",
+        "inLanguage": "sk",
+        "publisher": { "@id": "https://safeoid.sk/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Safeo ID",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://safeoid.sk/",
+        "inLanguage": "sk",
+        "description": "Webová aplikácia na evidenciu vyhradených technických zariadení (VTZ), revízií, kontrol, školení a lekárskych prehliadok s e-mailovými upozorneniami na termíny.",
+        "publisher": { "@id": "https://safeoid.sk/#organization" },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Standard",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "minPrice": 20,
+              "priceCurrency": "EUR",
+              "unitText": "mesiac",
+              "valueAddedTaxIncluded": false
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Profi",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "minPrice": 50,
+              "priceCurrency": "EUR",
+              "unitText": "mesiac",
+              "valueAddedTaxIncluded": false
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -112,193 +142,864 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header>
-    <div class="container nav">
-      <button class="hamburger" id="hamburger" aria-label="Otvoriť menu" aria-controls="mobileMenu"
-        aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+  <!-- Ikony (inline sprite, bez externých požiadaviek) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+      <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.7-.9l-.8-1.2A2 2 0 0 0 7.9 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></symbol>
+      <symbol id="i-qr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM21 14v.01M14 21h.01M17 21h4v-3"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1M12 18h1M7 18h1"/></symbol>
+      <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8z"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.6a1 1 0 0 0-.2-.6l-3.5-4.4a1 1 0 0 0-.8-.4H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.7 18-8-14a2 2 0 0 0-3.5 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3"/><path d="M12 9v4M12 17h.01"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+      <symbol id="i-lift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 9-6-6-6 6M12 3v14M5 21h14"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></symbol>
+      <symbol id="i-devices" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8M10 19v-4M7 19h5"/><rect x="16" y="12" width="6" height="10" rx="2"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+      <symbol id="i-repeat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+    </defs>
+  </svg>
 
-      <a href="#home" class="brand" aria-label="Domov">
-        <img src="/assets/img/header-logo.svg" alt="Safeo ID">
+  <a class="skip-link" href="#obsah">Preskočiť na obsah</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Safeo ID – úvod">
+        <img src="/assets/img/header-logo.svg" alt="Safeo ID" width="180" height="26">
       </a>
 
       <nav class="nav-links" aria-label="Hlavná navigácia">
+        <a href="#ako-funguje">Ako to funguje</a>
         <a href="#features">Funkcie</a>
+        <a href="#pre-koho">Pre koho</a>
         <a href="#pricing">Cenník</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#faq">Otázky</a>
       </nav>
 
-      <a class="btn nav-cta" target="_blank" href="https://app.safeoid.sk">Vyskúšať</a>
+      <div class="nav-actions">
+        <a class="login-link" href="https://app.safeoid.sk" target="_blank" rel="noopener" data-track="login_click"
+          data-cta-location="header">Prihlásiť sa</a>
+        <a class="btn sm nav-cta" href="#contact" data-track="cta_click" data-cta-location="header">Vyskúšať</a>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Otvoriť menu" aria-controls="mobileMenu"
+          aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <div class="mobile-wrap" id="mobileWrap" hidden>
     <div class="backdrop" id="backdrop" tabindex="-1" aria-hidden="true"></div>
-    <nav class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobilná navigácia">
+      <a href="#ako-funguje" class="mobile-link">Ako to funguje</a>
       <a href="#features" class="mobile-link">Funkcie</a>
+      <a href="#pre-koho" class="mobile-link">Pre koho</a>
       <a href="#pricing" class="mobile-link">Cenník</a>
+      <a href="#faq" class="mobile-link">Časté otázky</a>
       <a href="#contact" class="mobile-link">Kontakt</a>
+      <div class="mobile-actions">
+        <a class="btn block" href="#contact" data-track="cta_click" data-cta-location="mobile_menu">Vyskúšať aplikáciu</a>
+        <a class="btn outline block" href="https://app.safeoid.sk" target="_blank" rel="noopener"
+          data-track="login_click" data-cta-location="mobile_menu">Prihlásiť sa</a>
+      </div>
     </nav>
   </div>
 
-  <main class="hero" id="home">
-    <div class="container hero-inner">
-      <div>
-        <h1>Majte svoje úlohy pod kontrolou – revízie, školenia, kurzy, lekárske prehliadky a iné...</h1>
-        <p class="lead">Safeo ID uľahčuje evidenciu, prístup k&nbsp;dokumentom, pripomína termíny a&nbsp;pomáha zvládnuť
-          operatívu vašej prevádzky.</p>
-        <div class="hero-cta">
-          <a class="btn" href="#contact">Začať používať</a>
-          <a class="btn outline" href="#pricing">Pozrieť ceny</a>
+  <main id="obsah">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <span class="kicker">Evidencia VTZ a revízií pre slovenské firmy</span>
+          <h1 id="hero-title">Revízie technických zariadení <span class="accent">bez chaosu v&nbsp;termínoch</span></h1>
+          <p class="lead">Safeo ID je softvér na evidenciu vyhradených technických zariadení a ich revízií. Pomôže vám
+            nastaviť periodicitu revízií podľa kategórie zariadenia, uchová protokoly pri každom zariadení
+            a&nbsp;e-mailom upozorní na termíny skôr, než sa z&nbsp;nich stane problém.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#contact" data-track="cta_click" data-cta-location="hero">Vyskúšať aplikáciu</a>
+            <a class="btn outline" href="#ako-funguje" data-track="cta_click" data-cta-location="hero_secondary">Pozrieť,
+              ako funguje</a>
+          </div>
+          <p class="hero-note">Nezáväzná ukážka na vašich zariadeniach · od 20&nbsp;€ mesačne bez DPH</p>
+          <ul class="hero-trust" aria-label="Hlavné výhody">
+            <li><svg aria-hidden="true"><use href="#i-flag"/></svg>Slovenský produkt a podpora</li>
+            <li><svg aria-hidden="true"><use href="#i-devices"/></svg>V prehliadači, bez inštalácie</li>
+            <li><svg aria-hidden="true"><use href="#i-qr"/></svg>QR kód pri každom zariadení</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="app-mock" role="img"
+            aria-label="Ilustračná ukážka prehľadu technických zariadení v Safeo ID so stavmi platnosti revízií">
+            <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.safeoid.sk · Technické zariadenia</span></div>
+            <div class="mock-body" aria-hidden="true">
+              <div class="mock-title"><strong>Platnosť revízií</strong><span class="muted" style="font-size:.78rem">Prevádzka: Hala Žilina</span></div>
+              <div class="mock-stats">
+                <div><b>42</b><small>Počet VTZ</small></div>
+                <div><b style="color:#a15c00">3</b><small>Blíži sa termín</small></div>
+                <div><b style="color:#b4232f">1</b><small>Po termíne</small></div>
+              </div>
+              <div class="mock-row">
+                <span class="ico"><svg><use href="#i-flame"/></svg></span>
+                <span class="name"><strong>Plynová kotolňa K1</strong><small>Plynové · Odborná prehliadka</small></span>
+                <span class="pill warn">o 24 dní</span>
+              </div>
+              <div class="mock-row">
+                <span class="ico"><svg><use href="#i-lift"/></svg></span>
+                <span class="name"><strong>Mostový žeriav 5 t</strong><small>Zdvíhacie · Odborná skúška</small></span>
+                <span class="pill ok">do 03/2027</span>
+              </div>
+              <div class="mock-row">
+                <span class="ico"><svg><use href="#i-gauge"/></svg></span>
+                <span class="name"><strong>Tlaková nádoba kompresora</strong><small>Tlakové · Vnútorná prehliadka</small></span>
+                <span class="pill danger">Po termíne</span>
+              </div>
+              <div class="mock-row">
+                <span class="ico"><svg><use href="#i-zap"/></svg></span>
+                <span class="name"><strong>Elektroinštalácia – sklad</strong><small>Elektrické · Revízia</small></span>
+                <span class="pill ok">do 11/2028</span>
+              </div>
+            </div>
+            <p class="mock-caption" aria-hidden="true">Ilustračná ukážka s fiktívnymi údajmi</p>
+          </div>
+
+          <div class="float-card float-qr" aria-hidden="true">
+            <svg viewBox="0 0 21 21" shape-rendering="crispEdges"><path fill="#003177" d="M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2zM14 0h7v7h-7zM15 1v5h5V1zM16 2h3v3h-3zM0 14h7v7H0zM1 15v5h5v-5zM2 16h3v3H2zM8 0h2v2H8zM11 1h2v3h-2zM8 3h2v3H8zM9 8h3v2H9zM13 8h2v3h-2zM16 9h4v2h-4zM0 8h3v2H0zM4 9h3v2H4zM8 12h2v2H8zM11 11h2v4h-2zM14 13h3v2h-3zM18 12h3v3h-3zM8 15h2v3H8zM12 16h3v2h-3zM16 16h2v5h-2zM19 17h2v4h-2zM9 19h4v2H9z"/></svg>
+            <span><strong>Stiahnuť QR kód</strong><small>Stav revízií po naskenovaní</small></span>
+          </div>
+          <div class="float-card float-reminder" aria-hidden="true">
+            <span class="icon"><svg><use href="#i-bell"/></svg></span>
+            <span><strong>E-mail: blíži sa termín</strong><small>Odborná prehliadka · Plynová kotolňa K1 – o 30 dní</small></span>
+          </div>
         </div>
       </div>
 
-      <div>
-        <img src="assets/img/bozp.png" alt="Safeo ID – prehľad úloh, revízií a termínov" loading="lazy">
+      <div class="container">
+        <ul class="facts" aria-label="Safeo ID v číslach">
+          <li><b>5</b><span>kategórií VTZ – tlakové, plynové, zdvíhacie, elektrické a požiarne</span></li>
+          <li><b>5×</b><span>e-mailová pripomienka pred koncom platnosti – od 90 dní po posledný deň</span></li>
+          <li><b>37</b><span>preddefinovaných typov školení s predvolenou periodicitou</span></li>
+          <li><b>0</b><span>inštalácií – webová aplikácia pre počítač, tablet aj mobil</span></li>
+        </ul>
       </div>
-    </div>
-  </main>
+    </section>
 
-  <section class="product-demo">
-    <div class="container">
-      <div class="demo-shell">
-        <div class="demo-copy">
-          <span class="demo-kicker">Krátka ukážka systému</span>
-          <h2 class="section-title">Pozrite si, ako vyzerá poriadok v praxi</h2>
-          <p class="section-desc">V krátkej ukážke uvidíte využitie digitálnej platformy Safeo ID, ktorá pomáha
-            zjednodušiť každodennú operatívu aj kontrolu termínov.</p>
+    <!-- ============ PROBLÉM ============ -->
+    <section class="problem soft" id="preco" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Prečo nestačí Excel a kalendár</span>
+          <h2 class="section-title" id="problem-title">Sledovanie revízií v tabuľke funguje, kým sa na niečo nezabudne</h2>
+          <p class="section-desc">Pri desiatkach zariadení, rôznych typoch revízií a viacerých prevádzkach sa zo sledovania
+            termínov revízií stáva riziko. Toto sú situácie, ktoré Safeo ID rieši.</p>
         </div>
 
-        <div class="demo-video-card">
-          <video controls playsinline preload="metadata" poster="assets/img/promo-video-poster.jpg"
-            aria-label="Promo video systému Safeo ID">
-            <source src="assets/promo_video.mp4" type="video/mp4">
-            Váš prehliadač nepodporuje prehrávanie videa. Video si môžete otvoriť priamo cez
-            <a href="assets/promo_video.mp4">tento odkaz</a>.
-          </video>
+        <div class="problem-grid">
+          <article class="card">
+            <span class="icon pain"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <h3>Termíny sa strácajú v tabuľkách</h3>
+            <p>Excel sám neupozorní, že o mesiac končí platnosť odbornej prehliadky. Spoliehate sa na pamäť jedného
+              človeka.</p>
+          </article>
+          <article class="card">
+            <span class="icon pain"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3>Každé zariadenie má iné lehoty</h3>
+            <p>Tlakové, plynové, zdvíhacie či elektrické zariadenia majú odlišné typy revízií a periodicitu. Dohľadávať
+              ich zakaždým zaberá čas.</p>
+          </article>
+          <article class="card">
+            <span class="icon pain"><svg aria-hidden="true"><use href="#i-folder"/></svg></span>
+            <h3>Protokoly sú roztrúsené</h3>
+            <p>V e-mailoch, šanónoch a na diskoch. Keď príde kontrola alebo audit, hľadajú sa doklady pod tlakom.</p>
+          </article>
+          <article class="card">
+            <span class="icon pain"><svg aria-hidden="true"><use href="#i-alert"/></svg></span>
+            <h3>Nedostatky nemajú vlastníka</h3>
+            <p>Revízia zistí nedostatok, ale nie je jasné, kto ho má odstrániť a dokedy. Zostane v poznámke.</p>
+          </article>
+        </div>
+
+        <div class="compare">
+          <table>
+            <caption>Excel alebo kalendár vs. Safeo ID</caption>
+            <thead>
+              <tr>
+                <th scope="col">Úloha</th>
+                <th scope="col">Excel / kalendár</th>
+                <th scope="col">Safeo ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Periodicita revízií</th>
+                <td data-label="Excel">Dohľadávate a prepisujete ručne</td>
+                <td data-label="Safeo ID">Predvyplní sa podľa kategórie, skupiny a typu revízie</td>
+              </tr>
+              <tr>
+                <th scope="row">Upozornenia na termíny</th>
+                <td data-label="Excel">Len ak si ich niekto ručne nastaví</td>
+                <td data-label="Safeo ID">E-maily 90, 30, 10, 5 a 1 deň pred koncom platnosti</td>
+              </tr>
+              <tr>
+                <th scope="row">Protokoly a dokumenty</th>
+                <td data-label="Excel">V rôznych priečinkoch a e-mailoch</td>
+                <td data-label="Safeo ID">Priamo pri zariadení a konkrétnej revízii</td>
+              </tr>
+              <tr>
+                <th scope="row">Stav zariadenia v teréne</th>
+                <td data-label="Excel">Treba volať do kancelárie</td>
+                <td data-label="Safeo ID">QR kód na zariadení zobrazí údaje a revízie</td>
+              </tr>
+              <tr>
+                <th scope="row">Nedostatky z revízie</th>
+                <td data-label="Excel">Poznámka v bunke</td>
+                <td data-label="Safeo ID">Zodpovedná osoba, termín odstránenia a e-mailová notifikácia</td>
+              </tr>
+              <tr>
+                <th scope="row">Viac spoločností a prevádzok</th>
+                <td data-label="Excel">Viac súborov, viac verzií</td>
+                <td data-label="Safeo ID">Všetko v jednom systéme s filtrom podľa prevádzky</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="features">
-    <div class="container">
-      <h2 class="section-title">Čo získate</h2>
-      <p class="section-desc">Dokonalý prehľad o úlohách. Funkcie navrhnuté priamo pre prevádzku a bezpečnosť.</p>
-      <div class="grid grid-4">
-        <article class="card">
-          <div class="feature-head"><span class="feature-ico">📅</span>
-            <h3>Kalendár úloh</h3>
+    <!-- ============ AKO TO FUNGUJE ============ -->
+    <section class="how" id="ako-funguje" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Ako Safeo ID funguje v praxi</span>
+          <h2 class="section-title" id="how-title">Od pridania zariadenia po upozornenie na termín v&nbsp;5&nbsp;krokoch</h2>
+          <p class="section-desc">Kliknite na krok a pozrite si, čo v aplikácii robíte vy a čo urobí Safeo ID za vás.</p>
+        </div>
+
+        <div class="how-grid">
+          <div class="steps" role="tablist" aria-label="Kroky práce so Safeo ID" aria-orientation="vertical">
+            <button class="step" type="button" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true" data-step="1">
+              <span class="num">1</span>
+              <span><strong>Pridáte technické zariadenie</strong>
+                <span class="step-text">Názov, spoločnosť, prevádzka a umiestnenie. Zariadenie má odteraz vlastnú kartu.</span></span>
+            </button>
+            <button class="step" type="button" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1" data-step="2">
+              <span class="num">2</span>
+              <span><strong>Vyberiete kategóriu a parametre</strong>
+                <span class="step-text">Tlakové, plynové, zdvíhacie, elektrické alebo požiarne – so skupinou, podskupinou a technickými údajmi.</span></span>
+            </button>
+            <button class="step" type="button" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1" data-step="3">
+              <span class="num">3</span>
+              <span><strong>Systém pomôže nastaviť revízne povinnosti</strong>
+                <span class="step-text">Ponúkne typy revízií pre danú kategóriu a predvyplní ich periodicitu.</span></span>
+            </button>
+            <button class="step" type="button" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1" data-step="4">
+              <span class="num">4</span>
+              <span><strong>Evidujete vykonané revízie a kontroly</strong>
+                <span class="step-text">Dátum, výsledok, cena a protokol v prílohe. Platnosť sa dopočíta automaticky.</span></span>
+            </button>
+            <button class="step" type="button" role="tab" id="tab-5" aria-controls="panel-5" aria-selected="false" tabindex="-1" data-step="5">
+              <span class="num">5</span>
+              <span><strong>Safeo ID stráži termíny za vás</strong>
+                <span class="step-text">Kalendár, prehľad „Blíži sa termín“ a „Po termíne“ a e-mailové upozornenia.</span></span>
+            </button>
           </div>
-          <p class="muted">Prehľad termínov, nedostatkov z&nbsp;kontrol a finančných nákladov. Rýchlejšie a presnejšie
-            plánovanie, automatické notifikácie.</p>
-        </article>
-        <article class="card">
-          <div class="feature-head"><span class="feature-ico">🧭</span>
-            <h3>Položky</h3>
+
+          <div class="step-panels">
+            <!-- Krok 1 -->
+            <div class="step-panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" tabindex="0">
+              <div class="app-mock">
+                <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Technické zariadenia · Pridať novú položku</span></div>
+                <div class="mock-body">
+                  <div class="form-mock">
+                    <label>Názov zariadenia<span class="field active">Plynová kotolňa K1</span></label>
+                    <div class="two">
+                      <label>Spoločnosť<span class="field select">Vaša spoločnosť s.r.o.</span></label>
+                      <label>Prevádzka<span class="field select">Hala Žilina</span></label>
+                    </div>
+                    <div class="two">
+                      <label>Umiestnenie<span class="field">Suterén, miestnosť 0.12</span></label>
+                      <label>Dátum evidencie<span class="field">15. 01. 2026</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="panel-note">Zariadenia evidujete podľa spoločností a prevádzok – prehľadne aj pri viacerých
+                objektoch.</p>
+            </div>
+
+            <!-- Krok 2 -->
+            <div class="step-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" tabindex="0" hidden>
+              <div class="app-mock">
+                <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Technické zariadenia · Plynové</span></div>
+                <div class="mock-body">
+                  <div class="form-mock">
+                    <label>Kategória<span class="field select">Plynové zariadenie</span></label>
+                    <div class="two">
+                      <label>Skupina<span class="field select active">A</span></label>
+                      <label>Podskupina<span class="field select active">Aa</span></label>
+                    </div>
+                    <div class="two">
+                      <label>Druh plynu<span class="field">Zemný plyn</span></label>
+                      <label>Najvyšší pracovný tlak plynu (MPa)<span class="field">0,3</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="panel-note">Každá kategória VTZ má vlastné technické parametre – tlak, objem, nosnosť, druh plynu
+                a ďalšie.</p>
+            </div>
+
+            <!-- Krok 3 -->
+            <div class="step-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" tabindex="0" hidden>
+              <div class="app-mock">
+                <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Pridať revíziu · Typ revízie</span></div>
+                <div class="mock-body">
+                  <div class="duty">
+                    <strong>Odborná prehliadka</strong><span class="interval">6 mesiacov</span>
+                    <small>Periodicita predvyplnená podľa podskupiny Aa</small>
+                  </div>
+                  <div class="duty">
+                    <strong>Odborná skúška</strong><span class="interval">36 mesiacov</span>
+                    <small>Periodicita predvyplnená podľa podskupiny Aa</small>
+                  </div>
+                  <div class="duty">
+                    <strong>Úradná skúška</strong><span class="interval">120 mesiacov</span>
+                    <small>Periodicita predvyplnená podľa podskupiny Aa</small>
+                  </div>
+                </div>
+              </div>
+              <p class="panel-note">Príklad z aplikácie pre plynové zariadenie, podskupina Aa. Periodicitu môžete vždy
+                upraviť – pri niektorých podskupinách ju zadáte sami.</p>
+            </div>
+
+            <!-- Krok 4 -->
+            <div class="step-panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" tabindex="0" hidden>
+              <div class="app-mock">
+                <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Zoznam revízií · Plynová kotolňa K1</span></div>
+                <div class="mock-body">
+                  <div class="form-mock">
+                    <div class="two">
+                      <label>Dátum revízie<span class="field">10. 02. 2026</span></label>
+                      <label>Platí do<span class="field active">10. 08. 2026</span></label>
+                    </div>
+                    <label>Výsledok revízie<span class="field select">Spôsobilé prevádzky po odstránení nedostatku</span></label>
+                    <div class="two">
+                      <label>Zodpovedná osoba<span class="field">udrzba@vasafirma.sk</span></label>
+                      <label>Termín odstránenia<span class="field">28. 02. 2026</span></label>
+                    </div>
+                    <div class="two">
+                      <label>Cena bez DPH<span class="field">180 €</span></label>
+                      <label>Príloha<span class="field">protokol-OP-2026.pdf</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="panel-note">Pri nedostatku dostane zodpovedná osoba e-mail s popisom a termínom odstránenia.</p>
+            </div>
+
+            <!-- Krok 5 -->
+            <div class="step-panel" role="tabpanel" id="panel-5" aria-labelledby="tab-5" tabindex="0" hidden>
+              <div class="app-mock">
+                <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Domov · Prehľad</span></div>
+                <div class="mock-body">
+                  <div class="mock-stats">
+                    <div><b>42</b><small>Počet VTZ</small></div>
+                    <div><b style="color:#a15c00">3</b><small>Blíži sa termín</small></div>
+                    <div><b style="color:#b4232f">1</b><small>Po termíne</small></div>
+                  </div>
+                  <div class="notice">
+                    <svg aria-hidden="true"><use href="#i-bell"/></svg>
+                    <span><strong>O 30 dní:</strong> odborná prehliadka – Plynová kotolňa K1. E-mail odišiel editorom
+                      spoločnosti.</span>
+                  </div>
+                  <div class="notice danger">
+                    <svg aria-hidden="true"><use href="#i-alert"/></svg>
+                    <span><strong>Po termíne:</strong> vnútorná prehliadka – Tlaková nádoba kompresora.</span>
+                  </div>
+                </div>
+              </div>
+              <p class="panel-note">Upozornenia chodia 90, 30, 10, 5 a 1 deň pred koncom platnosti. Pri školeniach
+                a lekárskych prehliadkach aj priamo zamestnancovi.</p>
+            </div>
           </div>
-          <p class="muted">Zamestnanci, technické zariadenia, požiarne zariadenia, vozový park a vlastné položky –
-            všetko
-            na jednom mieste.</p>
-        </article>
-        <article class="card">
-          <div class="feature-head"><span class="feature-ico">🔒</span>
-            <h3>Spravovanie systému</h3>
+        </div>
+
+        <div class="inline-cta">
+          <p><strong>Chcete to vidieť na vlastných zariadeniach?</strong> Ukážeme vám Safeo ID na vašom prípade.</p>
+          <a class="btn" href="#contact" data-track="cta_click" data-cta-location="how_it_works">Vyskúšať aplikáciu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENEFITY ============ -->
+    <section class="benefits soft" id="prinosy" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Čo vám Safeo ID prinesie</span>
+          <h2 class="section-title" id="benefits-title">Menej administratívy, viac istoty pri revíziách</h2>
+          <p class="section-desc">Nejde o ďalšiu tabuľku. Safeo ID preberá rutinnú prácu okolo revíznych povinností, aby
+            ste sa mohli venovať prevádzke.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3>Menej dohľadávania, kedy a akú revíziu</h3>
+            <p>Pre každú kategóriu VTZ ponúkne správne typy revízií a predvyplní ich periodicitu. Dátum „Platí do“ sa
+              vypočíta sám.</p>
+            <p class="from"><b>Funkcia:</b> revízie a periodicita podľa kategórie</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-bell"/></svg></span>
+            <h3>Nižšie riziko zabudnutých termínov</h3>
+            <p>Sledovanie termínov revízií beží automaticky: päť e-mailových pripomienok od 90 dní až po posledný deň.
+              Nič nezávisí od pamäti jedného človeka.</p>
+            <p class="from"><b>Funkcia:</b> automatické upozornenia</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <h3>Prehľad na jednej obrazovke</h3>
+            <p>Kalendár všetkých termínov a prehľad podľa kategórií: koľko revízií sa blíži a čo je po termíne.</p>
+            <p class="from"><b>Funkcia:</b> kalendár úloh a prehľad</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span>
+            <h3>Dokumentácia na jednom mieste</h3>
+            <p>Protokoly, fotografie a návody priamo pri zariadení, revízii aj zamestnancovi. Žiadne hľadanie v
+              šanónoch.</p>
+            <p class="from"><b>Funkcia:</b> centrálna evidencia zariadení a príloh</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>Jednoduchšia príprava na kontrolu</h3>
+            <p>História revízií so zápisom výsledku, PDF s detailom zariadenia a QR kód, ktorý ukáže stav priamo pri
+              zariadení.</p>
+            <p class="from"><b>Funkcia:</b> archív revízií, PDF a QR kódy</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-wrench"/></svg></span>
+            <h3>Nedostatky dotiahnuté do konca</h3>
+            <p>Ku každému nedostatku z revízie priradíte zodpovednú osobu a termín. Tá dostane e-mail hneď po zápise.</p>
+            <p class="from"><b>Funkcia:</b> výsledky revízií a notifikácie</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VIDEO ============ -->
+    <section class="product-demo" id="ukazka" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="demo-shell">
+          <div class="demo-copy">
+            <span class="kicker">Krátka ukážka systému</span>
+            <h2 class="section-title" id="demo-title">Pozrite si, ako vyzerá poriadok v praxi</h2>
+            <p class="section-desc">Video ukazuje, ako Safeo ID pomáha prevádzke mať zariadenia, revízie a termíny pod
+              kontrolou.</p>
+            <ul class="check-list light">
+              <li>Evidencia VTZ podľa prevádzok</li>
+              <li>Revízie s platnosťou a protokolmi</li>
+              <li>QR kód priamo na zariadení</li>
+            </ul>
+            <a class="btn light" href="#contact" data-track="cta_click" data-cta-location="video">Vyskúšať aplikáciu</a>
           </div>
-          <p class="muted">Vlastní editori, zamestnanci a externí pracovníci. Auditná stopa a jasné pravidlá prístupov.
+
+          <div class="demo-video-card">
+            <video controls playsinline preload="none" poster="assets/img/promo-video-poster.jpg" width="1280"
+              height="720" aria-label="Promo video systému Safeo ID">
+              <source src="assets/promo_video.mp4" type="video/mp4">
+              Váš prehliadač nepodporuje prehrávanie videa. Video si môžete otvoriť priamo cez
+              <a href="assets/promo_video.mp4">tento odkaz</a>.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FUNKCIE ============ -->
+    <section class="features soft" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Funkcie</span>
+          <h2 class="section-title" id="features-title">Všetko pre evidenciu revízií a prevádzkových povinností</h2>
+          <p class="section-desc">Safeo ID je webová aplikácia – funguje v prehliadači na počítači, tablete aj mobile.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-gauge"/></svg></span>
+            <div>
+              <h3>Evidencia VTZ</h3>
+              <p>Tlakové, plynové, zdvíhacie, elektrické a požiarne zariadenia so skupinou, podskupinou a technickými
+                parametrami.</p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-repeat"/></svg></span>
+            <div>
+              <h3>Revízie a kontroly</h3>
+              <p>Typ revízie, dátum, výsledok, cena, poznámky a prílohy. Ďalšiu revíziu založíte jedným krokom, staršie
+                sa archivujú.</p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <div>
+              <h3>Kalendár a upozornenia</h3>
+              <p>Mesačný, týždenný aj denný pohľad na termíny. E-maily editorom spoločnosti a pri školeniach aj
+                zamestnancom.</p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-qr"/></svg></span>
+            <div>
+              <h3>QR kódy na zariadeniach</h3>
+              <p>Stiahnite QR kód a nalepte ho na zariadenie. Po naskenovaní sa zobrazia údaje o zariadení a zoznam
+                revízií – bez prihlásenia.</p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-building"/></svg></span>
+            <div>
+              <h3>Spoločnosti a prevádzky</h3>
+              <p>Viac spoločností a prevádzok v jednom účte. Editori vidia iba spoločnosti, ku ktorým majú prístup.</p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-download"/></svg></span>
+            <div>
+              <h3>PDF a prílohy</h3>
+              <p>Detail zariadenia, vozidla či zamestnanca stiahnete ako PDF. K záznamom priložíte súbory do 30&nbsp;MB.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="items-strip">
+          <span>Okrem VTZ evidujete aj:</span>
+          <span class="tag">Školenia zamestnancov</span>
+          <span class="tag">Lekárske prehliadky</span>
+          <span class="tag">Vozový park – STK, EK, PZP, diaľničné známky</span>
+          <span class="tag">Vlastné položky</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRE KOHO ============ -->
+    <section class="audience" id="pre-koho" aria-labelledby="audience-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Pre koho je Safeo ID</span>
+          <h2 class="section-title" id="audience-title">Pre každého, kto zodpovedá za technické zariadenia</h2>
+          <p class="section-desc">Od jednej prevádzky až po správu desiatok objektov a klientov.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-factory"/></svg></span>
+              <h3>Výrobné spoločnosti</h3>
+            </div>
+            <p>Kompresory, tlakové nádoby, žeriavy, elektroinštalácia hál. Desiatky zariadení s rôznymi lehotami.</p>
+            <p class="gain">Všetky VTZ a ich revízie v jednom prehľade naprieč prevádzkami.</p>
+          </article>
+          <article class="card">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-wrench"/></svg></span>
+              <h3>Prevádzkovatelia technických zariadení</h3>
+            </div>
+            <p>Kotolne, plynové a zdvíhacie zariadenia, kde zmeškaná odborná prehliadka znamená riziko pre prevádzku.</p>
+            <p class="gain">Viete, ktorá prehliadka či skúška vás čaká ako ďalšia.</p>
+          </article>
+          <article class="card">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-building"/></svg></span>
+              <h3>Správcovia budov</h3>
+            </div>
+            <p>Bleskozvody, elektroinštalácia, hasiace prístroje, požiarne uzávery či kotolne vo viacerých objektoch.</p>
+            <p class="gain">Každá budova ako samostatná prevádzka, QR kód priamo na zariadení.</p>
+          </article>
+          <article class="card">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <h3>BOZP technici</h3>
+            </div>
+            <p>Okrem VTZ aj školenia, lekárske prehliadky a ďalšie povinnosti zamestnancov – pre jednu aj viac
+              spoločností.</p>
+            <p class="gain">Termíny všetkých klientov a zamestnancov v jednom kalendári.</p>
+          </article>
+          <article class="card">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-truck"/></svg></span>
+              <h3>Firmy s väčším počtom zariadení</h3>
+            </div>
+            <p>Rozsiahly majetok, vozový park a viacero zodpovedných ľudí, ktorí potrebujú rovnaké informácie.</p>
+            <p class="gain">Balík Individual s vlastným počtom položiek a editorov.</p>
+          </article>
+          <article class="card" style="background:linear-gradient(135deg,#e8f7ef,#fff)">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <h3>Neviete, či sa hodí aj vám?</h3>
+            </div>
+            <p>Povedzte nám, aké zariadenia evidujete. Ukážeme vám Safeo ID na vašom prípade.</p>
+            <a class="btn outline" href="#contact" data-track="cta_click" data-cta-location="audience">Dohodnúť ukážku</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CENNÍK ============ -->
+    <section id="pricing" class="pricing-section soft" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="kicker">Cenník</span>
+          <h2 class="section-title" id="pricing-title">Jednoduché balíky podľa počtu zariadení</h2>
+          <p class="section-desc">Ceny sú v € bez DPH za 1 kalendárny mesiac predplatenej služby.</p>
+        </div>
+
+        <div class="grid grid-3 pricing">
+          <!-- Standard -->
+          <article class="card price">
+            <h3>Standard</h3>
+            <p class="fit">Pre menšiu spoločnosť alebo jednu prevádzku s niekoľkými zariadeniami.</p>
+            <div class="amount"><strong>od 20 €</strong> / mesiac</div>
+            <ul class="check-list">
+              <li>3 editori systému</li>
+              <li>5&nbsp;GB úložisko</li>
+            </ul>
+            <p class="list-label">Počet uložených položiek</p>
+            <ul class="check-list">
+              <li>50 zamestnancov</li>
+              <li>15 ks VTZ</li>
+              <li>3 druhy požiarnych zariadení</li>
+              <li>10 ks vozidiel</li>
+              <li>10 vlastných položiek</li>
+            </ul>
+            <a class="btn outline block" href="#contact" data-plan="Standard" data-track="cta_click"
+              data-cta-location="pricing">Mám záujem o Standard</a>
+          </article>
+
+          <!-- Profi -->
+          <article class="card price highlight">
+            <span class="badge">Pre rastúce prevádzky</span>
+            <h3>Profi</h3>
+            <p class="fit">Pre spoločnosti s viacerými prevádzkami, väčším tímom a vozovým parkom.</p>
+            <div class="amount"><strong>od 50 €</strong> / mesiac</div>
+            <ul class="check-list">
+              <li>5 editorov systému</li>
+              <li>10&nbsp;GB úložisko</li>
+            </ul>
+            <p class="list-label">Počet uložených položiek</p>
+            <ul class="check-list">
+              <li>150 zamestnancov</li>
+              <li>30 ks VTZ</li>
+              <li>6 druhov požiarnych zariadení</li>
+              <li>20 ks vozidiel</li>
+              <li>20 vlastných položiek</li>
+            </ul>
+            <a class="btn block" href="#contact" data-plan="Profi" data-track="cta_click" data-cta-location="pricing">Mám
+              záujem o Profi</a>
+          </article>
+
+          <!-- Individual -->
+          <article class="card price">
+            <h3>Individual</h3>
+            <p class="fit">Pre veľké spoločnosti, správcov viacerých objektov a BOZP technikov s mnohými klientmi.</p>
+            <div class="amount"><strong>Cena individuálne</strong></div>
+            <ul class="check-list">
+              <li>20+&nbsp;GB úložisko</li>
+              <li>Vlastné množstvo položiek</li>
+              <li>Vlastný počet editorov</li>
+            </ul>
+            <a class="btn outline block" href="#contact" data-plan="Individual" data-track="cta_click"
+              data-cta-location="pricing">Získať ponuku</a>
+          </article>
+        </div>
+
+        <div class="included">
+          <span>V každom balíku:</span>
+          <ul>
+            <li>kalendár a e-mailové upozornenia</li>
+            <li>periodicita revízií podľa kategórie</li>
+            <li>QR kódy a PDF export</li>
+            <li>prílohy k záznamom</li>
+            <li>školenia, lekárske prehliadky a vozový park</li>
+          </ul>
+        </div>
+
+        <p class="pricing-note">Neviete, ktorý balík vybrať? Zavolajte na
+          <a href="tel:+421911635510" data-track="phone_click" data-cta-location="pricing">+421&nbsp;911&nbsp;635&nbsp;510</a>
+          a poradíme vám podľa počtu vašich zariadení.</p>
+      </div>
+    </section>
+
+    <!-- ============ DÔVERA ============ -->
+    <section class="trust" id="o-nas" aria-labelledby="trust-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Komu dávate svoje údaje</span>
+          <h2 class="section-title" id="trust-title">Slovenský tím a bezpečný prístup k údajom</h2>
+        </div>
+
+        <div class="trust-grid">
+          <article class="card" id="about">
+            <h3><span class="icon"><svg aria-hidden="true"><use href="#i-flag"/></svg></span>O nás</h3>
+            <p>Safeo ID vyvíja slovenský tím s dlhoročnými skúsenosťami v oblasti bezpečnosti práce a digitalizácie
+              procesov. Aplikáciu navrhujeme podľa toho, ako revízie a kontroly reálne prebiehajú v slovenských
+              prevádzkach.</p>
+            <p>Safeo ID už v praxi používajú prví zákazníci a ich spätná väzba priamo určuje, čo vyvíjame ďalej.</p>
+            <p style="margin:0">Komunikujete s nami po slovensky – priamo s ľuďmi, ktorí aplikáciu vyvíjajú.</p>
+          </article>
+
+          <article class="card" id="security">
+            <h3><span class="icon"><svg aria-hidden="true"><use href="#i-lock"/></svg></span>Bezpečnosť a ochrana údajov</h3>
+            <ul class="check-list">
+              <li>Komunikácia s aplikáciou prebieha cez šifrované spojenie (HTTPS).</li>
+              <li>Prihlasovanie zabezpečuje Firebase Authentication od Google – heslá neukladáme vo vlastnej databáze.</li>
+              <li>Editori vidia iba spoločnosti, ku ktorým im bol pridelený prístup.</li>
+              <li>Databáza je prevádzkovaná u slovenského poskytovateľa hostingu.</li>
+              <li>Zmeny v kľúčových záznamoch systém interne ukladá do histórie.</li>
+              <!-- DOPLNIŤ PO OVERENÍ: zálohovanie, umiestnenie úložiska súborov (EÚ), GDPR / zmluva o spracúvaní OÚ -->
+            </ul>
+          </article>
+
+          <!--
+            REFERENCIE / PRÍPADOVÉ ŠTÚDIE – pripravené na doplnenie.
+            Odkomentujte až po získaní písomného súhlasu zákazníka. Nepublikujte vymyslené údaje.
+
+          <div class="references">
+            <figure class="card quote">
+              <blockquote>„Citát zákazníka – aký problém mal a čo sa zmenilo po zavedení Safeo ID.“</blockquote>
+              <figcaption><strong>Meno Priezvisko</strong>, pozícia · Spoločnosť s.r.o.</figcaption>
+            </figure>
+            <article class="card">
+              <h3>Prípadová štúdia: Názov spoločnosti</h3>
+              <p>Odvetvie · počet prevádzok · počet evidovaných VTZ. Východisková situácia → riešenie → výsledok.</p>
+            </article>
+          </div>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq soft" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="kicker">Časté otázky</span>
+          <h2 class="section-title" id="faq-title">Otázky k evidencii revízií v Safeo ID</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Ako Safeo ID pomáha určiť periodicitu revízií?</summary>
+            <div class="answer">
+              <p>Pri zariadení zvolíte kategóriu (tlakové, plynové, zdvíhacie, elektrické, požiarne), skupinu a
+                podskupinu. Pri pridaní revízie vám aplikácia ponúkne typy revízií pre danú kategóriu – napríklad
+                odbornú prehliadku, odbornú skúšku či úradnú skúšku – a predvyplní ich periodicitu. Dátum „Platí do“ sa
+                vypočíta automaticky.</p>
+              <p>Periodicitu môžete kedykoľvek upraviť a pri niektorých podskupinách ju zadávate sami. Predvyplnené
+                hodnoty sú pomôcka – za stanovenie lehôt zodpovedá prevádzkovateľ zariadenia, preto ich odporúčame
+                overiť s revíznym technikom.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Nahradí Safeo ID revízneho technika?</summary>
+            <div class="answer">
+              <p>Nie. Revízie a odborné prehliadky naďalej vykonáva oprávnená osoba. Safeo ID vám pomáha mať pod
+                kontrolou, kedy treba ktorú revíziu objednať, aký bol jej výsledok, kde je protokol a kto má odstrániť
+                zistené nedostatky.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Kedy a komu prídu upozornenia na termíny?</summary>
+            <div class="answer">
+              <p>E-mailové upozornenia odchádzajú 90, 30, 10, 5 a 1 deň pred koncom platnosti revízie, kontroly,
+                školenia či lekárskej prehliadky. Dostávajú ich editori danej spoločnosti, pri školeniach a lekárskych
+                prehliadkach aj samotný zamestnanec. Keď revízia zistí nedostatok, zodpovedná osoba dostane e-mail hneď.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Čo sa zobrazí po naskenovaní QR kódu na zariadení?</summary>
+            <div class="answer">
+              <p>Verejná stránka zariadenia so základnými a technickými údajmi a zoznamom revízií – typ, platnosť,
+                zodpovedná osoba a výsledok. Na zobrazenie netreba prihlásenie, takže informáciu má k dispozícii aj
+                údržbár či revízny technik priamo pri zariadení.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Čo okrem vyhradených technických zariadení môžem evidovať?</summary>
+            <div class="answer">
+              <p>Školenia zamestnancov (s preddefinovanými typmi a periodicitou), lekárske prehliadky, vozový park
+                vrátane STK, emisných kontrol, PZP či diaľničných známok a vlastné položky podľa potreby vašej
+                prevádzky.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Môžem v jednom účte spravovať viac spoločností a prevádzok?</summary>
+            <div class="answer">
+              <p>Áno. Zariadenia, vozidlá aj zamestnancov priraďujete k spoločnosti a prevádzke a podľa nich ich aj
+                filtrujete. Editori vidia iba spoločnosti, ku ktorým majú prístup.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Potrebujem niečo inštalovať?</summary>
+            <div class="answer">
+              <p>Nie. Safeo ID je webová aplikácia, ktorá beží v prehliadači na počítači, tablete aj mobilnom telefóne.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Ako môžem Safeo ID vyskúšať?</summary>
+            <div class="answer">
+              <p>Vyplňte krátky formulár alebo zavolajte na +421&nbsp;911&nbsp;635&nbsp;510. Ozveme sa vám, ukážeme
+                aplikáciu na príklade vašich zariadení a pripravíme prístup pre vašu spoločnosť.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Koľko Safeo ID stojí?</summary>
+            <div class="answer">
+              <p>Balík Standard začína od 20&nbsp;€ a Profi od 50&nbsp;€ mesačne bez DPH. Pre väčší počet zariadení a
+                editorov pripravíme individuálnu ponuku. Podrobnosti nájdete v <a href="#pricing">cenníku</a>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="kicker">Vyskúšajte Safeo ID</span>
+          <h2 class="section-title" id="contact-title">Majte revízie pod kontrolou ešte pred ďalšou kontrolou</h2>
+          <p class="section-desc">Nechajte nám meno a e-mail. Ozveme sa, ukážeme vám aplikáciu a pripravíme prístup pre
+            vašu spoločnosť.</p>
+          <ul class="check-list light">
+            <li>Ukážka na príklade vašich zariadení a revízií</li>
+            <li>Odporučíme balík podľa počtu vašich položiek</li>
+            <li>Prístup pripravíme pre vašu spoločnosť</li>
+            <li>Nezáväzne – rozhodnete sa až po ukážke</li>
+          </ul>
+          <p class="contact-direct">Radšej telefonicky?
+            <a href="tel:+421911635510" class="contact-phone-link" data-track="phone_click" data-cta-location="contact"
+              aria-label="Zavolať na číslo +421 911 635 510"><svg aria-hidden="true"><use href="#i-phone"/></svg>+421 911 635 510</a>
           </p>
-        </article>
-        <article class="card">
-          <div class="feature-head"><span class="feature-ico">🏷️</span>
-            <h3>QR kódy na VTZ</h3>
-          </div>
-          <p class="muted">Vygenerujte a stiahnite QR nálepku, nalepte ju na zariadenie a po naskenovaní používateľ
-            okamžite uvidí stav platnosti, poslednú a najbližšiu revíziu a rýchly prístup k
-            dokumentom.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="pricing" class="soft">
-    <div class="container">
-      <h2 class="section-title">Cenník</h2>
-      <div class="section-desc">Ceny sú v € bez DPH za 1 kalendárny mesiac predplatenej služby.</div>
-
-      <div class="grid grid-3 pricing">
-        <!-- Standard -->
-        <div class="card price">
-          <h3>Standard</h3>
-          <div class="muted"><strong>od 20 €</strong> / mesiac</div>
-
-          <ul class="list" style="margin-top:.75rem">
-            <li>3 editori systému</li>
-            <li>5&nbsp;GB úložisko</li>
-            <li class="no-icone"><em><b>Počet uložených položiek:</b></em></li>
-            <li>50 zamestnancov</li>
-            <li>15 ks VTZ</li>
-            <li>3 druhy požiarnych zariadení</li>
-            <li>10 ks vozidiel</li>
-            <li>10 vlastných položiek</li>
-          </ul>
         </div>
 
-        <!-- Profi -->
-        <div class="card price highlight">
-          <h3>Profi</h3>
-          <div class="muted"><strong>od 50 €</strong> / mesiac</div>
-
-          <ul class="list" style="margin-top:.75rem">
-            <li>5 editorov systému</li>
-            <li>10&nbsp;GB úložisko</li>
-            <li class="no-icone"><em><b>Počet uložených položiek:</b></em></li>
-            <li>150 zamestnancov</li>
-            <li>30 ks VTZ</li>
-            <li>6 druhov požiarnych zariadení</li>
-            <li>20 ks vozidiel</li>
-            <li>20 vlastných položiek</li>
-          </ul>
-        </div>
-
-        <!-- Individual -->
-        <div class="card price">
-          <h3>Individual</h3>
-          <div class="muted"><strong>Cena individuálne</strong></div>
-
-          <ul class="list" style="margin-top:.75rem">
-            <li>20+&nbsp;GB úložisko</li>
-            <li>Vlastné množstvo položiek</li>
-            <li>Vlastný počet editorov</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2 class="section-title">Záujem o prezentáciu a konzultáciu</h2>
-      <p class="section-desc">Zadajte svoje údaje a my vás budeme kontaktovať s termínom.</p>
-      <p class="contact-direct">Alebo volajte priamo:
-        <a href="tel:+421911635510" class="contact-phone-link" aria-label="Zavolať na číslo +421 911 635 510">+421 911
-          635 510</a>
-      </p>
-
-      <div class="contact-grid">
-        <!-- Ľavý stĺpec: ilustrácia -->
-        <div class="contact-icon">
-          <img src="https://safeo.sk/assets/safeoid/img/undraw_new-message_nl8w.svg" alt="Kontaktujte Safeo ID"
-            loading="lazy">
-        </div>
-
-        <!-- Pravý stĺpec: formulár -->
         <form action="https://safeo.sk/contact-send-email" method="post" class="php-email-form demo-form" id="demo-form"
           data-recaptcha-site-key="6LdNaasrAAAAAOvIYS3VPbhV9r-cQ95OJFn0rTCA">
+          <h3>Chcem vyskúšať Safeo ID</h3>
+          <p class="form-intro">Stačia dva údaje, vyplnenie zaberie pár sekúnd.</p>
+
           <!-- skrytá info (predmet/flag) -->
           <input type="hidden" name="subject" value="Záujem o Safeo ID">
-          <input type="hidden" name="message" value="Záujem o Safeo ID">
+          <input type="hidden" name="message" id="formMessage" value="Záujem o Safeo ID">
           <input type="hidden" name="safeoId" value="true">
 
           <!-- antispam + čas -->
@@ -306,112 +1007,76 @@
           <input type="hidden" name="form_time" id="form_time">
 
           <div class="form-group">
-            <input type="text" name="name" class="form-control" placeholder="Meno a priezvisko *" required="">
+            <label for="f-name">Meno a priezvisko *</label>
+            <input type="text" id="f-name" name="name" class="form-control" autocomplete="name" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" class="form-control" placeholder="Email *" required="">
+            <label for="f-email">Pracovný e-mail *</label>
+            <input type="email" id="f-email" name="email" class="form-control" autocomplete="email" inputmode="email"
+              required>
           </div>
 
           <!-- správy: NEmaj 'hidden' na WRAPPERI -->
           <div class="status" aria-live="polite">
-            <div class="loading" hidden="">Odosielam…</div>
-            <div class="error-message" hidden=""></div>
-            <div class="sent-message" hidden="">Ďakujeme! Ozveme sa s termínom prezentácie.</div>
+            <div class="loading" hidden>Odosielam…</div>
+            <div class="error-message" hidden></div>
+            <div class="sent-message" hidden>Ďakujeme! Ozveme sa s termínom ukážky.</div>
           </div>
 
-          <div class="text-left">
-            <button type="submit" class="btn submit-btn">Odoslať</button>
-          </div>
+          <button type="submit" class="btn submit-btn">Odoslať žiadosť</button>
+          <p class="form-legal">Údaje použijeme len na to, aby sme vás kontaktovali ohľadom Safeo ID.</p>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Ako to funguje -->
-  <section id="how-it-works" class="soft">
-    <div class="container">
-      <h2 class="section-title">Ako to funguje</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>Krok 1: Registrácia</h3>
-          <p>Vytvorte si účet a nastavte základné údaje o vašej firme a zariadeniach.</p>
-        </div>
-        <div class="card">
-          <h3>Krok 2: Pridanie úloh a zariadení</h3>
-          <p>Jednoducho pridajte zamestnancov, VTZ, úlohy a termíny do systému.</p>
-        </div>
-        <div class="card">
-          <h3>Krok 3: Automatické pripomienky</h3>
-          <p>Safeo ID vás automaticky upozorní na blížiace sa termíny a povinnosti.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
-  <!-- Prečo Safeo ID -->
-  <section id="why-safeoid">
+  <footer class="site-footer">
     <div class="container">
-      <h2 class="section-title">Prečo si vybrať Safeo ID?</h2>
-      <div class="grid grid-2">
-        <ul class="list">
-          <li>Jednoduché a intuitívne ovládanie</li>
-          <li>Bezpečné uchovávanie údajov v EÚ</li>
-          <li>Rýchla implementácia bez zložitých inštalácií</li>
-          <li>Pravidelné aktualizácie a podpora</li>
-          <li>Prístup z akéhokoľvek zariadenia</li>
-        </ul>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/img/header-logo.svg" alt="Safeo ID" width="170" height="25" loading="lazy">
+          <p>Softvér na správu revízií: evidencia VTZ, revízií technických zariadení a ďalších prevádzkových povinností na
+            jednom mieste.</p>
+        </div>
+        <nav aria-label="Odkazy v pätičke">
+          <h2>Produkt</h2>
+          <ul>
+            <li><a href="#ako-funguje">Ako to funguje</a></li>
+            <li><a href="#features">Funkcie</a></li>
+            <li><a href="#pricing">Cenník</a></li>
+            <li><a href="#faq">Časté otázky</a></li>
+          </ul>
+        </nav>
         <div>
-          <p>Safeo ID je navrhnutý pre firmy, ktoré chcú mať istotu, že na žiadnu povinnosť nezabudnú. Systém je vhodný
-            pre malé aj veľké podniky a je pripravený rásť spolu s vami.</p>
+          <h2>Kontakt</h2>
+          <ul>
+            <li><a href="tel:+421911635510" data-track="phone_click" data-cta-location="footer">+421 911 635 510</a></li>
+            <li><a href="#contact">Dohodnúť ukážku</a></li>
+            <li><a href="https://app.safeoid.sk" target="_blank" rel="noopener" data-track="login_click"
+                data-cta-location="footer">Prihlásenie do aplikácie</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- O nás -->
-  <section id="about" class="soft">
-    <div class="container">
-      <h2 class="section-title">O nás</h2>
-      <p>Safeo ID vyvíja slovenský tím s dlhoročnými skúsenosťami v oblasti bezpečnosti práce a digitalizácie procesov.
-        Naším cieľom je zjednodušiť firmám život a zvýšiť bezpečnosť na pracovisku.</p>
-    </div>
-  </section>
-
-  <!-- Bezpečnosť a ochrana údajov -->
-  <section id="security">
-    <div class="container">
-      <h2 class="section-title">Bezpečnosť a ochrana údajov</h2>
-      <p>Vaše dáta sú uložené na zabezpečených serveroch v EÚ. Pravidelné zálohovanie, šifrovanie a prístupové práva
-        chránia vaše informácie pred zneužitím. Safeo ID je v súlade s GDPR.</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footer-row">
-      <div class="muted">© <span id="year"></span> Safeo ID. Všetky práva vyhradené.</div>
-      <!--      <div class="footer-contact">
-        <strong>Kontakt:</strong> <a href="mailto:info@safeoid.sk" class="">info@safeoid.sk</a> | <a href="tel:+421911123456">+421 911 123 456</a><br>
-        Safeo ID, s.r.o., Príkladná 1, 821 01 Bratislava
-      </div>-->
+      <div class="footer-bottom">© <span id="year"></span> Safeo ID. Všetky práva vyhradené.</div>
     </div>
   </footer>
 
-  <script src="assets/app.js"></script>
+  <!-- Sticky CTA na mobile -->
+  <div class="mobile-cta" id="mobileCta" aria-hidden="true">
+    <a class="btn" href="#contact" tabindex="-1" data-track="cta_click" data-cta-location="mobile_sticky">Vyskúšať aplikáciu</a>
+    <a class="btn outline" href="tel:+421911635510" tabindex="-1" data-track="phone_click"
+      data-cta-location="mobile_sticky" aria-label="Zavolať">
+      <svg aria-hidden="true" width="18" height="18"><use href="#i-phone"/></svg></a>
+  </div>
 
+  <script src="/assets/app.js?v=20261019d" defer></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("form_time").value = Math.floor(Date.now() / 1000);
     });
   </script>
-
-  <noscript>
-    <div style="background:#fff3cd;color:#856404;padding:1em;text-align:center;">
-      Táto stránka funguje najlepšie s povoleným JavaScriptom.
-    </div>
-  </noscript>
-
-  <!-- SEO TIP: Otestujte stránku cez Google Mobile-Friendly Test: https://search.google.com/test/mobile-friendly -->
 </body>
 
 </html>
