@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "query", "key": "redizajn" }],
+      "destination": "/v2/",
+      "permanent": false
+    }
+  ]
+}
