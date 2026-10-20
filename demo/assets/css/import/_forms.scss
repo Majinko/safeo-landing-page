@@ -1,0 +1,265 @@
+@use 'variables' as *;
+
+// ------------------------------
+// Formulárové polia – vzhľad vstupov z formulára na landingu
+// (biele pole, jemný rámik, zaoblenie 10px, zelený focus)
+// ------------------------------
+.mat-mdc-form-field {
+  font-family: $font-family !important;
+  letter-spacing: 0 !important;
+
+  .mat-mdc-floating-label,
+  .mdc-floating-label {
+    font-family: $font-family !important;
+    letter-spacing: 0 !important;
+  }
+
+  .mat-mdc-form-field-hint,
+  .mat-mdc-form-field-error {
+    font-size: .76rem;
+  }
+}
+
+// Outline polia
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) {
+  background: var(--app-color-surface);
+  border-radius: var(--app-radius-sm);
+
+  .mdc-notched-outline__leading,
+  .mdc-notched-outline__notch,
+  .mdc-notched-outline__trailing {
+    border-color: var(--app-color-border-strong) !important;
+  }
+
+  &:hover .mdc-notched-outline > * {
+    border-color: var(--app-color-brand) !important;
+  }
+
+  &.mdc-text-field--focused .mdc-notched-outline > * {
+    border-color: var(--app-color-theme) !important;
+    border-width: 2px !important;
+  }
+
+  &.mdc-text-field--invalid .mdc-notched-outline > * {
+    border-color: var(--app-color-danger) !important;
+  }
+
+  .mdc-floating-label {
+    color: var(--app-color-text-secondary) !important;
+  }
+
+  &.mdc-text-field--focused .mdc-floating-label {
+    color: var(--app-color-theme) !important;
+  }
+}
+
+.mdc-text-field--outlined {
+  --mat-shape-small: 10px;
+
+  .mdc-notched-outline__leading {
+    border-radius: 10px 0 0 10px !important;
+    width: 12px !important;
+  }
+
+  .mdc-notched-outline__trailing {
+    border-radius: 0 10px 10px 0 !important;
+  }
+}
+
+// Fill polia (väčšina formulárov) – vykreslené ako ohraničené pole
+.mdc-text-field--filled {
+  border-radius: var(--app-radius-sm) !important;
+  border: 1px solid var(--app-color-border-strong);
+  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+
+  &:not(.mdc-text-field--disabled) {
+    background: var(--app-color-surface) !important;
+  }
+
+  &.mdc-text-field--disabled {
+    background: var(--app-color-hover) !important;
+    border-style: dashed;
+  }
+
+  .mdc-line-ripple {
+    display: none;
+  }
+
+  .mat-mdc-form-field-focus-overlay {
+    display: none;
+  }
+
+  &:not(.mdc-text-field--disabled):hover {
+    border-color: var(--app-color-brand);
+  }
+
+  &.mdc-text-field--focused:not(.mdc-text-field--disabled) {
+    border-color: var(--app-color-theme);
+    box-shadow: var(--app-focus-ring);
+  }
+
+  &.mdc-text-field--invalid:not(.mdc-text-field--disabled) {
+    border-color: var(--app-color-danger);
+  }
+
+  &:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--app-color-text-secondary) !important;
+  }
+
+  &.mdc-text-field--focused .mdc-floating-label {
+    color: var(--app-color-theme) !important;
+  }
+}
+
+.mat-mdc-form-field-has-icon-prefix .mat-mdc-form-field-icon-prefix .mat-icon,
+.mat-mdc-form-field-icon-suffix .mat-icon {
+  color: var(--app-color-text-secondary);
+}
+
+.mdc-text-field .mdc-text-field__input,
+.mat-mdc-select-value {
+  color: var(--app-color-text-primary) !important;
+  caret-color: var(--app-color-theme) !important;
+}
+
+.mat-mdc-select-arrow {
+  color: var(--app-color-text-secondary) !important;
+}
+
+// Pôvodná trieda – zachovaná kvôli šablónam
+.custom-mat-field {
+  .mdc-line-ripple {
+    display: none;
+  }
+}
+
+// ng-select (material téma) – zjednotenie s ostatnými poliami
+.ng-select.ng-select-single .ng-select-container,
+.ng-select.ng-select-multiple .ng-select-container {
+  border-radius: var(--app-radius-sm);
+  background: var(--app-color-surface);
+  color: var(--app-color-text-primary);
+}
+
+.ng-select .ng-select-container:after {
+  border-bottom-color: var(--app-color-border-strong) !important;
+}
+
+.ng-select.ng-select-focused .ng-select-container:after {
+  border-color: var(--app-color-theme) !important;
+}
+
+.ng-dropdown-panel {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--app-color-border);
+  box-shadow: var(--app-shadow-lg) !important;
+  background: var(--app-color-surface) !important;
+
+  .ng-option.ng-option-marked {
+    background: var(--app-color-hover) !important;
+  }
+
+  .ng-option.ng-option-selected {
+    color: var(--app-color-theme) !important;
+    background: var(--app-color-theme-soft) !important;
+  }
+}
+
+.ng-select .ng-select-container .ng-value-container .ng-value {
+  border-radius: 999px !important;
+  background: var(--app-color-theme-soft) !important;
+  color: var(--app-color-theme) !important;
+  font-weight: 600;
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--app-color-danger) !important;
+}
+
+.mat-mdc-form-field-error {
+  color: var(--app-color-danger) !important;
+}
+
+.mdc-text-field__input::placeholder {
+  color: var(--app-color-grey-light) !important;
+}
+
+// Tmavý režim – texty Material komponentov (light téma má natvrdo tmavé farby)
+[data-theme='dark'] {
+  .mdc-text-field--disabled .mdc-text-field__input,
+  .mdc-text-field--disabled .mdc-floating-label,
+  .mat-mdc-select-disabled .mat-mdc-select-value {
+    color: var(--app-color-grey-light) !important;
+  }
+
+  .mat-mdc-option .mdc-list-item__primary-text,
+  .mat-mdc-menu-item .mdc-list-item__primary-text,
+  .mat-mdc-menu-item,
+  .mat-mdc-checkbox label,
+  .mdc-form-field,
+  .mat-mdc-radio-button label,
+  .mat-mdc-slide-toggle label,
+  .mat-mdc-paginator,
+  .mat-mdc-paginator-range-label,
+  .mat-mdc-dialog-container .mdc-dialog__content,
+  .mat-calendar-body-cell-content,
+  .mat-calendar-table-header,
+  .mat-calendar-period-button,
+  .mat-mdc-card-content {
+    color: var(--app-color-text-primary) !important;
+  }
+
+  .mat-datepicker-content,
+  .mat-mdc-select-panel,
+  .mat-mdc-autocomplete-panel {
+    background: var(--app-color-surface) !important;
+    color: var(--app-color-text-primary) !important;
+  }
+
+  .mat-mdc-icon-button,
+  .mat-datepicker-toggle .mat-icon,
+  .mat-calendar-arrow,
+  .mat-calendar-previous-button,
+  .mat-calendar-next-button {
+    color: var(--app-color-text-secondary);
+    fill: var(--app-color-text-secondary);
+  }
+
+  .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate) ~ .mdc-checkbox__background {
+    border-color: var(--app-color-text-secondary) !important;
+  }
+}
+
+// Natívne pole na výber súborov (dialógy revízií, školení, prehliadok, kontrol)
+input[type='file'].form-control {
+  padding: 8px 10px;
+  border: 1px dashed var(--app-color-border-strong);
+  border-radius: var(--app-radius-sm);
+  background: var(--app-color-surface-2);
+  color: var(--app-color-text-secondary);
+  font-size: .9rem;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+
+  &:hover {
+    border-color: var(--app-color-brand);
+    background: var(--app-color-theme-soft);
+  }
+
+  &:focus {
+    box-shadow: var(--app-focus-ring);
+    border-color: var(--app-color-theme);
+  }
+
+  &::file-selector-button {
+    margin: 0 12px 0 0 !important;
+    padding: 6px 14px !important;
+    border: 1px solid var(--app-color-border-strong) !important;
+    border-radius: 8px !important;
+    background: var(--app-color-surface) !important;
+    color: var(--app-color-theme) !important;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}

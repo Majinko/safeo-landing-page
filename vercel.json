@@ -2,9 +2,54 @@
   "redirects": [
     {
       "source": "/",
-      "has": [{ "type": "query", "key": "redizajn" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "redizajn"
+        }
+      ],
       "destination": "/v2/",
       "permanent": false
+    },
+    {
+      "source": "/demo",
+      "destination": "/demo/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/demo/:path*",
+      "destination": "/demo/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/demo/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/demo/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/demo/index.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
     }
   ]
 }

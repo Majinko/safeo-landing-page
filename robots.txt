@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+# verejná ukážka aplikácie s fiktívnymi dátami
+Disallow: /demo/
 Sitemap: https://safeoid.sk/sitemap.xml

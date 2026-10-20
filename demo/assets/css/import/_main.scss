@@ -1,0 +1,194 @@
+@use 'variables' as *;
+
+// ------------------------------
+// Base (podľa landing stránky)
+// ------------------------------
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-size: .95rem;
+  line-height: 1.55;
+  background: var(--app-color-bg) !important;
+  color: var(--app-color-text-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mat-typography,
+.mat-typography p,
+.mat-typography h1,
+.mat-typography h2,
+.mat-typography h3,
+.mat-typography h4,
+.mat-typography h5,
+.mat-typography h6 {
+  font-family: $font-family;
+}
+
+h1, h2, h3, h4, h5,
+.mat-typography h1, .mat-typography h2, .mat-typography h3,
+.mat-typography h4, .mat-typography h5 {
+  color: var(--app-color-navy-deep);
+  line-height: 1.2;
+  letter-spacing: -.01em;
+}
+
+h5, .mat-typography h5 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+h6, .mat-typography h6 {
+  font-size: .98rem;
+  font-weight: 700;
+  color: var(--app-color-navy-deep);
+}
+
+a {
+  color: var(--app-color-theme);
+
+  &:hover {
+    color: var(--app-color-theme-hover);
+  }
+}
+
+:focus-visible {
+  outline: 3px solid rgba(26, 127, 83, .45);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(85, 196, 139, .3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+// ------------------------------
+// Karta / box
+// ------------------------------
+.box {
+  background: var(--app-color-surface);
+  padding: 24px;
+  border-radius: var(--app-radius);
+  border: 1px solid var(--app-color-border);
+  box-shadow: var(--app-shadow-sm);
+
+  @media (max-width: $bp-sm) {
+    padding: 18px 16px;
+  }
+}
+
+// Nadpis sekcie v karte (pôvodne zelená čiara pod textom)
+.border-bottom-2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px !important;
+  border-bottom: 1px solid var(--app-color-border);
+  color: var(--app-color-navy-deep) !important;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    width: 4px;
+    height: 18px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: var(--app-gradient);
+  }
+}
+
+// ------------------------------
+// Utility
+// ------------------------------
+.w-s-n {
+  white-space: nowrap !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.border-top-none {
+  border-top: none !important;
+}
+
+.border-bottom-none {
+  border-bottom: none !important;
+}
+
+.border-top,
+.border-bottom,
+.border {
+  border-color: var(--app-color-border) !important;
+}
+
+.muted,
+.text-muted {
+  color: var(--app-color-text-secondary) !important;
+}
+
+.img-thumbnail {
+  width: 200px;
+  border-color: var(--app-color-border);
+  border-radius: var(--app-radius-sm);
+}
+
+.table {
+  &.table-bordered {
+    th, td {
+      border: 1px solid var(--app-color-border);
+    }
+  }
+}
+
+.avatar-photo-edit {
+  .avatar-content {
+    height: 55px !important;
+    width: 55px !important;
+  }
+}
+
+.opacity-70 {
+  opacity: .7;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-pre-line {
+  white-space: pre-line;
+}
+
+// Ikony Material Symbols Rounded (obrys, zaoblené)
+.material-symbols-rounded {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

@@ -1486,6 +1486,27 @@ section {
     margin: 22px 0 26px;
   }
 
+  // dve tlačidlá vedľa seba: kontakt a živé demo
+  .demo-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @media (max-width: $bp-sm) {
+      flex-direction: column;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .demo-note {
+    margin: 12px 0 0;
+    color: #9fb4c8;
+    font-size: .88rem;
+  }
+
   .demo-video-card {
     position: relative;
     overflow: hidden;

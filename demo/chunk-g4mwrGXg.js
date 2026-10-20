@@ -1,0 +1,1 @@
+import{Gt as Se,gt as O,ir as fo,nr as f}from"./chunk-Bm4bxsn3.js";import{A as w}from"./main-2QKM3JVW.js";var s=()=>{let e=f(fo);return f(w).user$.pipe(Se(1),O(t=>t?!0:e.createUrlTree([`/auth/login`])))};var d=()=>{let e=f(fo);return f(w).user$.pipe(Se(1),O(t=>t?e.createUrlTree([`/dashboard`]):!0))};export{s as n,d as t};

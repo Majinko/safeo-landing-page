@@ -1249,6 +1249,24 @@ section {
 .product-demo .check-list {
   margin: 22px 0 26px;
 }
+.product-demo .demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (max-width: 560px) {
+  .product-demo .demo-actions {
+    flex-direction: column;
+  }
+  .product-demo .demo-actions .btn {
+    width: 100%;
+  }
+}
+.product-demo .demo-note {
+  margin: 12px 0 0;
+  color: #9fb4c8;
+  font-size: 0.88rem;
+}
 .product-demo .demo-video-card {
   position: relative;
   overflow: hidden;
@@ -1735,7 +1753,6 @@ section {
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(26, 127, 83, 0.22);
   transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-  width: 100%;
 }
 .contact-section .php-email-form .submit-btn:hover {
   background: #176341;
@@ -1744,6 +1761,9 @@ section {
 .contact-section .php-email-form .submit-btn:focus-visible {
   outline: 3px solid rgba(26, 127, 83, 0.45);
   outline-offset: 2px;
+}
+.contact-section .php-email-form .submit-btn {
+  width: 100%;
 }
 .contact-section .php-email-form .form-legal {
   margin: 12px 0 0;

@@ -1,0 +1,243 @@
+// ==============================
+// Design tokens – zladené s landing stránkou (safeo-landing-page/assets/styles.scss)
+// ==============================
+$font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+
+$bp-lg: 1024px;
+$bp-md: 820px;
+$bp-sm: 560px;
+
+:root {
+  // Značka
+  --app-color-brand              : #55c48b; // značková zelená (akcenty, ikony, grafika)
+  --app-color-theme              : #1a7f53; // zelená pre text a tlačidlá s bielym textom (kontrast 5:1)
+  --app-color-theme-hover        : #176341;
+  --app-color-theme-soft         : #e8f7ef;
+  --app-color-navy               : #003177; // farba loga
+  --app-color-navy-deep          : #0b1f3f; // nadpisy
+  --app-color-teal               : #108d9c;
+  --app-gradient                 : linear-gradient(135deg, #64e8a3 0%, #108d9c 100%);
+  --app-gradient-text            : linear-gradient(90deg, #1a7f53, #108d9c);
+  --app-gradient-dark            : radial-gradient(700px 360px at 100% 0%, rgba(100, 232, 163, .28), transparent 70%),
+                                   linear-gradient(135deg, #0b1f3f, #0f3a5c 70%, #0d5c63);
+
+  // Stavy (rovnaké ako pills na landingu)
+  --app-color-ok                 : #1a7f53;
+  --app-color-ok-bg              : #dcfce7;
+  --app-color-warn               : #a15c00;
+  --app-color-warn-bg            : #fff4d6;
+  --app-color-danger             : #b4232f;
+  --app-color-danger-bg          : #fde8ea;
+
+  // Plochy a text
+  --app-color-bg                 : #f7faf9;
+  --app-color-surface            : #ffffff;
+  --app-color-surface-2          : #fafcfb;
+  --app-color-text-primary       : #111827;
+  --app-color-text-soft          : #33403c;
+  --app-color-text-secondary     : #5b6b66;
+  --app-color-border             : #e2ebe6;
+  --app-color-border-strong      : #cfdcd5;
+  --app-color-hover              : #f3f7f5;
+
+  // Tvar a tiene
+  --app-radius-sm                : 10px;
+  --app-radius                   : 14px;
+  --app-radius-lg                : 22px;
+  --app-shadow-sm                : 0 1px 2px rgba(15, 35, 28, .06), 0 2px 8px rgba(15, 35, 28, .04);
+  --app-shadow                   : 0 10px 30px rgba(24, 54, 42, .08);
+  --app-shadow-lg                : 0 24px 60px rgba(24, 54, 42, .12);
+  --app-focus-ring               : 0 0 0 3px rgba(26, 127, 83, .28);
+  --app-header-h                 : 72px;
+
+  // Spätná kompatibilita (staršie názvy používané v šablónach)
+  --app-color-blue               : #003177;
+  --app-color-grey-dark          : #33403c;
+  --app-color-white              : #ffffff;
+  --app-color-blue-dark          : #0b1f3f;
+  --app-danger                   : #b4232f;
+  --app-success                  : #dcfce7;
+  --app-color-blue-focus         : #1a7f53;
+  --app-color-vehicle            : #108d9c;
+  --app-color-blue-light         : #108d9c;
+  --app-color-blue-inactive-1    : #a9bdb4;
+  --app-color-blue-inactive-2    : #e2ebe6;
+  --app-color-blue-inactive-3    : #f3f7f5;
+  --app-color-blue-hover         : #f3f7f5;
+  --app-color-grey-mid           : #5b6b66;
+  --app-color-drawer             : #5b6b66;
+  --app-color-drawer-content     : #f7faf9;
+  --app-color-grey-light         : #8a9a94;
+  --app-color-grey-inactive      : #e2ebe6;
+  --app-color-grey-bg            : #f3f7f5;
+  --app-color-yellow             : #a15c00;
+  --app-color-yellow-dark        : #8a4f00;
+  --app-color-error              : #b4232f;
+  --app-color-success            : #1a7f53;
+  --app-color-header-border      : #e2ebe6;
+  --app-color-sidebar-text       : #33403c;
+  --app-color-table-header       : #5b6b66;
+  --app-color-table-deactivated-bg: #f3f5f4;
+  --app-color-table-deactivated-border: #cfdcd5;
+}
+
+[data-theme='dark'] {
+  --app-color-brand              : #55c48b;
+  --app-color-theme              : #64e8a3;
+  --app-color-theme-hover        : #9ff0c6;
+  --app-color-theme-soft         : rgba(100, 232, 163, .12);
+  --app-color-navy               : #9fc3ff;
+  --app-color-navy-deep          : #e6eef8;
+  --app-color-teal               : #5fd4e0;
+  --app-gradient-text            : linear-gradient(90deg, #64e8a3, #5fd4e0);
+
+  --app-color-ok                 : #6ee7a8;
+  --app-color-ok-bg              : rgba(34, 197, 94, .14);
+  --app-color-warn               : #fbbf24;
+  --app-color-warn-bg            : rgba(251, 191, 36, .14);
+  --app-color-danger             : #f87171;
+  --app-color-danger-bg          : rgba(248, 113, 113, .14);
+
+  --app-color-bg                 : #08131f;
+  --app-color-surface            : #0f1d2b;
+  --app-color-surface-2          : #0c1824;
+  --app-color-text-primary       : #e6eef8;
+  --app-color-text-soft          : #c3d4e3;
+  --app-color-text-secondary     : #8ea3b6;
+  --app-color-border             : #1f3245;
+  --app-color-border-strong      : #2a4157;
+  --app-color-hover              : #142638;
+  --app-shadow-sm                : 0 1px 2px rgba(0, 0, 0, .3);
+  --app-shadow                   : 0 10px 30px rgba(0, 0, 0, .35);
+  --app-shadow-lg                : 0 24px 60px rgba(0, 0, 0, .45);
+
+  --app-color-blue               : #9fc3ff;
+  --app-color-grey-dark          : #e6eef8;
+  --app-color-white              : #0f1d2b;
+  --app-color-blue-dark          : #e6eef8;
+  --app-danger                   : #f87171;
+  --app-success                  : rgba(34, 197, 94, .14);
+  --app-color-blue-focus         : #64e8a3;
+  --app-color-vehicle            : #5fd4e0;
+  --app-color-blue-light         : #5fd4e0;
+  --app-color-blue-inactive-1    : #2a4157;
+  --app-color-blue-inactive-2    : #1f3245;
+  --app-color-blue-inactive-3    : #0c1824;
+  --app-color-blue-hover         : #142638;
+  --app-color-grey-mid           : #8ea3b6;
+  --app-color-drawer             : #0c1824;
+  --app-color-drawer-content     : #08131f;
+  --app-color-grey-light         : #64798c;
+  --app-color-grey-inactive      : #1f3245;
+  --app-color-grey-bg            : #0c1824;
+  --app-color-yellow             : #fbbf24;
+  --app-color-yellow-dark        : #f59e0b;
+  --app-color-error              : #f87171;
+  --app-color-success            : #6ee7a8;
+  --app-color-header-border      : #1f3245;
+  --app-color-sidebar-text       : #c3d4e3;
+  --app-color-table-header       : #8ea3b6;
+  --app-color-table-deactivated-bg: #0c1824;
+  --app-color-table-deactivated-border: #2a4157;
+}
+
+// Material paleta – primárna = "primary-strong" z landingu (biely text na tlačidlách)
+$md-safeoprimary: (
+  50 : #e8f7ef,
+  100 : #c6ebd6,
+  200 : #a0debb,
+  300 : #6fcd9c,
+  400 : #3fae78,
+  500 : #1a7f53,
+  600 : #17744b,
+  700 : #176341,
+  800 : #125536,
+  900 : #0b3d26,
+  A100 : #b1ffcf,
+  A200 : #7effb0,
+  A400 : #55c48b,
+  A700 : #1a7f53,
+  contrast: (
+    50 : #111827,
+    100 : #111827,
+    200 : #111827,
+    300 : #111827,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #111827,
+    A200 : #111827,
+    A400 : #111827,
+    A700 : #ffffff,
+  )
+);
+
+// Akcent = navy z loga
+$md-safeosecondary: (
+  50 : #e6edf6,
+  100 : #c0d1e8,
+  200 : #8fadd6,
+  300 : #5e88c3,
+  400 : #2f63ad,
+  500 : #003177,
+  600 : #002c6c,
+  700 : #00265e,
+  800 : #001f4f,
+  900 : #0b1f3f,
+  A100 : #a5cfff,
+  A200 : #72afff,
+  A400 : #108d9c,
+  A700 : #0d5c63,
+  contrast: (
+    50 : #111827,
+    100 : #111827,
+    200 : #111827,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #111827,
+    A200 : #111827,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$md-safeowarn: (
+  50 : #fde8ea,
+  100 : #f9c6cb,
+  200 : #f0959d,
+  300 : #e5636f,
+  400 : #d13b49,
+  500 : #b4232f,
+  600 : #a11f2a,
+  700 : #8c1a24,
+  800 : #76161e,
+  900 : #560f15,
+  A100 : #ffb3ba,
+  A200 : #ff808c,
+  A400 : #e5636f,
+  A700 : #b4232f,
+  contrast: (
+    50 : #111827,
+    100 : #111827,
+    200 : #111827,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #111827,
+    A200 : #111827,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);

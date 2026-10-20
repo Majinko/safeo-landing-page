@@ -1,0 +1,486 @@
+@use 'variables' as *;
+
+// ------------------------------
+// Layout (drawer)
+// ------------------------------
+mat-drawer-container {
+  height: 100%;
+  background: var(--app-color-bg);
+}
+
+// Pevná šírka menu – Material 22 inak berie šírku z obsahu a odsadenie obsahu sa rozíde
+mat-drawer-container {
+  --mat-sidenav-container-width: 272px;
+}
+
+mat-drawer,
+.mat-drawer.mat-drawer-side,
+.mat-drawer.mat-drawer-over {
+  width: 272px;
+  background: var(--app-color-surface);
+  border-right: 1px solid var(--app-color-border) !important;
+}
+
+.mat-drawer-container,
+.mat-drawer,
+.mat-drawer-inner-container,
+app-drawer {
+  background: var(--app-color-surface);
+  color: var(--app-color-text-primary);
+}
+
+.mat-drawer-container {
+  background: var(--app-color-bg);
+}
+
+.mat-drawer-content {
+  display: flex !important;
+  flex-direction: column;
+  background: var(--app-color-bg);
+}
+
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: rgba(0, 0, 0, .32);
+}
+
+.spinner-wrap {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+  background: rgba(247, 250, 249, .55);
+  backdrop-filter: blur(1px);
+}
+
+[data-theme='dark'] .spinner-wrap {
+  background: rgba(8, 19, 31, .55);
+}
+
+// ------------------------------
+// Tlačidlá – tvar a správanie ako .btn na landingu
+// ------------------------------
+.mat-mdc-button-base {
+  font-family: $font-family;
+  letter-spacing: 0 !important;
+}
+
+.mat-mdc-button,
+.mat-mdc-unelevated-button,
+.mat-mdc-raised-button,
+.mat-mdc-outlined-button {
+  --mat-shape-small: 12px;
+  border-radius: 12px !important;
+  height: 44px !important;
+  padding: 0 18px !important;
+  font-weight: 700 !important;
+  transition: background .18s ease, transform .18s ease, box-shadow .18s ease, border-color .18s ease !important;
+
+  .mat-icon {
+    margin-right: 6px;
+  }
+
+  .mdc-button__label {
+    text-transform: none;
+  }
+}
+
+.mat-mdc-button {
+  padding: 0 12px !important;
+}
+
+.mat-mdc-unelevated-button.mat-primary:not(:disabled),
+.mat-mdc-raised-button.mat-primary:not(:disabled) {
+  background: var(--app-color-theme) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 20px rgba(26, 127, 83, .22) !important;
+
+  &:hover {
+    background: #176341 !important;
+    transform: translateY(-1px);
+  }
+}
+
+[data-theme='dark'] {
+  .mat-mdc-unelevated-button.mat-primary:not(:disabled),
+  .mat-mdc-raised-button.mat-primary:not(:disabled) {
+    background: #1a7f53 !important;
+
+    &:hover {
+      background: #1f9562 !important;
+    }
+  }
+}
+
+.mat-mdc-raised-button.mat-warn:not(:disabled),
+.mat-mdc-unelevated-button.mat-warn:not(:disabled) {
+  box-shadow: 0 8px 20px rgba(180, 35, 47, .18) !important;
+}
+
+// Stroked = .btn.outline
+.mat-mdc-outlined-button:not(:disabled) {
+  background: var(--app-color-surface);
+  border-color: var(--app-color-border-strong) !important;
+  color: var(--app-color-navy) !important;
+  box-shadow: var(--app-shadow-sm);
+
+  &:hover {
+    background: var(--app-color-hover);
+    border-color: var(--app-color-brand) !important;
+  }
+
+  &.mat-primary {
+    color: var(--app-color-theme) !important;
+  }
+
+  &.mat-warn {
+    color: var(--app-color-danger) !important;
+
+    &:hover {
+      border-color: var(--app-color-danger) !important;
+    }
+  }
+}
+
+.mat-mdc-button:not(:disabled) {
+  color: var(--app-color-text-soft);
+
+  &.mat-primary {
+    color: var(--app-color-theme);
+  }
+
+  &:hover {
+    background: var(--app-color-theme-soft);
+    color: var(--app-color-theme);
+  }
+}
+
+.mat-mdc-icon-button {
+  border-radius: 10px !important;
+  --mat-icon-button-state-layer-size: 40px;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 8px !important;
+  color: var(--app-color-text-secondary);
+  transition: background .18s ease, color .18s ease;
+
+  .mat-mdc-button-persistent-ripple,
+  .mat-mdc-focus-indicator,
+  .mat-ripple {
+    border-radius: 10px !important;
+  }
+
+  &:hover:not(:disabled) {
+    background: var(--app-color-theme-soft);
+    color: var(--app-color-theme) !important;
+
+    .mat-icon {
+      color: var(--app-color-theme) !important;
+    }
+  }
+
+  &.mat-warn:hover:not(:disabled) {
+    background: var(--app-color-danger-bg);
+    color: var(--app-color-danger) !important;
+
+    .mat-icon {
+      color: var(--app-color-danger) !important;
+    }
+  }
+}
+
+.mat-mdc-mini-fab,
+.mat-mdc-fab {
+  box-shadow: var(--app-shadow) !important;
+}
+
+// ------------------------------
+// Karty, dialógy, menu
+// ------------------------------
+.mat-mdc-card {
+  border-radius: var(--app-radius) !important;
+  border: 1px solid var(--app-color-border);
+  box-shadow: var(--app-shadow-sm) !important;
+  background: var(--app-color-surface) !important;
+  color: var(--app-color-text-primary) !important;
+}
+
+.mat-mdc-card-title {
+  font-family: $font-family !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -.01em !important;
+  color: var(--app-color-navy-deep);
+}
+
+// Popisok poľa v detailoch (mat-card-subtitle + <p>)
+.mat-mdc-card-subtitle {
+  font-family: $font-family !important;
+  font-size: .78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .02em !important;
+  line-height: 1.4 !important;
+  color: var(--app-color-text-secondary) !important;
+  margin-bottom: 2px;
+
+  + p {
+    color: var(--app-color-text-primary);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+}
+
+.mat-mdc-dialog-container {
+  --mat-dialog-container-shape: var(--app-radius-lg);
+
+  .mdc-dialog__surface {
+    border-radius: var(--app-radius-lg) !important;
+    background: var(--app-color-surface) !important;
+    box-shadow: var(--app-shadow-lg) !important;
+  }
+
+  .mat-mdc-dialog-title {
+    font-family: $font-family;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    color: var(--app-color-navy-deep) !important;
+    padding-top: 22px;
+
+    &::before {
+      height: 46px;
+    }
+  }
+
+  .mdc-dialog__content,
+  .mat-mdc-dialog-content {
+    font-family: $font-family !important;
+    color: var(--app-color-text-soft) !important;
+    letter-spacing: 0 !important;
+  }
+
+  .mat-mdc-dialog-actions {
+    gap: 8px;
+    padding: 12px 24px 20px !important;
+    border-top: 1px solid var(--app-color-border);
+  }
+}
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(11, 31, 63, .38);
+}
+
+.mat-mdc-menu-panel {
+  border-radius: 12px !important;
+  border: 1px solid var(--app-color-border);
+  box-shadow: var(--app-shadow-lg) !important;
+  background: var(--app-color-surface) !important;
+  min-width: 200px !important;
+
+  .mat-mdc-menu-content {
+    padding: 6px !important;
+  }
+
+  .mat-mdc-menu-item {
+    border-radius: 8px;
+    min-height: 42px;
+    font-family: $font-family;
+    font-weight: 500;
+    color: var(--app-color-text-soft);
+
+    .mat-icon {
+      color: var(--app-color-text-secondary);
+      margin-right: 12px;
+    }
+
+    &:hover:not([disabled]) {
+      background: var(--app-color-theme-soft);
+      color: var(--app-color-theme);
+
+      .mat-icon {
+        color: var(--app-color-theme);
+      }
+    }
+  }
+}
+
+.mat-mdc-select-panel,
+.mat-mdc-autocomplete-panel {
+  border-radius: 12px !important;
+  border: 1px solid var(--app-color-border);
+  box-shadow: var(--app-shadow-lg) !important;
+  padding: 6px !important;
+  background: var(--app-color-surface) !important;
+
+  .mat-mdc-option {
+    border-radius: 8px;
+    min-height: 42px;
+    font-family: $font-family;
+
+    &.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+      color: var(--app-color-theme) !important;
+      font-weight: 600;
+    }
+
+    &:hover:not(.mdc-list-item--disabled),
+    &.mat-mdc-option-active {
+      background: var(--app-color-hover) !important;
+    }
+  }
+}
+
+.mat-mdc-tooltip .mdc-tooltip__surface {
+  background: var(--app-color-navy-deep) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  font-family: $font-family !important;
+  font-size: .78rem !important;
+  padding: 6px 10px !important;
+}
+
+[data-theme='dark'] .mat-mdc-tooltip .mdc-tooltip__surface {
+  background: #e6eef8 !important;
+  color: #0b1f3f !important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  border-radius: 12px !important;
+  background: var(--app-color-navy-deep) !important;
+  box-shadow: var(--app-shadow-lg) !important;
+}
+
+// ------------------------------
+// Taby
+// ------------------------------
+.mat-mdc-tab-group {
+  .mat-mdc-tab-header {
+    border-bottom: 1px solid var(--app-color-border);
+  }
+
+  .mat-mdc-tab {
+    font-family: $font-family !important;
+    letter-spacing: 0 !important;
+    min-width: auto !important;
+    padding: 0 18px !important;
+
+    .mdc-tab__text-label {
+      font-weight: 600;
+      color: var(--app-color-text-secondary) !important;
+    }
+
+    &.mdc-tab--active .mdc-tab__text-label {
+      color: var(--app-color-theme) !important;
+    }
+  }
+
+  .mdc-tab-indicator__content--underline {
+    border-color: var(--app-color-theme) !important;
+    border-top-width: 3px !important;
+    border-radius: 3px 3px 0 0;
+  }
+}
+
+// ------------------------------
+// Tabuľky (mat-table)
+// ------------------------------
+.mat-mdc-table {
+  background: var(--app-color-surface) !important;
+  color: var(--app-color-text-primary);
+
+  .mdc-data-table__row {
+    transition: background .15s ease;
+
+    &:hover {
+      background: var(--app-color-hover);
+
+      .invisible {
+        visibility: visible !important;
+      }
+    }
+  }
+}
+
+.mat-mdc-header-row,
+.mat-mdc-row,
+.mat-mdc-footer-row {
+  background: transparent !important;
+}
+
+.mat-mdc-header-row {
+  height: 46px !important;
+  background: var(--app-color-surface-2) !important;
+}
+
+.mat-mdc-header-cell {
+  font-family: $font-family !important;
+  font-size: .76rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+  text-transform: uppercase;
+  color: var(--app-color-text-secondary) !important;
+  border-bottom-color: var(--app-color-border) !important;
+}
+
+.mat-mdc-row {
+  height: 56px !important;
+}
+
+.mat-mdc-cell,
+.mat-mdc-footer-cell {
+  font-family: $font-family !important;
+  font-size: .92rem !important;
+  color: var(--app-color-text-primary);
+  border-bottom-color: var(--app-color-border) !important;
+}
+
+.mat-mdc-paginator {
+  background: transparent !important;
+  color: var(--app-color-text-secondary) !important;
+  font-family: $font-family !important;
+
+  .mat-mdc-paginator-container {
+    min-height: 60px;
+  }
+
+  .mat-mdc-form-field {
+    .mdc-text-field--outlined {
+      --mat-shape-small: 8px;
+    }
+  }
+}
+
+.mat-sort-header-arrow {
+  color: var(--app-color-theme) !important;
+}
+
+// ------------------------------
+// Ostatné
+// ------------------------------
+.mat-divider {
+  border-top-color: var(--app-color-border) !important;
+}
+
+.mat-mdc-progress-spinner circle,
+.mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
+  stroke: var(--app-color-brand) !important;
+}
+
+.mat-mdc-checkbox .mdc-checkbox__background {
+  border-radius: 5px !important;
+}
+
+.mat-mdc-chip {
+  border-radius: 999px !important;
+  font-family: $font-family !important;
+  font-weight: 600 !important;
+}
+
+.mat-expansion-panel {
+  border-radius: var(--app-radius) !important;
+  border: 1px solid var(--app-color-border);
+  box-shadow: none !important;
+}

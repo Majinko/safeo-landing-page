@@ -1,0 +1,820 @@
+@use 'variables' as *;
+
+// ==============================
+// Zdieľané komponenty prevzaté z landing stránky
+// ==============================
+
+// Kicker – malý štítok nad nadpisom
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--app-color-theme-soft);
+  color: var(--app-color-theme-hover);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+[data-theme='dark'] .kicker {
+  color: var(--app-color-theme);
+}
+
+// Status pills – rovnaké stavy ako na landingu
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: .76rem;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  color: var(--app-color-text-secondary);
+  background: var(--app-color-hover);
+
+  &::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  &.ok {
+    color: var(--app-color-ok);
+    background: var(--app-color-ok-bg);
+  }
+
+  &.warn {
+    color: var(--app-color-warn);
+    background: var(--app-color-warn-bg);
+  }
+
+  &.danger {
+    color: var(--app-color-danger);
+    background: var(--app-color-danger-bg);
+  }
+}
+
+// Ikona v jemnom zelenom štvorčeku
+.icon-tile {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--app-color-theme-soft);
+  color: var(--app-color-theme);
+
+  .mat-icon {
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    color: inherit !important;
+  }
+
+  &.sm {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+
+    .mat-icon {
+      width: 18px;
+      height: 18px;
+      font-size: 18px;
+    }
+  }
+
+  &.navy {
+    background: rgba(0, 49, 119, .08);
+    color: var(--app-color-navy);
+  }
+
+  &.teal {
+    background: rgba(16, 141, 156, .1);
+    color: var(--app-color-teal);
+  }
+
+  &.warn {
+    background: var(--app-color-warn-bg);
+    color: var(--app-color-warn);
+  }
+
+  &.danger {
+    background: var(--app-color-danger-bg);
+    color: var(--app-color-danger);
+  }
+}
+
+// Hlavička zoznamu (počet + akcia)
+.list-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  h5 {
+    margin: 0;
+    font-weight: 700 !important;
+  }
+
+  @media (max-width: 768px) {
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+// Filtre nad tabuľkou – mriežka s rovnakou šírkou polí
+.filter-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+  gap: 0 12px;
+  align-items: start;
+
+  > .mat-mdc-form-field {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  > .mat-mdc-icon-button {
+    justify-self: start;
+    margin: 8px 0 0 !important;
+  }
+}
+
+// Panel hromadných akcií nad tabuľkou (keď sú vybraté riadky)
+.bulk-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 8px;
+  padding: 10px 12px 10px 16px;
+  border: 1px solid rgba(26, 127, 83, .25);
+  border-radius: var(--app-radius-sm);
+  background: var(--app-color-theme-soft);
+
+  .bulk-count {
+    font-weight: 700;
+    color: var(--app-color-theme);
+  }
+}
+
+// Štatistické karty (dashboard) – štýl .facts / .mock-stats z landingu
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+  padding: 20px 22px;
+  background: var(--app-color-surface);
+  border: 1px solid var(--app-color-border);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-sm);
+  color: inherit;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+
+  &:hover {
+    color: inherit;
+    transform: translateY(-2px);
+    box-shadow: var(--app-shadow);
+    border-color: var(--app-color-border-strong);
+  }
+
+  b {
+    display: block;
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: -.02em;
+    background: var(--app-gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  small {
+    display: block;
+    margin-top: 6px;
+    color: var(--app-color-text-secondary);
+    font-size: .86rem;
+    line-height: 1.35;
+  }
+}
+
+// ------------------------------
+// Prihlásenie / reset hesla
+// ------------------------------
+.auth-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  min-height: 100vh;
+  background: var(--app-color-bg);
+
+  @media (max-width: $bp-lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.auth-aside {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 56px;
+  background: var(--app-gradient-dark);
+  color: #d7e4ef;
+
+  .brand-chip {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: #fff;
+
+    img {
+      width: 150px;
+      display: block;
+    }
+  }
+
+  h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.12;
+    letter-spacing: -.025em;
+    margin: 18px 0 14px;
+
+    .accent {
+      background: linear-gradient(90deg, #64e8a3, #5fd4e0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  .lead {
+    color: #c3d4e3;
+    font-size: 1.05rem;
+    max-width: 46ch;
+    margin: 0;
+  }
+
+  .kicker {
+    background: rgba(100, 232, 163, .16);
+    color: #9ff0c6;
+  }
+
+  .check-list {
+    display: grid;
+    gap: 12px;
+    margin: 28px 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 32px;
+      color: #e6eef8;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .15em;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364e8a3' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center / 12px no-repeat;
+    }
+  }
+
+  .aside-foot {
+    font-size: .86rem;
+    color: #9fb4c8;
+
+    a {
+      color: #9ff0c6;
+    }
+  }
+
+  @media (max-width: $bp-lg) {
+    padding: 28px 24px;
+    gap: 20px;
+
+    .aside-copy .lead,
+    .check-list,
+    .aside-foot {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.auth-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+
+  @media (max-width: $bp-sm) {
+    padding: 28px 16px 40px;
+    align-items: flex-start;
+  }
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 32px;
+  background: var(--app-color-surface);
+  border: 1px solid var(--app-color-border);
+  border-radius: var(--app-radius-lg);
+  box-shadow: var(--app-shadow-lg);
+
+  h2 {
+    font-size: 1.6rem;
+    margin: 0 0 6px;
+  }
+
+  .sub {
+    color: var(--app-color-text-secondary);
+    margin: 0 0 24px;
+  }
+
+  .mat-mdc-form-field {
+    width: 100%;
+  }
+
+  .submit {
+    width: 100%;
+    height: 48px !important;
+    margin-top: 8px;
+  }
+
+  .alt-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .notice {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    margin-top: 16px;
+    border-radius: 12px;
+    background: var(--app-color-ok-bg);
+    color: var(--app-color-ok);
+    font-weight: 600;
+    font-size: .9rem;
+  }
+
+  @media (max-width: $bp-sm) {
+    padding: 24px 20px;
+    box-shadow: var(--app-shadow);
+  }
+}
+
+// ------------------------------
+// Verejné stránky (QR kód) – hlavička
+// ------------------------------
+.public-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 64px;
+  padding: 0 24px;
+  background: rgba(255, 255, 255, .92);
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--app-color-border);
+
+  img {
+    width: 150px;
+    display: block;
+  }
+
+  @media (max-width: $bp-sm) {
+    padding: 0 16px;
+
+    img {
+      width: 124px;
+    }
+  }
+}
+
+[data-theme='dark'] .public-topbar {
+  background: rgba(15, 29, 43, .92);
+}
+
+.public-topbar .kicker {
+  .kicker-icon {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+  }
+
+  @media (max-width: $bp-sm) {
+    font-size: .72rem;
+    padding: 4px 10px;
+  }
+}
+
+.public-page {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+
+  @media (max-width: $bp-sm) {
+    padding: 16px 12px 40px;
+  }
+}
+
+[data-theme='dark'] .public-topbar img {
+  width: 140px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-sizing: content-box;
+}
+
+// Prázdny stav tabuľky
+.no-data-row:hover {
+  background: transparent !important;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 40px 16px;
+  text-align: center;
+  color: var(--app-color-text-secondary);
+
+  strong {
+    color: var(--app-color-navy-deep);
+    font-size: 1rem;
+  }
+
+  .icon-tile {
+    margin-bottom: 6px;
+  }
+
+  &.compact {
+    padding: 20px 12px;
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .stat-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px;
+
+    .icon-tile {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+
+      .mat-icon {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+      }
+    }
+
+    b {
+      font-size: 1.5rem;
+    }
+
+    small {
+      margin-top: 4px;
+      font-size: .74rem;
+    }
+  }
+}
+
+// ------------------------------
+// Detailové polia (zariadenie, vozidlo, zamestnanec, firma, verejné stránky)
+// Stĺpce .col-md-6 s dvojicami „popis + hodnota“ sa zložia do kompaktnej mriežky.
+// ------------------------------
+.box > .row:has(> [class*='col-md-6'] .mat-mdc-card-subtitle) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+  gap: 2px 28px;
+  margin: 0;
+
+  > * {
+    width: auto;
+    max-width: none;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  // nadpis sekcie, poznámka a podobne cez celú šírku
+  > .col-12,
+  > .col-md-12 {
+    grid-column: 1 / -1;
+  }
+
+  // obaly stĺpcov a pomocné obaly skupín „rozpustíme“, aby boli polia priamo v mriežke
+  > [class*='col-md-6']:not(:has(> .mat-mdc-card-subtitle)),
+  > [class*='col-md-6'] > div:not(:has(> .mat-mdc-card-subtitle)) {
+    display: contents;
+  }
+
+  // pole vo vnorenom riadku (.col-md-6 > .row > .col-12) je priamo v mriežke – bez odsadenia stĺpca
+  > [class*='col-md-6'] [class*='col']:has(> .mat-mdc-card-subtitle) {
+    padding: 0;
+  }
+
+  .mat-mdc-card-subtitle + p {
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+  }
+}
+
+// Vozidlo: polia sú v riadkoch .row > .col – zložíme ich do rovnakej mriežky
+.box > .row > .col-12:has(> .row > .col .mat-mdc-card-subtitle) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+  gap: 2px 28px;
+
+  > .row,
+  > .row > .col:not(:has(> .mat-mdc-card-subtitle)),
+  > .row > .col > div:not(:has(> .mat-mdc-card-subtitle)) {
+    display: contents;
+  }
+
+  > .row > .col,
+  > .row > .col > div {
+    padding: 0;
+  }
+
+  .mat-mdc-card-subtitle + p {
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: $bp-sm) {
+  .box > .row:has(> [class*='col-md-6'] .mat-mdc-card-subtitle),
+  .box > .row > .col-12:has(> .row > .col .mat-mdc-card-subtitle) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px 16px;
+  }
+}
+
+// Hlavička detailu: názov + akčné ikony – ikony ostanú v jednom rade
+.box .mat-mdc-card-title.d-flex {
+  gap: 12px;
+
+  > div:last-child {
+    display: flex;
+    flex-shrink: 0;
+  }
+}
+
+// Prázdne polia na detailoch (direktíva appEmptyFields)
+.hide-empty-fields .is-empty-field {
+  display: none !important;
+}
+
+.is-empty-field > [data-empty-label] {
+  font-size: 0;
+
+  &::after {
+    content: attr(data-empty-label);
+    color: var(--app-color-text-secondary);
+    font-size: .875rem;
+    opacity: .8;
+  }
+}
+
+// Kalendár v tmavom režime – dnešný deň má svetlozelené pozadie, text tmavý
+[data-theme='dark'] .calendar-wrapper .fc-day-today .fc-daygrid-day-number {
+  color: #0b1f3f !important;
+}
+
+// Dva stavové pruhy vedľa seba (verejná stránka zamestnanca)
+.validity-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 12px;
+}
+
+// Odkaz späť na zoznam nad detailom
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 12px;
+  color: var(--app-color-text-secondary);
+  font-size: .88rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  .mat-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: var(--app-color-theme);
+  }
+}
+
+// Výsledky globálneho vyhľadávania (overlay mimo komponentu)
+.search-panel {
+  .mat-mdc-optgroup-label {
+    min-height: 32px;
+    color: var(--app-color-text-secondary);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .search-hint {
+    color: var(--app-color-text-secondary) !important;
+    font-size: .88rem;
+  }
+
+  .search-result {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+
+    .mat-icon {
+      flex-shrink: 0;
+      margin: 0 !important;
+      color: var(--app-color-text-secondary);
+    }
+
+    strong {
+      display: block;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    small {
+      display: block;
+      color: var(--app-color-text-secondary);
+      font-size: .78rem;
+      line-height: 1.3;
+    }
+
+    &.deactivated {
+      opacity: .6;
+    }
+  }
+}
+
+.auth-card .notice.error {
+  background: var(--app-color-danger-bg);
+  color: var(--app-color-danger);
+  margin: 0 0 12px;
+}
+
+// ------------------------------
+// Hlásenia (snackbar) – info / úspech / chyba
+// ------------------------------
+.app-toast-panel {
+  .mdc-snackbar__surface {
+    padding: 0 !important;
+    min-width: min(92vw, 360px) !important;
+  }
+
+  .mdc-snackbar__label {
+    padding: 0 !important;
+  }
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 6px 10px 14px;
+  color: #fff;
+  font-family: $font-family;
+  font-size: .92rem;
+  line-height: 1.4;
+
+  .toast-message {
+    flex: 1;
+  }
+
+  .toast-close .mat-icon,
+  .toast-close {
+    color: rgba(255, 255, 255, .8) !important;
+  }
+}
+
+.toast-success .toast-icon {
+  color: #6ee7a8;
+}
+
+.toast-error .toast-icon {
+  color: #ff9aa4;
+}
+
+.toast-info .toast-icon {
+  color: #9fc3ff;
+}
+
+.app-toast-error .mdc-snackbar__surface {
+  background: #5c1219 !important;
+}
+
+// Lišta s uložením formulára – pri dlhom formulári zostáva prilepená na spodku obrazovky
+.form-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 24px -24px -24px;
+  padding: 14px 24px;
+  background: color-mix(in srgb, var(--app-color-surface) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--app-color-border);
+  border-radius: 0 0 var(--app-radius) var(--app-radius);
+
+  .mat-mdc-unelevated-button {
+    min-width: 132px;
+  }
+
+  @media (max-width: $bp-sm) {
+    margin: 20px -16px -18px;
+    padding: 12px 16px;
+
+    .mat-mdc-unelevated-button {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+}
+
+.form-actions-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: auto;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--app-color-warn);
+
+  .mat-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: $bp-sm) {
+    display: none;
+  }
+}
+
+// Zástupný blok počas načítavania
+.skeleton-line {
+  display: block;
+  height: 14px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--app-color-hover), var(--app-color-border), var(--app-color-hover));
+  background-size: 200% 100%;
+  animation: app-shimmer 1.2s infinite linear;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes app-shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
