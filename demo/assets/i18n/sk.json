@@ -1,4 +1,16 @@
 {
+  "LANGUAGE": {
+    "LABEL": "Jazyk",
+    "sk": "Slovenčina",
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "PHOTO": {
+    "SET": "Nastaviť fotku",
+    "NOT_IMAGE": "Vyberte obrázok (JPG, PNG, …).",
+    "TOO_LARGE": "Súbor má viac ako {{size}} MB.",
+    "UPLOAD_FAILED": "Fotku sa nepodarilo nahrať."
+  },
   "DEMO": {
     "TITLE": "Prezeráte si ukážku Safeo ID",
     "TEXT": "Firma aj údaje sú fiktívne. Skúšajte pokojne čokoľvek – zmeny vidíte len vy a po zatvorení okna sa zahodia.",
@@ -319,6 +331,7 @@
     "FILE_MANAGER": "Správa súborov"
   },
   "NAV": {
+    "MAIN": "Hlavná navigácia",
     "HOME": "Domov",
     "EMPLOYEES": "Zamestnanci",
     "FIRMS": "Spoločnosti",
@@ -370,7 +383,7 @@
   "PRESSURE_TEST": "Tlaková skúška",
   "PROFESSIONAL_EXAM": "Odborná skúška",
   "SAFETY_TRAINING": "Školenie BOZP",
-  "WORK_AT_HEIGHTS": "Práca vo výškach",
+  "WORK_AT_HEIGHTS": "Práce vo výškach a nad voľnou hĺbkou",
   "GAS_EQUIPMENT_OPERATION": "Obsluha plynového zariadenia (sk. B)",
   "FIRE_MAIN_WORKPLACE_TRAINING": "Školenie PHP (protipožiar. hl. pracoviska)",
   "FIRE_ASSISTANCE_PATROL_TRAINING": "Protipožiarna asistenčná hliadka",
@@ -390,13 +403,11 @@
   "ELECTRICITY": "Elektrina",
   "GEOTHERMAL_ENERGY": "Geotermálna energia",
   "SAFETY_TRAINING_AND_FIRE_SAFETY_TRAINING": "Školenie BOZP a Požiarna ochrana",
-  "WORK_AT_HEIGHTS": "Práce vo výškach a nad voľnou hĺbkou",
   "PRESSURE_EQUIPMENT_OPERATION": "Obsluha tlakového zariadenia",
   "LIFTING_EQUIPMENT_OPERATION": "Obsluha zdvíhacieho zariadenia",
   "FIRE_SAFETY_TRAINING": "Školenie PO (Požiarna ochrana)",
   "FIRE_PATROL_TRAINING": "Protipožiarna hliadka pracoviska",
   "NON_WORKING_HOURS": "Mimopracovný čas – ochrana pred požiarmi",
-  "FIRST_AID_COURSE": "Kurz prvej pomoci",
   "WELDER": "Zvárač",
   "USER_TRAINING_TYPE": "Školenie",
   "REVISION_TECHNICIAN_PRESSURE": "Revízny technik tlakových zariadení",
@@ -787,7 +798,7 @@
     "DEACTIVATED": "Deaktivovať",
     "DEACTIVATE": "VTZ deaktivované",
     "ACTIVATE": "VTZ aktivované",
-    "UPDATE_SUCCESS": "Zamestnanec bol úspešne aktualizovaný",
+    "UPDATE_SUCCESS": "Zariadenie bolo úspešne aktualizované",
     "FIND_ITEM": "Nájsť VTZ",
     "CREATED": "Technické zariadenie bolo vytvorené",
     "MAX": "Maximálna hodnota je: ",
@@ -1064,7 +1075,6 @@
   "NATURAL_WATER_SOURCE": "Jazero, potok, rieka",
   "ELEVATOR_FIRE": "Požiarny výťah",
   "ELEVATOR_EVACUATION": "Evakuačný výťah",
-  "EMERGENCY_LIGHTING": "Núdzové osvetlenie",
   "FIRE_PENETRATION": "Požiarny prestup",
   "CUSTOM_FIRE_EQUIPMENT": "--- Vlastné ---",
   "STABLE_FIRE_EXT_SYSTEM": "Stabilné hasiace zariadenie",

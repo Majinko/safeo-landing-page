@@ -326,14 +326,16 @@
 }
 
 .auth-main {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 48px 24px;
 
   @media (max-width: $bp-sm) {
-    padding: 28px 16px 40px;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 16px 40px;
   }
 }
 
@@ -817,4 +819,27 @@
 @keyframes app-shimmer {
   from { background-position: 200% 0; }
   to { background-position: -200% 0; }
+}
+
+// Prepínač jazyka na prihlásení
+.auth-language {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+
+  @media (max-width: $bp-sm) {
+    position: static;
+    align-self: flex-end;
+    margin-bottom: 16px;
+  }
+}
+
+// Nadpis skupiny položiek v menu (napr. Jazyk v menu používateľa)
+.menu-section-label {
+  padding: 8px 16px 4px;
+  color: var(--app-color-text-secondary);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
 }
