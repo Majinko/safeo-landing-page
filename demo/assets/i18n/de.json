@@ -16,6 +16,8 @@
     "UPLOAD_FAILED": "Das Foto konnte nicht hochgeladen werden."
   },
   "DEMO": {
+    "TITLE_SHORT": "Safeo ID Demo",
+    "TEXT_SHORT": "Fiktive Daten zum Ausprobieren",
     "TITLE": "Sie sehen eine Demo von Safeo ID",
     "TEXT": "Firma und Daten sind fiktiv. Probieren Sie ruhig alles aus – Änderungen sehen nur Sie, und beim Schließen des Fensters werden sie verworfen.",
     "RESET": "Neu beginnen",

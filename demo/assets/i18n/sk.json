@@ -16,6 +16,8 @@
     "UPLOAD_FAILED": "Fotku sa nepodarilo nahrať."
   },
   "DEMO": {
+    "TITLE_SHORT": "Ukážka Safeo ID",
+    "TEXT_SHORT": "Fiktívne dáta · zmeny vidíte len vy",
     "TITLE": "Prezeráte si ukážku Safeo ID",
     "TEXT": "Firma aj údaje sú fiktívne. Skúšajte pokojne čokoľvek – zmeny vidíte len vy a po zatvorení okna sa zahodia.",
     "RESET": "Začať odznova",
