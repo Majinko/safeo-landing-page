@@ -1,0 +1,192 @@
+// Kalendár (FullCalendar) na dashboarde – globálne, lebo FullCalendar generuje vlastné DOM mimo enkapsulácie
+.calendar-wrapper {
+  background: var(--app-color-surface);
+  color: var(--app-color-text-primary);
+  border: 1px solid var(--app-color-border);
+  box-shadow: var(--app-shadow-sm);
+  flex-grow: 1;
+  border-radius: var(--app-radius);
+  padding: 20px !important;
+
+  @media (max-width: 560px) {
+    padding: 14px !important;
+  }
+
+  full-calendar {
+    &.fc,
+    .fc {
+      --fc-border-color: var(--app-color-border);
+      --fc-page-bg-color: var(--app-color-surface);
+      --fc-neutral-bg-color: var(--app-color-surface-2);
+      --fc-list-event-hover-bg-color: var(--app-color-hover);
+      --fc-today-bg-color: var(--app-color-theme-soft);
+      --fc-button-bg-color: var(--app-color-surface);
+      --fc-button-border-color: var(--app-color-border-strong);
+      --fc-button-text-color: var(--app-color-text-soft);
+      --fc-button-hover-bg-color: var(--app-color-hover);
+      --fc-button-hover-border-color: var(--app-color-brand);
+      --fc-button-active-bg-color: var(--app-color-theme-soft);
+      --fc-button-active-border-color: var(--app-color-theme);
+      font-family: inherit;
+    }
+
+    .fc-toolbar.fc-header-toolbar {
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    h2,
+    .fc-toolbar-title {
+      font-size: 1.15rem !important;
+      font-weight: 700;
+      letter-spacing: -.01em;
+      color: var(--app-color-navy-deep) !important;
+      text-transform: capitalize;
+    }
+
+    a {
+      cursor: pointer !important;
+      color: var(--app-color-text-primary);
+      font-size: .86rem;
+      text-decoration: none;
+    }
+
+    .fc-scrollgrid {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .fc-col-header-cell {
+      background: var(--app-color-surface-2);
+    }
+
+    .fc-col-header-cell-cushion {
+      padding: 8px 4px;
+      color: var(--app-color-text-secondary) !important;
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .fc-daygrid-day-number {
+      color: var(--app-color-text-soft) !important;
+      font-weight: 600;
+    }
+
+    .fc-day-today .fc-daygrid-day-number {
+      display: inline-grid;
+      place-items: center;
+      min-width: 26px;
+      height: 26px;
+      margin: 4px;
+      padding: 0 6px;
+      border-radius: 999px;
+      background: var(--app-color-theme);
+      color: #fff !important;
+    }
+
+    .fc-day-other .fc-daygrid-day-number,
+    .fc-daygrid-day.fc-day-other {
+      color: var(--app-color-text-secondary) !important;
+      opacity: .7;
+    }
+
+    .fc-theme-standard td,
+    .fc-theme-standard th {
+      border-color: var(--app-color-border);
+    }
+
+    .fc-event {
+      border-radius: 6px;
+      border: 0;
+      padding: 1px 4px;
+      font-weight: 600;
+    }
+
+    .fc-h-event .fc-event-main {
+      color: #fff;
+    }
+
+    // Tlačidlá – ako .btn.outline na landingu (farby cez --fc-button-* premenné)
+    .fc-button {
+      border-radius: 10px;
+      padding: 6px 12px;
+      font-weight: 600;
+      font-size: .86rem;
+      box-shadow: none !important;
+      text-transform: capitalize;
+    }
+
+    .fc-button-group > .fc-button {
+      border-radius: 0;
+
+      &:first-child { border-radius: 10px 0 0 10px; }
+      &:last-child { border-radius: 0 10px 10px 0; }
+    }
+
+    .fc-button-primary:not(:disabled):hover,
+    .fc-button-primary:not(:disabled).fc-button-active {
+      color: var(--app-color-theme);
+    }
+
+    .fc-button:focus {
+      box-shadow: var(--app-focus-ring) !important;
+    }
+
+    // Zoznam udalostí (predvolený na mobile)
+    .fc-list {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .fc-list-day-cushion {
+      background: var(--app-color-hover);
+      color: var(--app-color-text-secondary);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-transform: capitalize;
+    }
+
+    .fc-list-event td {
+      padding: 12px 14px;
+      color: var(--app-color-text-primary);
+    }
+
+    .fc-list-event-time {
+      display: none; // celodenné udalosti – stĺpec „celý deň“ nič nehovorí
+    }
+
+    .fc-list-event-title {
+      font-weight: 600;
+    }
+
+    .fc-list-event-dot {
+      border-width: 6px;
+    }
+
+    .fc-list-empty {
+      background: transparent;
+      color: var(--app-color-text-secondary);
+    }
+
+    // Mobil: nadpis mesiaca cez celú šírku, pod ním šípky a prepínač zobrazenia
+    @media (max-width: 600px) {
+      .fc-toolbar.fc-header-toolbar {
+        justify-content: space-between;
+        gap: 10px 8px;
+      }
+
+      .fc-toolbar-chunk:nth-child(2) {
+        order: -1;
+        width: 100%;
+      }
+
+      .fc-button {
+        padding: 6px 10px;
+      }
+    }
+  }
+}

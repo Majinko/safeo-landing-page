@@ -1,1 +1,0 @@
-import{Ct as O,Jt as Se,nr as f,or as fo}from"./chunk-CriTSX_T.js";import{A as w}from"./main-465LRRQ4.js";var s=()=>{let e=f(fo);return f(w).user$.pipe(Se(1),O(t=>t?!0:e.createUrlTree([`/auth/login`])))};var d=()=>{let e=f(fo);return f(w).user$.pipe(Se(1),O(t=>t?e.createUrlTree([`/dashboard`]):!0))};export{s as n,d as t};
