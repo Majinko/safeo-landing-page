@@ -1,8 +1,12 @@
 {
+  "CALENDAR_VIEW": {
+    "LIST": "Liste",
+    "NO_EVENTS": "In diesem Monat gibt es keine Termine."
+  },
   "LANGUAGE": {
     "LABEL": "Sprache",
-    "sk": "Slovenčina",
-    "en": "English",
+    "sk": "Slowakisch",
+    "en": "Englisch",
     "de": "Deutsch"
   },
   "PHOTO": {
@@ -119,6 +123,13 @@
   },
   "LOGOUT": "Abmelden",
   "ERROR": {
+    "DUPLICATE_RECORD": "Ein Eintrag desselben Typs und derselben Gültigkeit existiert bereits.",
+    "EMAIL_EXISTS": "Ein Benutzer mit dieser E-Mail-Adresse existiert bereits.",
+    "INVALID_PERIODICITY": "Das Intervall muss eine ganze Zahl von 1 bis 600 Monaten sein.",
+    "USER_DEACTIVATED": "Der Benutzer ist deaktiviert.",
+    "EMPTY_FILE": "Die Datei ist leer.",
+    "FILE_GENERATION": "Die Datei konnte nicht erstellt werden. Bitte versuchen Sie es erneut.",
+    "NO_FIRM": "Ihr Konto ist keiner Firma zugeordnet.",
     "NETWORK": "Der Server ist nicht erreichbar. Prüfen Sie die Verbindung und versuchen Sie es erneut.",
     "UNAUTHORIZED": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
     "FORBIDDEN": "Für diese Aktion fehlt Ihnen die Berechtigung.",

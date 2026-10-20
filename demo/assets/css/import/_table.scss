@@ -197,9 +197,114 @@
   }
 }
 
+// Mobil: riadky zoznamu ako karty – názov hore, stav a ďalšie údaje pod ním, akcie vpravo.
+// Tabuľka sa tak nemusí posúvať do strany a nič sa neoreže.
 @media (max-width: 560px) {
-  .list-table .mat-column-select {
-    display: none;
+  .list-table {
+    display: block;
+    width: 100%;
+
+    .mat-column-select,
+    thead {
+      display: none;
+    }
+
+    tbody {
+      display: block;
+    }
+
+    tr.mat-mdc-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 6px 8px;
+      height: auto !important;
+      min-height: 0;
+      padding: 12px 4px 12px 14px;
+      border-bottom: 1px solid var(--app-color-border);
+    }
+
+    // na karte len to podstatné: názov, stav, EČV a akcie
+    tr.mat-mdc-row td.mat-mdc-cell:not(.mat-column-title, .mat-column-group, .mat-column-firstName, .mat-column-lastName,
+      .mat-column-status, .mat-column-medicalStatus, .mat-column-trainingStatus, .mat-column-ecv, .mat-column-action) {
+      display: none;
+    }
+
+    tr.mat-mdc-row td.mat-mdc-cell {
+      grid-column: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px 8px;
+      width: auto !important;
+      justify-self: stretch;
+      min-width: 0;
+      max-width: none;
+      padding: 0 !important;
+      border: 0;
+      white-space: normal;
+      color: var(--app-color-text-secondary);
+      font-size: .875rem;
+    }
+
+    .mat-column-title,
+    .mat-column-group {
+      min-width: 0;
+      font-size: .95rem !important;
+    }
+
+    td.mat-column-title,
+    td.mat-column-group,
+    td.mat-column-firstName,
+    td.mat-column-lastName {
+      color: var(--app-color-navy-deep) !important;
+      font-weight: 600;
+    }
+
+    td.mat-column-action {
+      grid-column: 2 !important;
+      grid-row: 1 / span 4;
+      width: auto;
+    }
+
+    // zamestnanci: meno a priezvisko v prvom riadku vedľa seba
+    tr.mat-mdc-row:has(> td.mat-column-firstName) {
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      column-gap: 5px;
+
+      td.mat-mdc-cell {
+        grid-column: 1 / 3;
+      }
+
+      td.mat-column-firstName {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      td.mat-column-lastName {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      td.mat-column-action {
+        grid-column: 3 !important;
+      }
+    }
+
+    td[data-label]::before {
+      content: attr(data-label);
+      min-width: 118px;
+      color: var(--app-color-text-secondary);
+      font-size: .8rem;
+    }
+
+    tr.mat-mdc-no-data-row {
+      display: block;
+
+      td {
+        display: block;
+      }
+    }
   }
 }
 
@@ -208,4 +313,89 @@
   outline: 3px solid rgba(26, 127, 83, .45);
   outline-offset: -3px;
   background: var(--app-color-hover) !important;
+}
+
+// Mobil: záznamy s platnosťou (revízie, školenia, prehliadky, kontroly) ako karty
+@media (max-width: 560px) {
+  .record-table {
+    display: block;
+    width: 100%;
+
+    thead {
+      display: none;
+    }
+
+    tbody {
+      display: block;
+    }
+
+    tr.mat-mdc-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      align-items: center;
+      gap: 4px 8px;
+      height: auto !important;
+      padding: 12px 4px 12px 14px;
+      border-bottom: 1px solid var(--app-color-border);
+    }
+
+    tr.mat-mdc-row td.mat-mdc-cell {
+      grid-column: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      width: auto !important;
+      max-width: none !important;
+      justify-self: stretch;
+      min-width: 0;
+      padding: 0 !important;
+      border: 0;
+      white-space: normal;
+      color: var(--app-color-text-secondary);
+      font-size: .875rem;
+    }
+
+    // na karte: typ, stav, platnosť od – do a akcie; ostatné v detaile záznamu (úprava)
+    td.mat-column-responsiblePerson,
+    td.mat-column-result,
+    td.mat-column-price,
+    td.mat-column-workFactor,
+    td.mat-column-conclusion {
+      display: none !important;
+    }
+
+    td.mat-column-type {
+      color: var(--app-color-navy-deep) !important;
+      font-size: .95rem !important;
+      font-weight: 600;
+    }
+
+    // akcií je až päť (obnoviť, stiahnuť, upraviť, zmazať…) – samostatný riadok dole, obsah má celú šírku
+    td.mat-column-action {
+      grid-column: 1 !important;
+      justify-content: flex-end;
+      flex-wrap: nowrap !important;
+      margin: 2px 0 -6px;
+    }
+
+    // na dotykovom displeji niet hoveru – všetky akcie viditeľné
+    td.mat-column-action .invisible {
+      visibility: visible !important;
+    }
+
+    td[data-label]::before {
+      content: attr(data-label);
+      min-width: 84px;
+      font-size: .8rem;
+    }
+
+    tr.mat-mdc-no-data-row {
+      display: block;
+
+      td {
+        display: block;
+      }
+    }
+  }
 }

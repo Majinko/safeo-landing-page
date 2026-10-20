@@ -1,9 +1,13 @@
 {
+  "CALENDAR_VIEW": {
+    "LIST": "Zoznam",
+    "NO_EVENTS": "V tomto mesiaci nie sú žiadne termíny."
+  },
   "LANGUAGE": {
     "LABEL": "Jazyk",
     "sk": "Slovenčina",
-    "en": "English",
-    "de": "Deutsch"
+    "en": "Angličtina",
+    "de": "Nemčina"
   },
   "PHOTO": {
     "SET": "Nastaviť fotku",
@@ -119,6 +123,13 @@
   },
   "LOGOUT": "Odhlásiť sa",
   "ERROR": {
+    "DUPLICATE_RECORD": "Záznam s rovnakým typom a platnosťou už existuje.",
+    "EMAIL_EXISTS": "Používateľ s týmto e-mailom už existuje.",
+    "INVALID_PERIODICITY": "Lehota musí byť celý počet mesiacov od 1 do 600.",
+    "USER_DEACTIVATED": "Používateľ je deaktivovaný.",
+    "EMPTY_FILE": "Súbor je prázdny.",
+    "FILE_GENERATION": "Súbor sa nepodarilo vytvoriť. Skúste to prosím znova.",
+    "NO_FIRM": "Váš účet nie je priradený k žiadnej spoločnosti.",
     "NETWORK": "Server je nedostupný. Skontrolujte pripojenie a skúste to znova.",
     "UNAUTHORIZED": "Platnosť prihlásenia vypršala. Prihláste sa znova.",
     "FORBIDDEN": "Na túto akciu nemáte oprávnenie.",
@@ -313,8 +324,8 @@
   "OPERATION": {
     "ADD": "Pridať prevádzku",
     "EDIT": "Upraviť prevádzku",
-    "OPERATION": "Prevádzká",
-    "REQUIRED": "Prevádzká je požadovaná"
+    "OPERATION": "Prevádzka",
+    "REQUIRED": "Prevádzka je požadovaná"
   },
   "FILE": {
     "PREVIEW": "Náhľad súboru",

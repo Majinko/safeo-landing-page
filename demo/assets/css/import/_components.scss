@@ -603,6 +603,11 @@
   display: none !important;
 }
 
+.hide-empty-fields.all-fields-empty,
+[class*='col']:has(> .hide-empty-fields.all-fields-empty) {
+  display: none !important;
+}
+
 .is-empty-field > [data-empty-label] {
   font-size: 0;
 

@@ -1,9 +1,13 @@
 {
+  "CALENDAR_VIEW": {
+    "LIST": "List",
+    "NO_EVENTS": "No deadlines this month."
+  },
   "LANGUAGE": {
     "LABEL": "Language",
-    "sk": "Slovenčina",
+    "sk": "Slovak",
     "en": "English",
-    "de": "Deutsch"
+    "de": "German"
   },
   "PHOTO": {
     "SET": "Set photo",
@@ -119,6 +123,13 @@
   },
   "LOGOUT": "Sign out",
   "ERROR": {
+    "DUPLICATE_RECORD": "A record of the same type and validity already exists.",
+    "EMAIL_EXISTS": "A user with this email already exists.",
+    "INVALID_PERIODICITY": "The interval must be a whole number of months from 1 to 600.",
+    "USER_DEACTIVATED": "The user is deactivated.",
+    "EMPTY_FILE": "The file is empty.",
+    "FILE_GENERATION": "The file could not be created. Please try again.",
+    "NO_FIRM": "Your account is not assigned to any company.",
     "NETWORK": "The server is unavailable. Check your connection and try again.",
     "UNAUTHORIZED": "Your session has expired. Please sign in again.",
     "FORBIDDEN": "You don't have permission for this action.",
