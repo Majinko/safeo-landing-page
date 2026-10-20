@@ -1,3 +1,32 @@
+// Texty skriptu podľa jazyka stránky (<html lang="sk|en|de">)
+const I18N = {
+    sk: {
+        plan: 'Záujem o Safeo ID – balík ',
+        openMenu: 'Otvoriť menu', closeMenu: 'Zavrieť menu',
+        noAction: 'Formulár nemá nastavený action atribút.',
+        required: 'Vyplňte prosím meno a e-mail.',
+        sending: 'Odosielam…', sent: 'Ďakujeme! Ozveme sa s termínom ukážky.', sentShort: 'Odoslané.',
+        failed: 'Odoslanie zlyhalo.', failedRetry: 'Odoslanie sa nepodarilo. Skúste to prosím znova alebo nám zavolajte.', error: 'Chyba.',
+    },
+    en: {
+        plan: 'Interested in Safeo ID – plan ',
+        openMenu: 'Open menu', closeMenu: 'Close menu',
+        noAction: 'The form has no action attribute.',
+        required: 'Please fill in your name and e-mail.',
+        sending: 'Sending…', sent: 'Thank you! We will get back to you with a demo date.', sentShort: 'Sent.',
+        failed: 'Sending failed.', failedRetry: 'Sending failed. Please try again or give us a call.', error: 'Error.',
+    },
+    de: {
+        plan: 'Interesse an Safeo ID – Paket ',
+        openMenu: 'Menü öffnen', closeMenu: 'Menü schließen',
+        noAction: 'Das Formular hat kein action-Attribut.',
+        required: 'Bitte geben Sie Ihren Namen und Ihre E-Mail-Adresse an.',
+        sending: 'Wird gesendet…', sent: 'Vielen Dank! Wir melden uns mit einem Termin für die Vorführung.', sentShort: 'Gesendet.',
+        failed: 'Senden fehlgeschlagen.', failedRetry: 'Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder rufen Sie uns an.', error: 'Fehler.',
+    },
+};
+const t = I18N[(document.documentElement.lang || 'sk').slice(0, 2)] || I18N.sk;
+
 // Rok v pätičke
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -28,7 +57,7 @@ document.addEventListener('click', e => {
 const formMessage = document.getElementById('formMessage');
 document.querySelectorAll('[data-plan]').forEach(a => {
     a.addEventListener('click', () => {
-        if (formMessage) formMessage.value = 'Záujem o Safeo ID – balík ' + a.dataset.plan;
+        if (formMessage) formMessage.value = t.plan + a.dataset.plan;
     });
 });
 
@@ -58,7 +87,7 @@ function openMenu() {
         hamburger.classList.add('is-open');
     });
     hamburger.setAttribute('aria-expanded', 'true');
-    hamburger.setAttribute('aria-label', 'Zavrieť menu');
+    hamburger.setAttribute('aria-label', t.closeMenu);
     document.body.classList.add('body-locked');
     mobileMenu?.querySelector('a')?.focus();
 }
@@ -66,7 +95,7 @@ function closeMenu() {
     mobileWrap.classList.remove('is-open');
     hamburger.classList.remove('is-open');
     hamburger.setAttribute('aria-expanded', 'false');
-    hamburger.setAttribute('aria-label', 'Otvoriť menu');
+    hamburger.setAttribute('aria-label', t.openMenu);
     document.body.classList.remove('body-locked');
     setTimeout(() => { mobileWrap.hidden = true; }, 280);
 }
@@ -204,12 +233,12 @@ mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', close
             const thisForm = this;
             const action = thisForm.getAttribute('action');
 
-            if (!action) return setError(thisForm, 'Formulár nemá nastavený action atribút.');
+            if (!action) return setError(thisForm, t.noAction);
 
             // jednoduchý check
             const name = thisForm.querySelector('[name="name"]')?.value.trim();
             const email = thisForm.querySelector('[name="email"]')?.value.trim();
-            if (!name || !email) return setError(thisForm, 'Vyplňte prosím meno a e-mail.');
+            if (!name || !email) return setError(thisForm, t.required);
 
             setLoading(thisForm, true);
 
@@ -224,17 +253,17 @@ mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', close
                 .then((text) => {
                     setLoading(thisForm, false);
                     if (typeof text === 'string' && text.trim() === 'OK') {
-                        showSent(thisForm, 'Ďakujeme! Ozveme sa s termínom ukážky.');
+                        showSent(thisForm, t.sent);
                         track('generate_lead', { form_id: thisForm.id, lead_type: 'demo_request' });
                         thisForm.reset();
                     } else {
-                        setError(thisForm, text || 'Odoslanie zlyhalo.');
+                        setError(thisForm, text || t.failed);
                         track('form_error', { form_id: thisForm.id, error: 'response' });
                     }
                 })
                 .catch((err) => {
                     setLoading(thisForm, false);
-                    setError(thisForm, 'Odoslanie sa nepodarilo. Skúste to prosím znova alebo nám zavolajte.');
+                    setError(thisForm, t.failedRetry);
                     track('form_error', { form_id: thisForm.id, error: String(err).slice(0, 80) });
                 });
         });
@@ -242,17 +271,17 @@ mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', close
 
     // --- helpers (odskryjú aj wrapper .status) ---
     function setLoading(form, on) {
-        toggleMsg(form, '.loading', on, 'Odosielam…');
+        toggleMsg(form, '.loading', on, t.sending);
         toggleMsg(form, '.error-message', false);
         toggleMsg(form, '.sent-message', false);
         const btn = form.querySelector('[type="submit"]');
         if (btn) btn.disabled = on;
     }
     function setError(form, msg) {
-        toggleMsg(form, '.error-message', true, msg || 'Chyba.');
+        toggleMsg(form, '.error-message', true, msg || t.error);
     }
     function showSent(form, msg) {
-        toggleMsg(form, '.sent-message', true, msg || 'Odoslané.');
+        toggleMsg(form, '.sent-message', true, msg || t.sentShort);
     }
     function toggleMsg(form, selector, show, text) {
         const el = form.querySelector(selector);

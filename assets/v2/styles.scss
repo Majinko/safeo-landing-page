@@ -313,6 +313,33 @@ header.site-header {
     gap: 8px;
   }
 
+  // prepínač jazyka (SK / EN / DE)
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-right: 4px;
+
+    a {
+      padding: 6px 8px;
+      border-radius: 8px;
+      color: $muted;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary-strong;
+      }
+
+      &[aria-current="page"] {
+        color: $navy-deep;
+        background: $primary-soft;
+      }
+    }
+  }
+
   .login-link {
     padding: 8px 12px;
     color: $text-soft;
@@ -336,7 +363,8 @@ header.site-header {
     }
 
     .nav-links,
-    .login-link {
+    .login-link,
+    .lang-switch {
       display: none;
     }
 
@@ -471,6 +499,29 @@ header.site-header {
     margin-top: 16px;
     padding-top: 16px;
     border-top: 1px solid $border;
+  }
+
+  .lang-switch {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+
+    a {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid $border;
+      border-radius: $radius-sm;
+      color: $text-soft;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+
+      &[aria-current="page"] {
+        border-color: $primary-strong;
+        color: $primary-strong;
+        background: $primary-soft;
+      }
+    }
   }
 }
 

@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
+  <title>Überwachungsbedürftige Anlagen und Prüfungen verwalten | Safeo ID</title>
+  <meta name="description"
+    content="Software für überwachungsbedürftige Anlagen und ihre Prüfungen. Safeo ID füllt Prüfintervalle vor, überwacht die Gültigkeit und erinnert per E-Mail an anstehende Termine." />
+  <link rel="canonical" href="https://safeoid.sk/de/" />
+  <!-- Deutsche Version: neue Seite, wird indexiert. -->
+  <meta name="robots" content="index,follow" />
+
+  <!-- Internationalization -->
+  <link rel="alternate" hreflang="sk" href="https://safeoid.sk/" />
+  <link rel="alternate" hreflang="en" href="https://safeoid.sk/en/" />
+  <link rel="alternate" hreflang="de" href="https://safeoid.sk/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://safeoid.sk/" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Safeo ID" />
+  <meta property="og:title" content="Prüfungen technischer Anlagen ohne Terminchaos | Safeo ID" />
+  <meta property="og:description"
+    content="Überwachungsbedürftige Anlagen, Prüfungen und Dokumentation an einem Ort. Safeo ID hilft beim Festlegen der Prüfintervalle und erinnert an anstehende Termine." />
+  <meta property="og:url" content="https://safeoid.sk/de/" />
+  <meta property="og:image" content="https://safeoid.sk/assets/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Safeo ID – Verwaltung überwachungsbedürftiger Anlagen und ihrer Prüfungen" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prüfungen technischer Anlagen ohne Terminchaos | Safeo ID" />
+  <meta name="twitter:description"
+    content="Überwachungsbedürftige Anlagen, Prüfungen und Dokumentation an einem Ort. Terminerinnerungen per E-Mail." />
+  <meta name="twitter:image" content="https://safeoid.sk/assets/img/og-image.jpg" />
+
+  <!-- PWA / Theme -->
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Performance hints -->
+  <link rel="dns-prefetch" href="https://app.safeoid.sk">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+
+  <meta name="author" content="Safeo ID">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/v2/styles.min.css?v=20261020b">
+
+  <!-- Cookie / Consent -->
+  <script src="https://www.datacookie.sk/api/jBrSyU4PYngsFAmgV0TSl31GEq9Lv71XBhP6cS9ifYzU7bwZ89/cookie/script"></script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://safeoid.sk/#organization",
+        "name": "Safeo ID",
+        "url": "https://safeoid.sk/",
+        "logo": "https://safeoid.sk/assets/img/apple-touch-icon.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+421911635510",
+          "contactType": "sales",
+          "areaServed": "SK",
+          "availableLanguage": "sk"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://safeoid.sk/#website",
+        "name": "Safeo ID",
+        "url": "https://safeoid.sk/",
+        "inLanguage": "de",
+        "publisher": { "@id": "https://safeoid.sk/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Safeo ID",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://safeoid.sk/",
+        "inLanguage": "de",
+        "description": "Webanwendung zur Verwaltung überwachungsbedürftiger Anlagen, Prüfungen, Kontrollen, Schulungen und arbeitsmedizinischer Untersuchungen mit E-Mail-Erinnerungen an Termine.",
+        "publisher": { "@id": "https://safeoid.sk/#organization" },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Standard",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "minPrice": 20,
+              "priceCurrency": "EUR",
+              "unitText": "Monat",
+              "valueAddedTaxIncluded": false
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Profi",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "minPrice": 50,
+              "priceCurrency": "EUR",
+              "unitText": "Monat",
+              "valueAddedTaxIncluded": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({ design_version: 'v2', page_language: 'de' });</script>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PTM7WQD6');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTM7WQD6" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Icons (Inline-Sprite, ohne externe Anfragen) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+      <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.7-.9l-.8-1.2A2 2 0 0 0 7.9 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></symbol>
+      <symbol id="i-qr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM21 14v.01M14 21h.01M17 21h4v-3"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-factory" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1M12 18h1M7 18h1"/></symbol>
+      <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8z"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.6a1 1 0 0 0-.2-.6l-3.5-4.4a1 1 0 0 0-.8-.4H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.7 18-8-14a2 2 0 0 0-3.5 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3"/><path d="M12 9v4M12 17h.01"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+      <symbol id="i-lift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 9-6-6-6 6M12 3v14M5 21h14"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></symbol>
+      <symbol id="i-devices" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8M10 19v-4M7 19h5"/><rect x="16" y="12" width="6" height="10" rx="2"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+      <symbol id="i-repeat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#obsah">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="Safeo ID – Startseite">
+        <img src="/assets/img/header-logo.svg" alt="Safeo ID" width="180" height="26">
+      </a>
+
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="#ako-funguje">So funktioniert’s</a>
+        <a href="#features">Funktionen</a>
+        <a href="#pre-koho">Für wen</a>
+        <a href="#pricing">Preise</a>
+        <a href="#faq">FAQ</a>
+        <a href="/demo/?lang=de" data-track="demo_open" data-cta-location="header">Demo</a>
+      </nav>
+
+      <div class="nav-actions">
+        <nav class="lang-switch" aria-label="Sprache">
+          <a href="/" lang="sk" hreflang="sk">SK</a>
+          <a href="/en/" lang="en" hreflang="en">EN</a>
+          <a href="/de/" lang="de" hreflang="de" aria-current="page">DE</a>
+        </nav>
+        <a class="login-link" href="https://app.safeoid.sk" target="_blank" rel="noopener" data-track="login_click"
+          data-cta-location="header">Anmelden</a>
+        <a class="btn sm nav-cta" href="#contact" data-track="cta_click" data-cta-location="header">Testen</a>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Menü öffnen" aria-controls="mobileMenu"
+          aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-wrap" id="mobileWrap" hidden>
+    <div class="backdrop" id="backdrop" tabindex="-1" aria-hidden="true"></div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+      <a href="#ako-funguje" class="mobile-link">So funktioniert’s</a>
+      <a href="#features" class="mobile-link">Funktionen</a>
+      <a href="#pre-koho" class="mobile-link">Für wen</a>
+      <a href="#pricing" class="mobile-link">Preise</a>
+      <a href="#faq" class="mobile-link">Häufige Fragen</a>
+      <a href="#contact" class="mobile-link">Kontakt</a>
+      <a href="/demo/?lang=de" class="mobile-link" data-track="demo_open" data-cta-location="mobile_menu">Demo ansehen</a>
+      <div class="mobile-actions">
+        <a class="btn block" href="#contact" data-track="cta_click" data-cta-location="mobile_menu">Anwendung testen</a>
+        <a class="btn outline block" href="https://app.safeoid.sk" target="_blank" rel="noopener"
+          data-track="login_click" data-cta-location="mobile_menu">Anmelden</a>
+      </div>
+      <nav class="lang-switch" aria-label="Sprache">
+        <a href="/" lang="sk" hreflang="sk">Slovensky</a>
+        <a href="/en/" lang="en" hreflang="en">English</a>
+        <a href="/de/" lang="de" hreflang="de" aria-current="page">Deutsch</a>
+      </nav>
+    </nav>
+  </div>
+
+  <main id="obsah">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <span class="kicker">Prüfmanagement für überwachungsbedürftige Anlagen</span>
+          <h1 id="hero-title">Prüfungen technischer Anlagen <span class="accent">ohne Terminchaos</span></h1>
+          <p class="lead">Safeo ID ist eine Software für überwachungsbedürftige Anlagen und ihre Prüfungen. Sie hilft
+            Ihnen, Prüfintervalle je nach Anlagenkategorie festzulegen, bewahrt die Protokolle direkt bei jeder Anlage auf
+            und erinnert Sie per E-Mail an Termine, bevor sie zum Problem werden.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#contact" data-track="cta_click" data-cta-location="hero">Anwendung testen</a>
+            <a class="btn outline" href="/demo/?lang=de" data-track="demo_open" data-cta-location="hero_secondary">Live-Demo
+              ansehen</a>
+          </div>
+          <p class="hero-note">Unverbindliche Vorführung mit Ihren Anlagen · ab 20&nbsp;€ monatlich zzgl. MwSt.</p>
+          <ul class="hero-trust" aria-label="Wichtigste Vorteile">
+            <li><svg aria-hidden="true"><use href="#i-flag"/></svg>Produkt und Support aus der Slowakei</li>
+            <li><svg aria-hidden="true"><use href="#i-devices"/></svg>Im Browser, ohne Installation</li>
+            <li><svg aria-hidden="true"><use href="#i-qr"/></svg>QR-Code an jeder Anlage</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="app-mock" role="img"
+            aria-label="Beispielansicht der Anlagenübersicht in Safeo ID mit dem Gültigkeitsstatus der Prüfungen">
+            <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.safeoid.sk · Technische Anlagen</span></div>
+            <div class="mock-body" aria-hidden="true">
+              <div class="mock-title"><strong>Gültigkeit der Prüfungen</strong><span class="muted" style="font-size:.78rem">Standort: Halle Nürnberg</span></div>
+              <div class="mock-stats">
+                <div><b>42</b><small>Anlagen gesamt</small></div>
+                <div><b style="color:#a15c00">3</b><small>Bald fällig</small></div>
+                <div><b style="color:#b4232f">1</b><small>Überfällig</small></div>
+              </div>
+              <div class="mock-row">
+                <span class="ico"><svg><use href="#i-flame"/></svg></span>
+                <span class="name"><strong>Gaskesselanlage K1</strong><small>Gas · Fachinspektion</small></span>
+                <span class="pill warn">in 24 Tagen</span>
+              </div>
+              <div class="mock-row">
+                <span class="ico"><svg><use href="#i-lift"/></svg></span>
+                <span class="name"><strong>Brückenkran 5 t</strong><small>Hebezeug · Fachprüfung</small></span>
+                <span class="pill ok">bis 03/2027</span>
+              </div>
+              <div class="mock-row">
+                <span class="ico"><svg><use href="#i-gauge"/></svg></span>
+                <span class="name"><strong>Druckbehälter Kompressor</strong><small>Druck · Innere Prüfung</small></span>
+                <span class="pill danger">Überfällig</span>
+              </div>
+              <div class="mock-row">
+                <span class="ico"><svg><use href="#i-zap"/></svg></span>
+                <span class="name"><strong>Elektroinstallation – Lager</strong><small>Elektro · Prüfung</small></span>
+                <span class="pill ok">bis 11/2028</span>
+              </div>
+            </div>
+            <p class="mock-caption" aria-hidden="true">Beispielansicht mit fiktiven Daten</p>
+          </div>
+
+          <div class="float-card float-qr" aria-hidden="true">
+            <svg viewBox="0 0 21 21" shape-rendering="crispEdges"><path fill="#003177" d="M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2zM14 0h7v7h-7zM15 1v5h5V1zM16 2h3v3h-3zM0 14h7v7H0zM1 15v5h5v-5zM2 16h3v3H2zM8 0h2v2H8zM11 1h2v3h-2zM8 3h2v3H8zM9 8h3v2H9zM13 8h2v3h-2zM16 9h4v2h-4zM0 8h3v2H0zM4 9h3v2H4zM8 12h2v2H8zM11 11h2v4h-2zM14 13h3v2h-3zM18 12h3v3h-3zM8 15h2v3H8zM12 16h3v2h-3zM16 16h2v5h-2zM19 17h2v4h-2zM9 19h4v2H9z"/></svg>
+            <span><strong>QR-Code herunterladen</strong><small>Prüfstatus nach dem Scannen</small></span>
+          </div>
+          <div class="float-card float-reminder" aria-hidden="true">
+            <span class="icon"><svg><use href="#i-bell"/></svg></span>
+            <span><strong>E-Mail: Termin bald fällig</strong><small>Fachinspektion · Gaskesselanlage K1 – in 30 Tagen</small></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="facts" aria-label="Safeo ID in Zahlen">
+          <li><b>5</b><span>Anlagenkategorien – Druck-, Gas-, Hebe-, Elektro- und Brandschutzanlagen</span></li>
+          <li><b>5×</b><span>E-Mail-Erinnerung vor Ablauf der Gültigkeit – ab 90 Tagen bis zum letzten Tag</span></li>
+          <li><b>37</b><span>vordefinierte Schulungsarten mit voreingestelltem Intervall</span></li>
+          <li><b>0</b><span>Installationen – Web-App für Computer, Tablet und Smartphone</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="problem soft" id="preco" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Warum Excel und Kalender nicht reichen</span>
+          <h2 class="section-title" id="problem-title">Prüfungen per Tabelle verfolgen klappt – bis etwas vergessen wird</h2>
+          <p class="section-desc">Bei Dutzenden Anlagen, unterschiedlichen Prüfarten und mehreren Standorten wird die
+            Terminüberwachung zum Risiko. Diese Situationen löst Safeo ID.</p>
+        </div>
+
+        <div class="problem-grid">
+          <article class="card">
+            <span class="icon pain"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <h3>Termine gehen in Tabellen unter</h3>
+            <p>Excel meldet sich nicht von selbst, wenn in einem Monat eine Fachinspektion abläuft. Sie verlassen sich auf
+              das Gedächtnis einer einzigen Person.</p>
+          </article>
+          <article class="card">
+            <span class="icon pain"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3>Jede Anlage hat andere Fristen</h3>
+            <p>Druck-, Gas-, Hebe- oder Elektroanlagen haben unterschiedliche Prüfarten und Prüfintervalle. Sie jedes Mal
+              nachzuschlagen kostet Zeit.</p>
+          </article>
+          <article class="card">
+            <span class="icon pain"><svg aria-hidden="true"><use href="#i-folder"/></svg></span>
+            <h3>Protokolle sind verstreut</h3>
+            <p>In E-Mails, Ordnern und auf Laufwerken. Steht eine Kontrolle oder ein Audit an, wird unter Zeitdruck gesucht.</p>
+          </article>
+          <article class="card">
+            <span class="icon pain"><svg aria-hidden="true"><use href="#i-alert"/></svg></span>
+            <h3>Mängel ohne Verantwortlichen</h3>
+            <p>Die Prüfung stellt einen Mangel fest, doch unklar bleibt, wer ihn bis wann beheben soll. Er bleibt in einer Notiz liegen.</p>
+          </article>
+        </div>
+
+        <div class="compare">
+          <table>
+            <caption>Excel oder Kalender vs. Safeo ID</caption>
+            <thead>
+              <tr>
+                <th scope="col">Aufgabe</th>
+                <th scope="col">Excel / Kalender</th>
+                <th scope="col">Safeo ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Prüfintervalle</th>
+                <td data-label="Excel">Manuell nachschlagen und übertragen</td>
+                <td data-label="Safeo ID">Vorausgefüllt nach Kategorie, Gruppe und Prüfart</td>
+              </tr>
+              <tr>
+                <th scope="row">Terminerinnerungen</th>
+                <td data-label="Excel">Nur wenn jemand sie manuell einrichtet</td>
+                <td data-label="Safeo ID">E-Mails 90, 30, 10, 5 und 1 Tag vor Ablauf der Gültigkeit</td>
+              </tr>
+              <tr>
+                <th scope="row">Protokolle und Dokumente</th>
+                <td data-label="Excel">In verschiedenen Ordnern und E-Mails</td>
+                <td data-label="Safeo ID">Direkt bei der Anlage und der jeweiligen Prüfung</td>
+              </tr>
+              <tr>
+                <th scope="row">Anlagenstatus vor Ort</th>
+                <td data-label="Excel">Anruf im Büro nötig</td>
+                <td data-label="Safeo ID">QR-Code an der Anlage zeigt Daten und Prüfungen</td>
+              </tr>
+              <tr>
+                <th scope="row">Mängel aus Prüfungen</th>
+                <td data-label="Excel">Notiz in einer Zelle</td>
+                <td data-label="Safeo ID">Verantwortliche Person, Frist zur Behebung und E-Mail-Benachrichtigung</td>
+              </tr>
+              <tr>
+                <th scope="row">Mehrere Firmen und Standorte</th>
+                <td data-label="Excel">Mehrere Dateien, mehrere Versionen</td>
+                <td data-label="Safeo ID">Alles in einem System, filterbar nach Standort</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SO FUNKTIONIERT'S ============ -->
+    <section class="how" id="ako-funguje" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">So funktioniert Safeo ID in der Praxis</span>
+          <h2 class="section-title" id="how-title">Von der neuen Anlage bis zur Terminerinnerung in&nbsp;5&nbsp;Schritten</h2>
+          <p class="section-desc">Klicken Sie auf einen Schritt und sehen Sie, was Sie in der Anwendung tun – und was
+            Safeo ID für Sie erledigt.</p>
+        </div>
+
+        <div class="how-grid">
+          <div class="steps" role="tablist" aria-label="Arbeitsschritte in Safeo ID" aria-orientation="vertical">
+            <button class="step" type="button" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true" data-step="1">
+              <span class="num">1</span>
+              <span><strong>Sie legen eine technische Anlage an</strong>
+                <span class="step-text">Name, Firma, Standort und Aufstellort. Die Anlage hat ab sofort eine eigene Karte.</span></span>
+            </button>
+            <button class="step" type="button" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1" data-step="2">
+              <span class="num">2</span>
+              <span><strong>Sie wählen Kategorie und Parameter</strong>
+                <span class="step-text">Druck, Gas, Hebezeug, Elektro oder Brandschutz – mit Gruppe, Untergruppe und technischen Daten.</span></span>
+            </button>
+            <button class="step" type="button" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1" data-step="3">
+              <span class="num">3</span>
+              <span><strong>Das System hilft beim Festlegen der Prüfpflichten</strong>
+                <span class="step-text">Es schlägt die Prüfarten für die Kategorie vor und füllt ihr Prüfintervall aus.</span></span>
+            </button>
+            <button class="step" type="button" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" tabindex="-1" data-step="4">
+              <span class="num">4</span>
+              <span><strong>Sie erfassen durchgeführte Prüfungen und Kontrollen</strong>
+                <span class="step-text">Datum, Ergebnis, Preis und Protokoll als Anhang. Die Gültigkeit wird automatisch berechnet.</span></span>
+            </button>
+            <button class="step" type="button" role="tab" id="tab-5" aria-controls="panel-5" aria-selected="false" tabindex="-1" data-step="5">
+              <span class="num">5</span>
+              <span><strong>Safeo ID überwacht die Termine für Sie</strong>
+                <span class="step-text">Kalender, Übersicht „Bald fällig“ und „Überfällig“ sowie E-Mail-Erinnerungen.</span></span>
+            </button>
+          </div>
+
+          <div class="step-panels">
+            <!-- Schritt 1 -->
+            <div class="step-panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" tabindex="0">
+              <div class="app-mock">
+                <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Technische Anlagen · Neuen Eintrag hinzufügen</span></div>
+                <div class="mock-body">
+                  <div class="form-mock">
+                    <label>Anlagenname<span class="field active">Gaskesselanlage K1</span></label>
+                    <div class="two">
+                      <label>Firma<span class="field select">Ihre Firma GmbH</span></label>
+                      <label>Standort<span class="field select">Halle Nürnberg</span></label>
+                    </div>
+                    <div class="two">
+                      <label>Aufstellort<span class="field">Untergeschoss, Raum 0.12</span></label>
+                      <label>Erfasst am<span class="field">15.01.2026</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="panel-note">Anlagen erfassen Sie nach Firmen und Standorten – übersichtlich auch bei mehreren
+                Objekten.</p>
+            </div>
+
+            <!-- Schritt 2 -->
+            <div class="step-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" tabindex="0" hidden>
+              <div class="app-mock">
+                <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Technische Anlagen · Gas</span></div>
+                <div class="mock-body">
+                  <div class="form-mock">
+                    <label>Kategorie<span class="field select">Gasanlage</span></label>
+                    <div class="two">
+                      <label>Gruppe<span class="field select active">A</span></label>
+                      <label>Untergruppe<span class="field select active">Aa</span></label>
+                    </div>
+                    <div class="two">
+                      <label>Gasart<span class="field">Erdgas</span></label>
+                      <label>Max. Betriebsdruck des Gases (MPa)<span class="field">0,3</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="panel-note">Jede Anlagenkategorie hat eigene technische Parameter – Druck, Volumen, Tragfähigkeit,
+                Gasart und weitere.</p>
+            </div>
+
+            <!-- Schritt 3 -->
+            <div class="step-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" tabindex="0" hidden>
+              <div class="app-mock">
+                <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Prüfung hinzufügen · Prüfart</span></div>
+                <div class="mock-body">
+                  <div class="duty">
+                    <strong>Fachinspektion</strong><span class="interval">6 Monate</span>
+                    <small>Prüfintervall vorausgefüllt nach Untergruppe Aa</small>
+                  </div>
+                  <div class="duty">
+                    <strong>Fachprüfung</strong><span class="interval">36 Monate</span>
+                    <small>Prüfintervall vorausgefüllt nach Untergruppe Aa</small>
+                  </div>
+                  <div class="duty">
+                    <strong>Behördliche Prüfung</strong><span class="interval">120 Monate</span>
+                    <small>Prüfintervall vorausgefüllt nach Untergruppe Aa</small>
+                  </div>
+                </div>
+              </div>
+              <p class="panel-note">Beispiel aus der Anwendung für eine Gasanlage, Untergruppe Aa. Das Prüfintervall können
+                Sie jederzeit anpassen – bei manchen Untergruppen geben Sie es selbst ein.</p>
+            </div>
+
+            <!-- Schritt 4 -->
+            <div class="step-panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" tabindex="0" hidden>
+              <div class="app-mock">
+                <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Prüfungsliste · Gaskesselanlage K1</span></div>
+                <div class="mock-body">
+                  <div class="form-mock">
+                    <div class="two">
+                      <label>Prüfdatum<span class="field">10.02.2026</span></label>
+                      <label>Gültig bis<span class="field active">10.08.2026</span></label>
+                    </div>
+                    <label>Prüfergebnis<span class="field select">Betriebsfähig nach Beseitigung des Mangels</span></label>
+                    <div class="two">
+                      <label>Verantwortliche Person<span class="field">udrzba@vasafirma.sk</span></label>
+                      <label>Frist zur Behebung<span class="field">28.02.2026</span></label>
+                    </div>
+                    <div class="two">
+                      <label>Preis zzgl. MwSt.<span class="field">180 €</span></label>
+                      <label>Anhang<span class="field">pruefprotokoll-2026.pdf</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="panel-note">Bei einem Mangel erhält die verantwortliche Person eine E-Mail mit Beschreibung und Frist
+                zur Behebung.</p>
+            </div>
+
+            <!-- Schritt 5 -->
+            <div class="step-panel" role="tabpanel" id="panel-5" aria-labelledby="tab-5" tabindex="0" hidden>
+              <div class="app-mock">
+                <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>Start · Übersicht</span></div>
+                <div class="mock-body">
+                  <div class="mock-stats">
+                    <div><b>42</b><small>Anlagen gesamt</small></div>
+                    <div><b style="color:#a15c00">3</b><small>Bald fällig</small></div>
+                    <div><b style="color:#b4232f">1</b><small>Überfällig</small></div>
+                  </div>
+                  <div class="notice">
+                    <svg aria-hidden="true"><use href="#i-bell"/></svg>
+                    <span><strong>In 30 Tagen:</strong> Fachinspektion – Gaskesselanlage K1. Die E-Mail ging an die
+                      Bearbeiter der Firma.</span>
+                  </div>
+                  <div class="notice danger">
+                    <svg aria-hidden="true"><use href="#i-alert"/></svg>
+                    <span><strong>Überfällig:</strong> innere Prüfung – Druckbehälter Kompressor.</span>
+                  </div>
+                </div>
+              </div>
+              <p class="panel-note">Erinnerungen kommen 90, 30, 10, 5 und 1 Tag vor Ablauf der Gültigkeit. Bei Schulungen
+                und arbeitsmedizinischen Untersuchungen auch direkt an den Mitarbeiter.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="inline-cta">
+          <p><strong>Möchten Sie das mit Ihren eigenen Anlagen sehen?</strong> Wir zeigen Ihnen Safeo ID an Ihrem konkreten Fall.</p>
+          <a class="btn" href="#contact" data-track="cta_click" data-cta-location="how_it_works">Anwendung testen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VORTEILE ============ -->
+    <section class="benefits soft" id="prinosy" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Was Ihnen Safeo ID bringt</span>
+          <h2 class="section-title" id="benefits-title">Weniger Verwaltung, mehr Sicherheit bei Prüfungen</h2>
+          <p class="section-desc">Keine weitere Tabelle: Safeo ID übernimmt die Routinearbeit rund um die Prüfpflichten,
+            damit Sie sich um Ihren Betrieb kümmern können.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3>Kein Nachschlagen, wann welche Prüfung fällig ist</h3>
+            <p>Für jede Anlagenkategorie schlägt Safeo ID die passenden Prüfarten vor und füllt das Prüfintervall aus. Das
+              Datum „Gültig bis“ wird automatisch berechnet.</p>
+            <p class="from"><b>Funktion:</b> Prüfungen und Prüfintervalle nach Kategorie</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-bell"/></svg></span>
+            <h3>Geringeres Risiko vergessener Termine</h3>
+            <p>Die Terminüberwachung läuft automatisch: fünf E-Mail-Erinnerungen von 90 Tagen bis zum letzten Tag.
+              Nichts hängt vom Gedächtnis einer einzelnen Person ab.</p>
+            <p class="from"><b>Funktion:</b> automatische Erinnerungen</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <h3>Überblick auf einem Bildschirm</h3>
+            <p>Kalender aller Termine und Übersicht nach Kategorien: wie viele Prüfungen anstehen und was überfällig ist.</p>
+            <p class="from"><b>Funktion:</b> Aufgabenkalender und Übersicht</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span>
+            <h3>Dokumentation an einem Ort</h3>
+            <p>Protokolle, Fotos und Anleitungen direkt bei der Anlage, der Prüfung und dem Mitarbeiter. Kein Suchen mehr
+              in Aktenordnern.</p>
+            <p class="from"><b>Funktion:</b> zentrale Verwaltung von Anlagen und Anhängen</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>Einfachere Vorbereitung auf Kontrollen</h3>
+            <p>Prüfhistorie mit dokumentiertem Ergebnis, PDF mit Anlagendetails und ein QR-Code, der den Status direkt an
+              der Anlage zeigt.</p>
+            <p class="from"><b>Funktion:</b> Prüfarchiv, PDF und QR-Codes</p>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-wrench"/></svg></span>
+            <h3>Mängel konsequent behoben</h3>
+            <p>Jedem Mangel aus einer Prüfung weisen Sie eine verantwortliche Person und eine Frist zu. Sie erhält sofort
+              nach der Erfassung eine E-Mail.</p>
+            <p class="from"><b>Funktion:</b> Prüfergebnisse und Benachrichtigungen</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VIDEO ============ -->
+    <section class="product-demo" id="ukazka" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="demo-shell">
+          <div class="demo-copy">
+            <span class="kicker">Kurze Systemvorstellung</span>
+            <h2 class="section-title" id="demo-title">So sieht Ordnung in der Praxis aus</h2>
+            <p class="section-desc">Das Video zeigt, wie Safeo ID Betrieben hilft, Anlagen, Prüfungen und Termine im Griff
+              zu behalten.</p>
+            <ul class="check-list light">
+              <li>Anlagen nach Standorten erfassen</li>
+              <li>Prüfungen mit Gültigkeit und Protokollen</li>
+              <li>QR-Code direkt an der Anlage</li>
+            </ul>
+            <div class="demo-actions">
+              <a class="btn light" href="/demo/?lang=de" data-track="demo_open" data-cta-location="video">Demo öffnen</a>
+              <a class="btn ghost-light" href="#contact" data-track="cta_click" data-cta-location="video">Anwendung
+                testen</a>
+            </div>
+            <p class="demo-note">Demo mit fiktiver Firma, ohne Registrierung. Ihre Änderungen sehen nur Sie.</p>
+          </div>
+
+          <div class="demo-video-card">
+            <video controls playsinline preload="none" poster="/assets/img/promo-video-poster.jpg" width="1280"
+              height="720" aria-label="Promo-Video zu Safeo ID">
+              <source src="/assets/promo_video.mp4" type="video/mp4">
+              Ihr Browser unterstützt keine Videowiedergabe. Sie können das Video direkt über
+              <a href="/assets/promo_video.mp4">diesen Link</a> öffnen.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FUNKTIONEN ============ -->
+    <section class="features soft" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Funktionen</span>
+          <h2 class="section-title" id="features-title">Alles für Prüfungen und betriebliche Pflichten</h2>
+          <p class="section-desc">Safeo ID ist eine Web-App – sie läuft im Browser auf Computer, Tablet und Smartphone.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-gauge"/></svg></span>
+            <div>
+              <h3>Überwachungsbedürftige Anlagen</h3>
+              <p>Druck-, Gas-, Hebe-, Elektro- und Brandschutzanlagen mit Gruppe, Untergruppe und technischen
+                Parametern.</p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-repeat"/></svg></span>
+            <div>
+              <h3>Prüfungen und Kontrollen</h3>
+              <p>Prüfart, Datum, Ergebnis, Preis, Notizen und Anhänge. Die nächste Prüfung legen Sie mit einem Schritt an,
+                ältere werden archiviert.</p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <div>
+              <h3>Kalender und Erinnerungen</h3>
+              <p>Monats-, Wochen- und Tagesansicht der Termine. E-Mails an die Bearbeiter der Firma, bei Schulungen auch
+                an die Mitarbeiter.</p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-qr"/></svg></span>
+            <div>
+              <h3>QR-Codes an Anlagen</h3>
+              <p>QR-Code herunterladen und an der Anlage anbringen. Nach dem Scannen erscheinen Anlagendaten und
+                Prüfungsliste – ohne Anmeldung.</p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-building"/></svg></span>
+            <div>
+              <h3>Firmen und Standorte</h3>
+              <p>Mehrere Firmen und Standorte in einem Konto. Bearbeiter sehen nur die Firmen, für die sie freigeschaltet sind.</p>
+            </div>
+          </article>
+          <article class="card">
+            <span class="icon"><svg aria-hidden="true"><use href="#i-download"/></svg></span>
+            <div>
+              <h3>PDF und Anhänge</h3>
+              <p>Details zu Anlage, Fahrzeug oder Mitarbeiter laden Sie als PDF herunter. An Einträge hängen Sie Dateien bis 30&nbsp;MB an.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="items-strip">
+          <span>Neben Anlagen erfassen Sie auch:</span>
+          <span class="tag">Mitarbeiterschulungen</span>
+          <span class="tag">Arbeitsmedizinische Untersuchungen</span>
+          <span class="tag">Fuhrpark – HU, AU, Kfz-Haftpflicht, Vignetten</span>
+          <span class="tag">Eigene Einträge</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FÜR WEN ============ -->
+    <section class="audience" id="pre-koho" aria-labelledby="audience-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Für wen ist Safeo ID</span>
+          <h2 class="section-title" id="audience-title">Für alle, die für technische Anlagen verantwortlich sind</h2>
+          <p class="section-desc">Vom einzelnen Standort bis zur Betreuung Dutzender Objekte und Kunden.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-factory"/></svg></span>
+              <h3>Produktionsunternehmen</h3>
+            </div>
+            <p>Kompressoren, Druckbehälter, Krane, Elektroinstallation der Hallen. Dutzende Anlagen mit unterschiedlichen Fristen.</p>
+            <p class="gain">Alle Anlagen und ihre Prüfungen in einer Übersicht – über alle Standorte hinweg.</p>
+          </article>
+          <article class="card">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-wrench"/></svg></span>
+              <h3>Betreiber technischer Anlagen</h3>
+            </div>
+            <p>Heizräume, Gas- und Hebeanlagen, bei denen eine versäumte Fachinspektion ein Risiko für den Betrieb bedeutet.</p>
+            <p class="gain">Sie wissen, welche Inspektion oder Prüfung als Nächstes ansteht.</p>
+          </article>
+          <article class="card">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-building"/></svg></span>
+              <h3>Gebäudeverwalter</h3>
+            </div>
+            <p>Blitzschutz, Elektroinstallation, Feuerlöscher, Brandschutzabschlüsse oder Heizräume in mehreren Objekten.</p>
+            <p class="gain">Jedes Gebäude als eigener Standort, QR-Code direkt an der Anlage.</p>
+          </article>
+          <article class="card">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <h3>Fachkräfte für Arbeitsschutz</h3>
+            </div>
+            <p>Neben Anlagen auch Schulungen, arbeitsmedizinische Untersuchungen und weitere Pflichten rund um die
+              Mitarbeiter – für eine oder mehrere Firmen.</p>
+            <p class="gain">Termine aller Kunden und Mitarbeiter in einem Kalender.</p>
+          </article>
+          <article class="card">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-truck"/></svg></span>
+              <h3>Firmen mit vielen Anlagen</h3>
+            </div>
+            <p>Umfangreicher Bestand, Fuhrpark und mehrere Verantwortliche, die dieselben Informationen brauchen.</p>
+            <p class="gain">Paket Individual mit frei wählbarer Anzahl an Einträgen und Bearbeitern.</p>
+          </article>
+          <article class="card" style="background:linear-gradient(135deg,#e8f7ef,#fff)">
+            <div class="who"><span class="icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <h3>Passt es auch zu Ihnen?</h3>
+            </div>
+            <p>Sagen Sie uns, welche Anlagen Sie verwalten. Wir zeigen Ihnen Safeo ID an Ihrem konkreten Fall.</p>
+            <a class="btn outline" href="#contact" data-track="cta_click" data-cta-location="audience">Vorführung vereinbaren</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREISE ============ -->
+    <section id="pricing" class="pricing-section soft" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="kicker">Preise</span>
+          <h2 class="section-title" id="pricing-title">Einfache Pakete nach Anzahl der Anlagen</h2>
+          <p class="section-desc">Preise in € zzgl. MwSt. für 1 Kalendermonat des im Voraus bezahlten Dienstes.</p>
+        </div>
+
+        <div class="grid grid-3 pricing">
+          <!-- Standard -->
+          <article class="card price">
+            <h3>Standard</h3>
+            <p class="fit">Für kleinere Firmen oder einen Standort mit einigen Anlagen.</p>
+            <div class="amount"><strong>ab 20 €</strong> / Monat</div>
+            <ul class="check-list">
+              <li>3 Bearbeiter</li>
+              <li>5&nbsp;GB Speicherplatz</li>
+            </ul>
+            <p class="list-label">Anzahl gespeicherter Einträge</p>
+            <ul class="check-list">
+              <li>50 Mitarbeiter</li>
+              <li>15 überwachungsbedürftige Anlagen</li>
+              <li>3 Arten von Brandschutzeinrichtungen</li>
+              <li>10 Fahrzeuge</li>
+              <li>10 eigene Einträge</li>
+            </ul>
+            <a class="btn outline block" href="#contact" data-plan="Standard" data-track="cta_click"
+              data-cta-location="pricing">Standard anfragen</a>
+          </article>
+
+          <!-- Profi -->
+          <article class="card price highlight">
+            <span class="badge">Für wachsende Betriebe</span>
+            <h3>Profi</h3>
+            <p class="fit">Für Firmen mit mehreren Standorten, größerem Team und Fuhrpark.</p>
+            <div class="amount"><strong>ab 50 €</strong> / Monat</div>
+            <ul class="check-list">
+              <li>5 Bearbeiter</li>
+              <li>10&nbsp;GB Speicherplatz</li>
+            </ul>
+            <p class="list-label">Anzahl gespeicherter Einträge</p>
+            <ul class="check-list">
+              <li>150 Mitarbeiter</li>
+              <li>30 überwachungsbedürftige Anlagen</li>
+              <li>6 Arten von Brandschutzeinrichtungen</li>
+              <li>20 Fahrzeuge</li>
+              <li>20 eigene Einträge</li>
+            </ul>
+            <a class="btn block" href="#contact" data-plan="Profi" data-track="cta_click" data-cta-location="pricing">Profi
+              anfragen</a>
+          </article>
+
+          <!-- Individual -->
+          <article class="card price">
+            <h3>Individual</h3>
+            <p class="fit">Für große Unternehmen, Verwalter mehrerer Objekte und Fachkräfte für Arbeitsschutz mit vielen Kunden.</p>
+            <div class="amount"><strong>Preis auf Anfrage</strong></div>
+            <ul class="check-list">
+              <li>20+&nbsp;GB Speicherplatz</li>
+              <li>Individuelle Anzahl an Einträgen</li>
+              <li>Individuelle Anzahl an Bearbeitern</li>
+            </ul>
+            <a class="btn outline block" href="#contact" data-plan="Individual" data-track="cta_click"
+              data-cta-location="pricing">Angebot anfordern</a>
+          </article>
+        </div>
+
+        <div class="included">
+          <span>In jedem Paket:</span>
+          <ul>
+            <li>Kalender und E-Mail-Erinnerungen</li>
+            <li>Prüfintervalle nach Kategorie</li>
+            <li>QR-Codes und PDF-Export</li>
+            <li>Anhänge zu Einträgen</li>
+            <li>Schulungen, arbeitsmedizinische Untersuchungen und Fuhrpark</li>
+          </ul>
+        </div>
+
+        <p class="pricing-note">Unsicher, welches Paket passt? Rufen Sie uns an unter
+          <a href="tel:+421911635510" data-track="phone_click" data-cta-location="pricing">+421&nbsp;911&nbsp;635&nbsp;510</a>
+          – wir beraten Sie anhand der Anzahl Ihrer Anlagen.</p>
+      </div>
+    </section>
+
+    <!-- ============ VERTRAUEN ============ -->
+    <section class="trust" id="o-nas" aria-labelledby="trust-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Wem Sie Ihre Daten anvertrauen</span>
+          <h2 class="section-title" id="trust-title">Ein Team aus der Slowakei und sicherer Zugriff auf Ihre Daten</h2>
+        </div>
+
+        <div class="trust-grid">
+          <article class="card" id="about">
+            <h3><span class="icon"><svg aria-hidden="true"><use href="#i-flag"/></svg></span>Über uns</h3>
+            <p>Safeo ID wird von einem slowakischen Team mit langjähriger Erfahrung im Arbeitsschutz und in der
+              Digitalisierung von Prozessen entwickelt. Wir gestalten die Anwendung danach, wie Prüfungen und Kontrollen
+              in slowakischen Betrieben tatsächlich ablaufen.</p>
+            <p>Erste Kunden nutzen Safeo ID bereits in der Praxis, und ihr Feedback bestimmt direkt, was wir als Nächstes
+              entwickeln.</p>
+            <p style="margin:0">Sie sprechen direkt mit den Menschen, die die Anwendung entwickeln.</p>
+          </article>
+
+          <article class="card" id="security">
+            <h3><span class="icon"><svg aria-hidden="true"><use href="#i-lock"/></svg></span>Sicherheit und Datenschutz</h3>
+            <ul class="check-list">
+              <li>Die Kommunikation mit der Anwendung läuft über eine verschlüsselte Verbindung (HTTPS).</li>
+              <li>Die Anmeldung erfolgt über Firebase Authentication von Google – Passwörter speichern wir nicht in unserer eigenen Datenbank.</li>
+              <li>Bearbeiter sehen nur die Firmen, für die ihnen der Zugriff erteilt wurde.</li>
+              <li>Die Datenbank wird bei einem slowakischen Hosting-Anbieter betrieben.</li>
+              <li>Änderungen an wichtigen Einträgen speichert das System intern in einer Historie.</li>
+              <!-- NACH PRÜFUNG ERGÄNZEN: Datensicherung, Speicherort der Dateien (EU), DSGVO / Auftragsverarbeitungsvertrag -->
+            </ul>
+          </article>
+
+          <!--
+            REFERENZEN / FALLSTUDIEN – zum Ergänzen vorbereitet.
+            Erst nach schriftlicher Zustimmung des Kunden einkommentieren. Keine erfundenen Angaben veröffentlichen.
+
+          <div class="references">
+            <figure class="card quote">
+              <blockquote>„Kundenzitat – welches Problem bestand und was sich mit Safeo ID geändert hat.“</blockquote>
+              <figcaption><strong>Vorname Nachname</strong>, Position · Firma GmbH</figcaption>
+            </figure>
+            <article class="card">
+              <h3>Fallstudie: Name des Unternehmens</h3>
+              <p>Branche · Anzahl Standorte · Anzahl erfasster Anlagen. Ausgangslage → Lösung → Ergebnis.</p>
+            </article>
+          </div>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq soft" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head center">
+          <span class="kicker">Häufige Fragen</span>
+          <h2 class="section-title" id="faq-title">Fragen zur Prüfungsverwaltung mit Safeo ID</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Wie hilft Safeo ID beim Festlegen der Prüfintervalle?</summary>
+            <div class="answer">
+              <p>Bei der Anlage wählen Sie die Kategorie (Druck, Gas, Hebezeug, Elektro, Brandschutz), die Gruppe und die
+                Untergruppe. Beim Hinzufügen einer Prüfung schlägt die Anwendung die Prüfarten für diese Kategorie vor –
+                etwa Fachinspektion, Fachprüfung oder behördliche Prüfung – und füllt ihr Prüfintervall aus. Das Datum
+                „Gültig bis“ wird automatisch berechnet.</p>
+              <p>Das Prüfintervall können Sie jederzeit anpassen, bei manchen Untergruppen geben Sie es selbst ein. Die
+                vorausgefüllten Werte sind eine Hilfe – für die Festlegung der Fristen ist der Betreiber der Anlage
+                verantwortlich. Wir empfehlen daher, sie mit Ihrem Prüfer abzustimmen.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Ersetzt Safeo ID den Prüfer?</summary>
+            <div class="answer">
+              <p>Nein. Prüfungen und Inspektionen führt weiterhin eine dazu befugte Person durch. Safeo ID hilft Ihnen, im
+                Blick zu behalten, wann welche Prüfung zu beauftragen ist, wie ihr Ergebnis lautete, wo das Protokoll liegt
+                und wer festgestellte Mängel beheben soll.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Wann und an wen gehen die Terminerinnerungen?</summary>
+            <div class="answer">
+              <p>E-Mail-Erinnerungen gehen 90, 30, 10, 5 und 1 Tag vor Ablauf einer Prüfung, Kontrolle, Schulung oder
+                arbeitsmedizinischen Untersuchung hinaus. Sie erhalten die Bearbeiter der jeweiligen Firma, bei Schulungen und
+                arbeitsmedizinischen Untersuchungen auch der Mitarbeiter selbst. Stellt eine Prüfung einen Mangel fest, erhält
+                die verantwortliche Person sofort eine E-Mail.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Was wird nach dem Scannen des QR-Codes an der Anlage angezeigt?</summary>
+            <div class="answer">
+              <p>Eine öffentliche Seite der Anlage mit Basis- und technischen Daten sowie der Prüfungsliste – Art, Gültigkeit,
+                verantwortliche Person und Ergebnis. Eine Anmeldung ist nicht nötig, sodass auch Haustechniker oder Prüfer
+                die Informationen direkt an der Anlage haben.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Was kann ich außer überwachungsbedürftigen Anlagen noch erfassen?</summary>
+            <div class="answer">
+              <p>Mitarbeiterschulungen (mit vordefinierten Arten und Intervallen), arbeitsmedizinische Untersuchungen, den
+                Fuhrpark einschließlich Hauptuntersuchung, Abgasuntersuchung, Kfz-Haftpflicht und Vignetten sowie eigene
+                Einträge nach Bedarf Ihres Betriebs.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Kann ich mehrere Firmen und Standorte in einem Konto verwalten?</summary>
+            <div class="answer">
+              <p>Ja. Anlagen, Fahrzeuge und Mitarbeiter ordnen Sie einer Firma und einem Standort zu und filtern auch danach.
+                Bearbeiter sehen nur die Firmen, für die sie freigeschaltet sind.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Muss ich etwas installieren?</summary>
+            <div class="answer">
+              <p>Nein. Safeo ID ist eine Web-App, die im Browser auf Computer, Tablet und Smartphone läuft.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Wie kann ich Safeo ID testen?</summary>
+            <div class="answer">
+              <p>Füllen Sie das kurze Formular aus oder rufen Sie uns an unter +421&nbsp;911&nbsp;635&nbsp;510. Wir melden
+                uns, zeigen Ihnen die Anwendung am Beispiel Ihrer Anlagen und richten den Zugang für Ihre Firma ein.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Was kostet Safeo ID?</summary>
+            <div class="answer">
+              <p>Das Paket Standard gibt es ab 20&nbsp;€, Profi ab 50&nbsp;€ monatlich zzgl. MwSt. Für mehr Anlagen und
+                Bearbeiter erstellen wir ein individuelles Angebot. Details finden Sie in der <a href="#pricing">Preisübersicht</a>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="kicker">Safeo ID testen</span>
+          <h2 class="section-title" id="contact-title">Prüfungen im Griff – schon vor der nächsten Kontrolle</h2>
+          <p class="section-desc">Hinterlassen Sie uns Namen und E-Mail-Adresse. Wir melden uns, zeigen Ihnen die
+            Anwendung und richten den Zugang für Ihre Firma ein.</p>
+          <ul class="check-list light">
+            <li>Vorführung am Beispiel Ihrer Anlagen und Prüfungen</li>
+            <li>Paketempfehlung nach Anzahl Ihrer Einträge</li>
+            <li>Zugang für Ihre Firma eingerichtet</li>
+            <li>Unverbindlich – Sie entscheiden erst nach der Vorführung</li>
+          </ul>
+          <p class="contact-direct">Lieber telefonisch?
+            <a href="tel:+421911635510" class="contact-phone-link" data-track="phone_click" data-cta-location="contact"
+              aria-label="Anrufen unter +421 911 635 510"><svg aria-hidden="true"><use href="#i-phone"/></svg>+421 911 635 510</a>
+          </p>
+        </div>
+
+        <form action="https://safeo.sk/contact-send-email" method="post" class="php-email-form demo-form" id="demo-form"
+          data-recaptcha-site-key="6LdNaasrAAAAAOvIYS3VPbhV9r-cQ95OJFn0rTCA">
+          <h3>Ich möchte Safeo ID testen</h3>
+          <p class="form-intro">Zwei Angaben genügen – das Ausfüllen dauert nur Sekunden.</p>
+
+          <!-- versteckte Infos (Betreff/Flag) -->
+          <input type="hidden" name="subject" value="Záujem o Safeo ID (DE)">
+          <input type="hidden" name="message" id="formMessage" value="Záujem o Safeo ID (DE)">
+          <input type="hidden" name="safeoId" value="true">
+
+          <!-- Antispam + Zeit -->
+          <input type="text" name="website_url" class="hp-input" autocomplete="off" tabindex="-1" aria-hidden="true">
+          <input type="hidden" name="form_time" id="form_time">
+
+          <div class="form-group">
+            <label for="f-name">Vor- und Nachname *</label>
+            <input type="text" id="f-name" name="name" class="form-control" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="f-email">Geschäftliche E-Mail *</label>
+            <input type="email" id="f-email" name="email" class="form-control" autocomplete="email" inputmode="email"
+              required>
+          </div>
+
+          <!-- Meldungen: KEIN 'hidden' am WRAPPER -->
+          <div class="status" aria-live="polite">
+            <div class="loading" hidden>Wird gesendet…</div>
+            <div class="error-message" hidden></div>
+            <div class="sent-message" hidden>Vielen Dank! Wir melden uns mit einem Termin für die Vorführung.</div>
+          </div>
+
+          <button type="submit" class="btn submit-btn">Anfrage senden</button>
+          <p class="form-legal">Wir verwenden Ihre Daten ausschließlich, um Sie zu Safeo ID zu kontaktieren.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/img/header-logo.svg" alt="Safeo ID" width="170" height="25" loading="lazy">
+          <p>Software für das Prüfmanagement: überwachungsbedürftige Anlagen, Prüfungen technischer Anlagen und weitere
+            betriebliche Pflichten an einem Ort.</p>
+        </div>
+        <nav aria-label="Links in der Fußzeile">
+          <h2>Produkt</h2>
+          <ul>
+            <li><a href="#ako-funguje">So funktioniert’s</a></li>
+            <li><a href="#features">Funktionen</a></li>
+            <li><a href="#pricing">Preise</a></li>
+            <li><a href="#faq">Häufige Fragen</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Kontakt</h2>
+          <ul>
+            <li><a href="tel:+421911635510" data-track="phone_click" data-cta-location="footer">+421 911 635 510</a></li>
+            <li><a href="#contact">Vorführung vereinbaren</a></li>
+            <li><a href="https://app.safeoid.sk" target="_blank" rel="noopener" data-track="login_click"
+                data-cta-location="footer">Anmeldung in der Anwendung</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year"></span> Safeo ID. Alle Rechte vorbehalten.</div>
+    </div>
+  </footer>
+
+  <!-- Sticky-CTA auf Mobilgeräten -->
+  <div class="mobile-cta" id="mobileCta" aria-hidden="true">
+    <a class="btn" href="#contact" tabindex="-1" data-track="cta_click" data-cta-location="mobile_sticky">Anwendung testen</a>
+    <a class="btn outline" href="tel:+421911635510" tabindex="-1" data-track="phone_click"
+      data-cta-location="mobile_sticky" aria-label="Anrufen">
+      <svg aria-hidden="true" width="18" height="18"><use href="#i-phone"/></svg></a>
+  </div>
+
+  <script src="/assets/v2/app.js?v=20261020b" defer></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("form_time").value = Math.floor(Date.now() / 1000);
+    });
+  </script>
+</body>
+
+</html>
