@@ -1,0 +1,34 @@
+# Safeo ID
+
+> Safeo ID je slovenská webová aplikácia na evidenciu vyhradených technických zariadení (VTZ), revízií, kontrol, školení zamestnancov, lekárskych prehliadok a vozového parku. Predvyplní periodicitu revízií, sleduje platnosť a e-mailom upozorní na blížiace sa termíny. Vyvíja ju slovenský tím so skúsenosťami v oblasti bezpečnosti práce a digitalizácie procesov; komunikácia prebieha po slovensky priamo s vývojármi.
+
+- Web: https://safeoid.sk (anglicky: https://safeoid.sk/en/, nemecky: https://safeoid.sk/de/)
+- Prihlásenie do aplikácie: https://app.safeoid.sk
+- Kontakt: +421 911 635 510, info@safeoid.sk
+
+## Funkcie
+
+- Evidencia VTZ: tlakové, plynové, zdvíhacie, elektrické a požiarne zariadenia so skupinou, podskupinou a technickými parametrami.
+- Revízie a kontroly: typ revízie, dátum, výsledok, cena, poznámky a prílohy. Aplikácia ponúkne typy revízií pre danú kategóriu (odborná prehliadka, odborná skúška, úradná skúška) a predvyplní ich periodicitu; dátum „Platí do“ sa vypočíta automaticky. Periodicitu možno upraviť – za stanovenie lehôt zodpovedá prevádzkovateľ zariadenia.
+- Kalendár a upozornenia: mesačný, týždenný a denný pohľad. E-maily 90, 30, 10, 5 a 1 deň pred koncom platnosti; pri školeniach a lekárskych prehliadkach aj samotnému zamestnancovi. Pri zistenom nedostatku dostane zodpovedná osoba e-mail hneď.
+- QR kódy na zariadeniach: po naskenovaní sa bez prihlásenia zobrazia údaje o zariadení a zoznam revízií.
+- Spoločnosti a prevádzky: viac spoločností a prevádzok v jednom účte; editori vidia iba spoločnosti, ku ktorým majú prístup.
+- PDF a prílohy: detail zariadenia, vozidla či zamestnanca ako PDF, prílohy do 30 MB.
+- Ďalej: školenia zamestnancov, lekárske prehliadky, vozový park (STK, EK, PZP, diaľničné známky) a vlastné položky.
+- Safeo ID nenahrádza revízneho technika – revízie naďalej vykonáva oprávnená osoba.
+
+## Cenník (bez DPH, za 1 mesiac)
+
+- Standard – od 20 €: 3 editori, 5 GB úložisko, 50 zamestnancov, 15 ks VTZ, 3 druhy požiarnych zariadení, 10 vozidiel, 10 vlastných položiek.
+- Profi – od 50 €: 5 editorov, 10 GB úložisko, 150 zamestnancov, 30 ks VTZ, 6 druhov požiarnych zariadení, 20 vozidiel, 20 vlastných položiek.
+- Individual – cena individuálne: pre veľké spoločnosti, správcov viacerých objektov a BOZP technikov s mnohými klientmi.
+
+## Pre koho
+
+Pre personalistov, správcov majetku a vozového parku aj vedúcich pracovníkov:
+
+- výrobné aj nevýrobné prevádzky,
+- správcovia objektov a vozových parkov,
+- revízni technici a technici BOZP,
+- HR oddelenia,
+- každý, kto chce mať poriadok a prehľad v termínoch.
