@@ -351,6 +351,60 @@ header.site-header {
     }
   }
 
+  .nav-links a,
+  .login-link,
+  .nav-cta {
+    white-space: nowrap;
+  }
+
+  // užší desktop: menu sa musí zmestiť do jedného riadku aj s dlhším CTA (DE)
+  @media (max-width: 1320px) {
+    .nav {
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 150px;
+    }
+
+    .nav-links {
+      gap: 0;
+
+      a {
+        padding: 8px 8px;
+        font-size: .92rem;
+      }
+    }
+
+    .lang-switch {
+      margin-right: 0;
+    }
+
+    .login-link {
+      padding: 8px 6px;
+      font-size: .92rem;
+    }
+  }
+
+  @media (max-width: 1120px) {
+    .nav {
+      gap: 8px;
+    }
+
+    .brand img {
+      width: 132px;
+    }
+
+    .nav-links a {
+      padding: 8px 6px;
+      font-size: .9rem;
+    }
+
+    .nav-cta {
+      padding: 9px 12px;
+    }
+  }
+
   @media (max-width: $bp-lg) {
     .nav {
       gap: 12px;
@@ -369,6 +423,13 @@ header.site-header {
 
     .nav-actions {
       margin-left: auto;
+    }
+  }
+
+  // na mobile je rovnaké CTA hneď v úvode a v spodnej lište
+  @media (max-width: 480px) {
+    .nav-cta {
+      display: none;
     }
   }
 

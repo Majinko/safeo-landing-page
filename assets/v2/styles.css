@@ -263,6 +263,48 @@ header.site-header .login-link {
 header.site-header .login-link:hover {
   color: #1a7f53;
 }
+header.site-header .nav-links a,
+header.site-header .login-link,
+header.site-header .nav-cta {
+  white-space: nowrap;
+}
+@media (max-width: 1320px) {
+  header.site-header .nav {
+    gap: 12px;
+  }
+  header.site-header .brand img {
+    width: 150px;
+  }
+  header.site-header .nav-links {
+    gap: 0;
+  }
+  header.site-header .nav-links a {
+    padding: 8px 8px;
+    font-size: 0.92rem;
+  }
+  header.site-header .lang-switch {
+    margin-right: 0;
+  }
+  header.site-header .login-link {
+    padding: 8px 6px;
+    font-size: 0.92rem;
+  }
+}
+@media (max-width: 1120px) {
+  header.site-header .nav {
+    gap: 8px;
+  }
+  header.site-header .brand img {
+    width: 132px;
+  }
+  header.site-header .nav-links a {
+    padding: 8px 6px;
+    font-size: 0.9rem;
+  }
+  header.site-header .nav-cta {
+    padding: 9px 12px;
+  }
+}
 @media (max-width: 1024px) {
   header.site-header .nav {
     gap: 12px;
@@ -278,6 +320,11 @@ header.site-header .login-link:hover {
   }
   header.site-header .nav-actions {
     margin-left: auto;
+  }
+}
+@media (max-width: 480px) {
+  header.site-header .nav-cta {
+    display: none;
   }
 }
 @media (max-width: 380px) {
