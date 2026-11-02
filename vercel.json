@@ -1,15 +1,14 @@
 {
   "redirects": [
     {
-      "source": "/",
-      "has": [
-        {
-          "type": "query",
-          "key": "redizajn"
-        }
-      ],
-      "destination": "/v2/",
-      "permanent": false
+      "source": "/v2",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/v2/:path*",
+      "destination": "/",
+      "permanent": true
     },
     {
       "source": "/demo",

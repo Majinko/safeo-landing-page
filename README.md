@@ -2,31 +2,24 @@
 
 Statická stránka (HTML + SCSS), nasadená na Vercel.
 
-## Dve verzie dizajnu
+## Štruktúra
 
-| Verzia | URL | Súbory |
-|---|---|---|
-| Pôvodný dizajn (predvolený) | `https://safeoid.sk/` | `index.html`, `assets/app.js`, `assets/styles.scss` → `assets/dist/` |
-| Nový dizajn (test) | `https://safeoid.sk/?redizajn` → `/v2/` | `v2/index.html`, `assets/v2/` |
+| Stránka | Súbor |
+|---|---|
+| `https://safeoid.sk/` (SK) | `index.html` |
+| `https://safeoid.sk/en/`, `/de/` | `en/index.html`, `de/index.html` |
+| Spoločné štýly a skripty | `assets/v2/` |
 
-`/?redizajn` presmeruje na `/v2/` (redirect vo `vercel.json`, záložne JS v `index.html`).
-Nová verzia má `noindex`, aby ju Google neindexoval ako duplicitu. Obe verzie posielajú do `dataLayer`
-`design_version` (`v1` / `v2`), takže konverzie sa dajú v GA4 porovnať.
-
-**Spustenie nového dizajnu naostro:** skopírovať `v2/index.html` do `index.html`, zmeniť cesty
-`/assets/v2/…` podľa potreby, nastaviť `robots` na `index,follow` a odstrániť redirect z `vercel.json`.
-Celý redizajn je aj v branchi `redesign-landing`.
+Starý dizajn bol odstránený 2. 11. 2026 (je v git histórii). Staré adresy `/v2/…` presmerúva `vercel.json` na `/`.
+V `dataLayer` ostáva `design_version: 'v2'` kvôli porovnaniu s obdobím pred spustením.
 
 ## Build štýlov
 
 ```bash
-# pôvodný dizajn
-sass assets/styles.scss assets/dist/styles.css
-# nový dizajn
 sass --style=compressed assets/v2/styles.scss assets/v2/styles.min.css
 ```
 
-Po zmene CSS/JS zvýšte `?v=` v príslušnom HTML.
+Po zmene CSS/JS zvýšte `?v=` vo všetkých troch HTML (SK, EN, DE).
 
 ## Meranie konverzií (GTM `GTM-PTM7WQD6`)
 
@@ -48,4 +41,4 @@ Pri kliknutí na balík v cenníku sa do skrytého poľa `message` doplní „Z�
 
 ## Referencie
 
-V novom dizajne (`v2/index.html`) je v sekcii `#o-nas` je zakomentovaná šablóna pre referencie a prípadové štúdie – odkomentujte ju až s reálnymi údajmi a súhlasom zákazníka.
+V `index.html` je v sekcii `#o-nas` zakomentovaná šablóna pre referencie a prípadové štúdie – odkomentujte ju až s reálnymi údajmi a súhlasom zákazníka.
